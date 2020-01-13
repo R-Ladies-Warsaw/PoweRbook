@@ -1,0 +1,11 @@
+--- 
+title: "PoweR, czyli Python i R w Data Science dla początkujących"
+author: "Anna Kozak"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Materiały z warsztatów"
+---

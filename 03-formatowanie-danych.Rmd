@@ -1,0 +1,7 @@
+# Formatowanie danych {#formatowanie-danych}
+
+Formatowanie danych 
+
+- pandas, numpy (Python)
+
+- dplyr, tidyr (R)

@@ -1,0 +1,11 @@
+# Podstawy języka {#podstawy-jezyka}
+
+Wstęp do Pythona i R
+
+```{r}
+print("Hello World!")
+```
+
+```{python}
+print("Hello World!")
+```

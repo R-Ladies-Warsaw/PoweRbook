@@ -2,9 +2,173 @@
 
 Wstęp do Pythona i R
 
+## R
+
+<img align="center" src="figure/cheatSheetR1.png" alt="drawing"/>
+
+Następujący kod będzie pisany w oprogramowaniu **RStudio**. Jest to najbardziej powszechne środowisko programistyczne do R-a, integrujące także wiele innych przydatnych funkcjonalności.
+
+R to bardzo wygodne narzędzie w kwestii operacji arytmetycznych. Sprawdźmy jak sprawdzi się dla paru z nich!
+
 ```{r}
-print("Hello World!")
+2 + 2
+2 + 2 + 2 + 2
+2^4
 ```
+
+Oprócz wyżej wymienionych można także dokonywać wielu innych obliczeń. Zachowywana jest także kolejność działań.
+
+*Zadanie 1*. Sprawdź czy R zachowuje kolejność dzialań. Jakiego przykladu można uzyć?
+
+**Przykładowe rozwiązanie:**
+
+```{r}
+2 + 2 * 2
+```
+
+W R-rze istnieją dwie metody przypisania. Głownie używamy składni *x <- 5* (możliwe także *5 -> x*), ale istnieje rownież opcja może bardziej instynktownego *x = 5*. Standardowo przynajmniej na tym etapie lepiej jest jednak używać "strzałki".
+
+```{r}
+x <- 5
+x
+y = 5
+zmienna <- "Hello World!"
+```
+
+Jedną z podstawowych struktur danych są *wektory*. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.
+
+```{r}
+parzyste <- c(2, 4, 6)
+litery <- c("a", "b", "c")
+litery[2]
+vec <- c(parzyste, litery)
+vec
+```
+
+Oczywiście i na nich możemy dokonywać różnych operacji.
+
+```{r}
+nieparzyste <- c(1, 3, 5)
+
+parzyste + nieparzyste
+parzyste * x
+```
+
+Inną istotną strukturą są *listy*.
+
+```{r}
+liczby <- list(parzyste = parzyste, nieparzyste = nieparzyste)
+c(parzyste, nieparzyste)
+
+liczby[[1]]
+liczby[["parzyste"]]
+```
+
+*Zadanie 2*
+a) Stwórz dwa wektory składające się z 5 liczb każdy, a następnie przypisz ich rożnice do nowej zmiennej o nazwie różnica.
+
+b) Połącz te trzy wektory w listę.
+
+**Przykładowe rozwiązanie:**
+
+a)
+```{r}
+a <- c(1, 2, 3, 4, 5)
+b <- c(6, 7, 8, 9, 10)
+roznica <- b - a
+```
+b)
+```{r}
+lista_wektorow <- list(a, b, roznica)
+```
+
+R jest także bogaty w szereg przydatnych funkcji wbudowanych. Oto niektóre z nich i ich działanie:
+
+```{r}
+?min # zwraca informacje o funkcji
+min(roznica)
+max(roznica)
+sum(roznica)
+length(roznica)
+vec2 <- 1:20
+vec2
+vec3 <- 50:100
+vec3
+```
+
+Kolejną bardzo ważną strukturą w R jest *ramka danych*.
+
+```{r}
+df <- data.frame(col_1 = c(1, 2, 3), col_2 = c("raz", "dwa", "trzy"))
+```
+
+Możemy na niej działać poprzez odpowiednie operatory:
+
+```{r}
+df$col_1
+df[["col"]]
+df[3, 1]
+df[ ,1]
+df[1, ]
+df[2:3, ]
+```
+
+W celu dokonywania decyzji o wykonywanych krokach używa się tzw. *instrukcjej warunkowej*. Najprościej mówiąc owy element języka pozwala na wykonanie ciągu operacji w zależności od zaproponowanego przez programistę warunku. Oto i przykładowe takie warunki:
+
+```{r}
+1 == 1
+1 == 0
+1 > 0
+1 < 0
+!(1==1)
+parzyste
+parzyste == 2
+all(parzyste == 2)
+any(parzyste == 2)
+2 %in% parzyste
+```
+
+... i sama instrukcja **if** w praktyce:
+
+```{r}
+if( !(8 %in% parzyste) ){
+  parzyste <- c(parzyste, 8)
+}
+parzyste
+
+skorupa <- TRUE
+if(skorupa == TRUE){
+  "zolw"
+} else {
+  "kot"
+}
+
+ifelse(skorupa == TRUE, "zolw", "kot")
+# ifelse działa też na wektorze
+skorupa <- c(TRUE, TRUE, FALSE)
+ifelse(skorupa == TRUE, "zolw", "kot")
+```
+
+*Zadanie 3*
+a) Podobnie jak w powyższym przykładzie, wektor liczb nieparzystych powiększ o liczbe 7, o ile już jej nie ma.
+b) Dany jest wektor liczb, v <- c(1,2,2,2,2,2,3,3,3,1,1,2). Użyj instrukcji if else lub ifelse, zeby zrobić z niego wektor zawierający wartosci "jeden", "dwa", "trzy".
+
+**Przykładowe rozwiązanie:**
+
+a)
+```{r}
+if( !(7 %in% nieparzyste) ){
+  nieparzyste <- c(nieparzyste, 7)
+}
+nieparzyste
+```
+
+b)
+```{r}
+ifelse(v == 1, "jeden", ifelse(v == 2, "dwa", "trzy"))
+```
+
+## Python
 
 ```{python}
 print("Hello World!")

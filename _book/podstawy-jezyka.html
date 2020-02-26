@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 2 Podstawy języka | PoweR, czyli Python i R w Data Science dla początkujących</title>
   <meta name="description" content="Materiały z warsztatów" />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 2 Podstawy języka | PoweR, czyli Python i R w Data Science dla początkujących" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Kozak" />
 
 
-<meta name="date" content="2020-01-03" />
+<meta name="date" content="2020-02-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,25 +53,26 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +81,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,7 +133,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Wstęp</a></li>
-<li class="chapter" data-level="2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html"><i class="fa fa-check"></i><b>2</b> Podstawy języka</a></li>
+<li class="chapter" data-level="2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html"><i class="fa fa-check"></i><b>2</b> Podstawy języka</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#r"><i class="fa fa-check"></i><b>2.1</b> R</a></li>
+<li class="chapter" data-level="2.2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#python"><i class="fa fa-check"></i><b>2.2</b> Python</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="formatowanie-danych.html"><a href="formatowanie-danych.html"><i class="fa fa-check"></i><b>3</b> Formatowanie danych</a></li>
 <li class="chapter" data-level="4" data-path="wizualne-eda.html"><a href="wizualne-eda.html"><i class="fa fa-check"></i><b>4</b> Wizualne EDA</a></li>
 <li class="divider"></li>
@@ -158,11 +163,92 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="podstawy-jezyka" class="section level1">
 <h1><span class="header-section-number"> 2</span> Podstawy języka</h1>
 <p>Wstęp do Pythona i R</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">print</span>(<span class="st">&quot;Hello World!&quot;</span>)</a></code></pre></div>
-<pre><code>## [1] &quot;Hello World!&quot;</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="bu">print</span>(<span class="st">&quot;Hello World!&quot;</span>)</a></code></pre></div>
+<div id="r" class="section level2">
+<h2><span class="header-section-number">2.1</span> R</h2>
+<p><img align="center" src="figure/cheatSheetR1.png" alt="drawing"/></p>
+<p>Następujący kod będzie pisany w oprogramowaniu <strong>RStudio</strong>. Jest to najbardziej powszechne środowisko programistyczne do R-a, integrujące także wiele innych przydatnych funkcjonalności.</p>
+<p>R to bardzo wygodne narzędzie w kwestii operacji arytmetycznych. Sprawdźmy jak sprawdzi się dla paru z nich!</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="podstawy-jezyka.html#cb1-1"></a><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="podstawy-jezyka.html#cb3-1"></a><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="podstawy-jezyka.html#cb5-1"></a><span class="dv">2</span><span class="op">^</span><span class="dv">4</span></span></code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<p>Oprócz wyżej wymienionych można także dokonywać wielu innych obliczeń. Zachowywana jest także kolejność działań.</p>
+<p><em>Zadanie 1</em>. Sprawdź czy R zachowuje kolejność dzialań. Jakiego przykladu można uzyć?</p>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="podstawy-jezyka.html#cb7-1"></a><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<p>W R-rze istnieją dwie metody przypisania. Głownie używamy składni <em>x &lt;- 5</em> (możliwe także <em>5 -&gt; x</em>), ale istnieje rownież opcja może bardziej instynktownego <em>x = 5</em>. Standardowo przynajmniej na tym etapie lepiej jest jednak używać “strzałki”.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="podstawy-jezyka.html#cb9-1"></a>x &lt;-<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb9-2"><a href="podstawy-jezyka.html#cb9-2"></a>x</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="podstawy-jezyka.html#cb11-1"></a>y =<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb11-2"><a href="podstawy-jezyka.html#cb11-2"></a>zmienna &lt;-<span class="st"> &quot;Hello World!&quot;</span></span></code></pre></div>
+<p>Jedną z podstawowych struktur danych są <em>wektory</em>. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="podstawy-jezyka.html#cb12-1"></a>parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
+<span id="cb12-2"><a href="podstawy-jezyka.html#cb12-2"></a>litery &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>)</span>
+<span id="cb12-3"><a href="podstawy-jezyka.html#cb12-3"></a>litery[<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [1] &quot;b&quot;</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="podstawy-jezyka.html#cb14-1"></a>vec &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, litery)</span>
+<span id="cb14-2"><a href="podstawy-jezyka.html#cb14-2"></a>vec</span></code></pre></div>
+<pre><code>## [1] &quot;2&quot; &quot;4&quot; &quot;6&quot; &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
+<p>Oczywiście i na nich możemy dokonywać różnych operacji.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="podstawy-jezyka.html#cb16-1"></a>nieparzyste &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb16-2"><a href="podstawy-jezyka.html#cb16-2"></a></span>
+<span id="cb16-3"><a href="podstawy-jezyka.html#cb16-3"></a>parzyste <span class="op">+</span><span class="st"> </span>nieparzyste</span></code></pre></div>
+<pre><code>## [1]  3  7 11</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="podstawy-jezyka.html#cb18-1"></a>parzyste <span class="op">*</span><span class="st"> </span>x</span></code></pre></div>
+<pre><code>## [1] 10 20 30</code></pre>
+<p>Inną istotną strukturą są <em>listy</em>.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="podstawy-jezyka.html#cb20-1"></a>liczby &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">parzyste =</span> parzyste, <span class="dt">nieparzyste =</span> nieparzyste)</span>
+<span id="cb20-2"><a href="podstawy-jezyka.html#cb20-2"></a><span class="kw">c</span>(parzyste, nieparzyste)</span></code></pre></div>
+<pre><code>## [1] 2 4 6 1 3 5</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="podstawy-jezyka.html#cb22-1"></a>liczby[[<span class="dv">1</span>]]</span></code></pre></div>
+<pre><code>## [1] 2 4 6</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="podstawy-jezyka.html#cb24-1"></a>liczby[[<span class="st">&quot;parzyste&quot;</span>]]</span></code></pre></div>
+<pre><code>## [1] 2 4 6</code></pre>
+<p><em>Zadanie 2</em>.
+a) Stwórz dwa wektory składające się z 5 liczb każdy, a następnie przypisz ich rożnice do nowej zmiennej o nazwie różnica.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Połącz te trzy wektory w listę.</li>
+</ol>
+<p><strong>Przykładowe rozwiązanie:</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="podstawy-jezyka.html#cb26-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb26-2"><a href="podstawy-jezyka.html#cb26-2"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span>
+<span id="cb26-3"><a href="podstawy-jezyka.html#cb26-3"></a>roznica &lt;-<span class="st"> </span>b <span class="op">-</span><span class="st"> </span>a</span></code></pre></div>
+<ol start="2" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="podstawy-jezyka.html#cb27-1"></a>lista_wektorow &lt;-<span class="st"> </span><span class="kw">list</span>(a, b, roznica)</span></code></pre></div>
+<p>R jest także bogaty w szereg przydatnych funkcji wbudowanych. Oto niektóre z nich i ich działanie:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="podstawy-jezyka.html#cb28-1"></a>?min</span>
+<span id="cb28-2"><a href="podstawy-jezyka.html#cb28-2"></a><span class="kw">min</span>(roznica)</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="podstawy-jezyka.html#cb30-1"></a><span class="kw">max</span>(roznica)</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="podstawy-jezyka.html#cb32-1"></a><span class="kw">sum</span>(roznica)</span></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="podstawy-jezyka.html#cb34-1"></a><span class="kw">length</span>(roznica)</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="podstawy-jezyka.html#cb36-1"></a>vec2 &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span></span>
+<span id="cb36-2"><a href="podstawy-jezyka.html#cb36-2"></a>vec2</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="podstawy-jezyka.html#cb38-1"></a>vec3 &lt;-<span class="st"> </span><span class="dv">50</span><span class="op">:</span><span class="dv">100</span></span>
+<span id="cb38-2"><a href="podstawy-jezyka.html#cb38-2"></a>vec3</span></code></pre></div>
+<pre><code>##  [1]  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68
+## [20]  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87
+## [39]  88  89  90  91  92  93  94  95  96  97  98  99 100</code></pre>
+</div>
+<div id="python" class="section level2">
+<h2><span class="header-section-number">2.2</span> Python</h2>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="podstawy-jezyka.html#cb40-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello World!&quot;</span>)</span></code></pre></div>
 <pre><code>## Hello World!</code></pre>
 
+</div>
 </div>
             </section>
 

@@ -85,6 +85,3 @@ _Wojtek jest studentem Fizyki Technicznej na Politechnice Warszawskiej i wicepre
 <img align="left" src="figure/Ania.png" alt="drawing" width="200"/>
 
 _Ania jest studentką Statystyki Matematycznej i Analizy Danych na Politechnice Warszawskiej oraz pracuje jako Data Scientist. Związana z MI2 Data Lab oraz Kołem Naukowym Data Science. W wolnych chwilach organizuje i prowadzi warsztaty (SER Warsaw, R Ladies Warsaw) związane z popularyzacją języka R. Jest autorką pakietu R vivo. Gdy nie programuje jest cukieRnikiem ;)_
-
-
-

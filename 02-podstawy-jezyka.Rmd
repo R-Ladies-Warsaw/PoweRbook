@@ -6,10 +6,11 @@ Wstęp do Pythona i R
 
 <img align="center" src="figure/cheatSheetR1.png" alt="drawing"/>
 
-Następujący kod będzie pisany w oprogramowaniu **RStudio**. Jest to najbardziej powszechne środowisko programistyczne do R-a, integrujące także wiele innych przydatnych funkcjonalności.
+### Podstawowe operacje
+
+Następujący kod będzie pisany w oprogramowaniu **RStudio**. Jest to najbardziej powszechne środowisko programistyczne *R*-a, integrujące także wiele innych przydatnych funkcjonalności.
 
 R to bardzo wygodne narzędzie w kwestii operacji arytmetycznych. Sprawdźmy jak sprawdzi się dla paru z nich!
-
 ```{r}
 2 + 2
 2 + 2 + 2 + 2
@@ -18,16 +19,16 @@ R to bardzo wygodne narzędzie w kwestii operacji arytmetycznych. Sprawdźmy jak
 
 Oprócz wyżej wymienionych można także dokonywać wielu innych obliczeń. Zachowywana jest także kolejność działań.
 
-*Zadanie 1*. Sprawdź czy R zachowuje kolejność dzialań. Jakiego przykladu można uzyć?
+**Zadanie 1**
 
-**Przykładowe rozwiązanie:**
+Sprawdź czy R zachowuje kolejność dzialań. Jakiego przykladu można uzyć?
 
+*Przykładowe rozwiązanie:*
 ```{r}
 2 + 2 * 2
 ```
 
 W R-rze istnieją dwie metody przypisania. Głownie używamy składni *x <- 5* (możliwe także *5 -> x*), ale istnieje rownież opcja może bardziej instynktownego *x = 5*. Standardowo przynajmniej na tym etapie lepiej jest jednak używać "strzałki".
-
 ```{r}
 x <- 5
 x
@@ -35,8 +36,9 @@ y = 5
 zmienna <- "Hello World!"
 ```
 
-Jedną z podstawowych struktur danych są *wektory*. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.
+### Struktury danych
 
+Jedną z podstawowych są *wektory*. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.
 ```{r}
 parzyste <- c(2, 4, 6)
 litery <- c("a", "b", "c")
@@ -46,30 +48,27 @@ vec
 ```
 
 Oczywiście i na nich możemy dokonywać różnych operacji.
-
 ```{r}
 nieparzyste <- c(1, 3, 5)
-
 parzyste + nieparzyste
 parzyste * x
 ```
 
 Inną istotną strukturą są *listy*.
-
 ```{r}
 liczby <- list(parzyste = parzyste, nieparzyste = nieparzyste)
 c(parzyste, nieparzyste)
-
 liczby[[1]]
 liczby[["parzyste"]]
 ```
 
-*Zadanie 2*
+**Zadanie 2**
+
 a) Stwórz dwa wektory składające się z 5 liczb każdy, a następnie przypisz ich rożnice do nowej zmiennej o nazwie różnica.
 
 b) Połącz te trzy wektory w listę.
 
-**Przykładowe rozwiązanie:**
+*Przykładowe rozwiązanie:*
 
 a)
 ```{r}
@@ -83,9 +82,10 @@ lista_wektorow <- list(a, b, roznica)
 ```
 
 R jest także bogaty w szereg przydatnych funkcji wbudowanych. Oto niektóre z nich i ich działanie:
-
-```{r}
+```{r, eval = FALSE}
 ?min # zwraca informacje o funkcji
+```
+```{r, message = FALSE}
 min(roznica)
 max(roznica)
 sum(roznica)
@@ -97,24 +97,23 @@ vec3
 ```
 
 Kolejną bardzo ważną strukturą w R jest *ramka danych*.
-
 ```{r}
 df <- data.frame(col_1 = c(1, 2, 3), col_2 = c("raz", "dwa", "trzy"))
 ```
 
 Możemy na niej działać poprzez odpowiednie operatory:
-
 ```{r}
 df$col_1
-df[["col"]]
+df[["col_1"]]
 df[3, 1]
-df[ ,1]
-df[1, ]
-df[2:3, ]
+df[,1]
+df[1,]
+df[2:3,]
 ```
 
-W celu dokonywania decyzji o wykonywanych krokach używa się tzw. *instrukcjej warunkowej*. Najprościej mówiąc owy element języka pozwala na wykonanie ciągu operacji w zależności od zaproponowanego przez programistę warunku. Oto i przykładowe takie warunki:
+### Instrukcja warunkowa
 
+... to konstrukcja, której używamy W celu dokonywania decyzji o wykonywanych krokach. Najprościej mówiąc owy element języka pozwala na wykonanie ciągu operacji w zależności od zaproponowanego przez programistę warunku. Oto i przykładowe takie warunki:
 ```{r}
 1 == 1
 1 == 0
@@ -128,8 +127,7 @@ any(parzyste == 2)
 2 %in% parzyste
 ```
 
-... i sama instrukcja **if** w praktyce:
-
+... i sama instrukcja *if* w praktyce:
 ```{r}
 if( !(8 %in% parzyste) ){
   parzyste <- c(parzyste, 8)
@@ -144,16 +142,20 @@ if(skorupa == TRUE){
 }
 
 ifelse(skorupa == TRUE, "zolw", "kot")
-# ifelse działa też na wektorze
+```
+
+ifelse działa też na wektorze:
+```{r}
 skorupa <- c(TRUE, TRUE, FALSE)
 ifelse(skorupa == TRUE, "zolw", "kot")
 ```
 
-*Zadanie 3*
+**Zadanie 3**
+
 a) Podobnie jak w powyższym przykładzie, wektor liczb nieparzystych powiększ o liczbe 7, o ile już jej nie ma.
 b) Dany jest wektor liczb, v <- c(1,2,2,2,2,2,3,3,3,1,1,2). Użyj instrukcji if else lub ifelse, zeby zrobić z niego wektor zawierający wartosci "jeden", "dwa", "trzy".
 
-**Przykładowe rozwiązanie:**
+*Przykładowe rozwiązanie:*
 
 a)
 ```{r}
@@ -165,11 +167,250 @@ nieparzyste
 
 b)
 ```{r}
+v <- 2
 ifelse(v == 1, "jeden", ifelse(v == 2, "dwa", "trzy"))
+```
+
+### Pętle
+
+Często spotykamy się z sytuacją, kiedy daną operację lub ciąg wielu instrukcji chcemy wykonać wielokrotnie. Do tego właśnie używamy tytułowych konstrukcji.
+
+Dwie najbardziej powszechne to *while* i *for*. Pierwsza z nich działa na podobnej zasadzie jak intrukcja if - z tym wyjątkiem, że warunek sprawdzany jest wielokrotnie - tak długo, aż będzie spełniany.
+
+```{r}
+while (length(parzyste) < 10) {
+  len <- length(parzyste)
+  parzyste <- c(parzyste, parzyste[len] + 2)
+}
+```
+
+Z drugiej strony for udostępnia nam możliwość wykonania operacji konkretną ilość razy - np. dokonując czynności dla każdej liczby z listy.
+
+```{r}
+nieparzyste2 <- c()
+for(liczba in parzyste){
+  nieparzyste2 <- c(nieparzyste2, liczba - 1)
+}
+```
+
+**Zadanie 4**
+
+a) Użyj pętli (której?), żeby iterując po wektorze `liczby <- 1:10` stworzyć wektor 10 kolejnych liczb nieparzystych.
+
+b) Czy jest więcej niż jeden sposob?
+
+*Przykładowe rozwiązanie:*
+a)
+```{r}
+nieparzyste3 <- c()
+for(x in 1:10){
+  nieparzyste3 <- c(nieparzyste3, 2 * x - 1)  
+}
+```
+
+b) Ależ oczywiście, że tak!
+
+### Pliki i odczyt danych
+
+Bardzo istotnymi funkcjami są *getwd()* i *setwd()* - pierwsza zwraca ścieżkę do roboczego katalogu roboczego, zaś druga umożliwia ustawienie nowej.
+
+```{r, eval = FALSE}
+getwd()
+setwd("/Users/ja/mojeskrypty")
+```
+
+Do odczytania ramki danych możemy użyć funkcji *read.csv* - w tym celu jako pierwszy argument podajemy ścieżkę do naszego pliku, a jako opcjonalny drugi - separator [znak lub ciąg oddzielający kolejne kolumki data frame].
+
+```{r, eval = FALSE}
+# seriale <- read.csv("<tu nalezy wkleic sciezke do pliku>", sep=";")
+seriale <- read.csv("files/netflix_titles.csv")
+```
+
+Zobaczmy efekt wywołania naszej funkcji - operacja *head* zwróci nam kilka pierwszych wierszy, zaś *View* udostępnia estetyczny ogląd tabelki.
+
+```{r, eval = FALSE}
+head(seriale)
+View(seriale)
+```
+
+**Zadanie 5**
+
+a) Wypisz nazwy seriali, które wyszły w 2020 roku.
+
+b) Wybierz podzbiór zawierający Twoje 3 ulubione seriale i przypisz go do nowej zmiennej.
+
+*Przykładowe rozwiązanie:*
+a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli zawiera TRUE, to znaczy, że serial był wydany w 2020, jeśli FALSE oznacza, że serial byl wydany w innym roku
+```{r, eval = FALSE}
+ktore_w_2020 <- seriale[["release_year"]] == 2020
+```
+
+Możemy użyc wektora TRUE/FALSE do indeksowania wierszy. Poniższe polecenie wybierze tylko te wiersze, w których wektor *ktore_w_2020* przyjął wartość TRUE.
+```{r, eval = FALSE}
+seriale_2020 <- seriale[ktore_w_2020, ]
+```
+
+b)
+```{r, eval = FALSE}
+moje_seriale <- seriale[c(1, 2, 10), ]
 ```
 
 ## Python
 
-```{python}
-print("Hello World!")
+<img align="center" src="figure/cheatSheetPython1.png" alt="drawing"/>
+
+### Podstawy i typy danych
+
+```{python, python.reticulate = FALSE}
+print("Hi!")
 ```
+
+Python jest językiem **interpretowanym** - najprościej mówiąc oznacza to, że jest on tłumaczony i wykonywany "w locie". Tłumaczeniem i wykonywaniem programu zajmuje się specjalny program nazwany interpreterem języka.
+
+Najprostszym typem jest **int** - obejmuje on liczby całkowite.
+
+```{python, python.reticulate = FALSE}
+x = 21
+print(x)
+print(type(x))
+y = 0.3
+print(y)
+print(type(y))
+```
+```{python, python.reticulate = FALSE}
+def fun(x, y):
+    return x + y
+
+x = "Data"
+y = "Science"
+print(fun(x, y))
+
+x = 5
+y = 7
+print(fun(x, y))
+```
+
+Python jest *dynamicznie typowany* i typowanie jest silne - oznacza to, że język nie może niejawnie konwertować wartości różnych typów.
+
+```{python, python.reticulate = FALSE, eval = FALSE}
+a = 2
+b = 'L'
+c = a + b # zwróci błąd
+```
+
+Wartości niektórych obiektów mogą ulec zmianie. Obiekty, których wartość może ulec zmianie, są nazywane *mutable*; obiekty, których wartość jest niezmienna po ich utworzeniu, nazywane są *immutable*.
+
+Typ logiczny **bool** to dwie stałe: True i False.
+```{python, python.reticulate = FALSE}
+a = True
+print(a)
+print(type(a))
+b = False
+print(b)
+print(type(a))
+```
+
+*bool* jest podtypem liczby całkowitej (*int*).
+
+Funkcja *isinstance()* została zaprojektowana specjalnie w celu sprawdzenia, czy dane należą do określonej klasy (typu danych), zaś funkcja *issubclass()* wskazuje, czy określona klasa jest podklasą określonych klas.
+```{python, python.reticulate = FALSE}
+print(isinstance(True, int))
+print(isinstance(False, int))
+print(issubclass(bool, int))
+```
+```{python, python.reticulate = FALSE}
+x = True
+y = 1
+z = False
+print(x + y)
+print(y + z)
+```
+
+W Pythonie wartość liczby całkowitej nie jest ograniczona liczbą bitów i może wzrosnąć do limitu dostępnej pamięci.
+
+W porównaniu do np. *C++* gdzie *int* ma wartości od -2147483648 do 2147483647 - 4 bajty.
+```{python, python.reticulate = FALSE}
+x = 78
+y = -5
+z = 100 ** 20
+print(type(x), x)
+print(type(y), y)
+print(type(z), z)
+```
+
+Liczby możemy zapisywać także w w ósemkowym, szesnastkowym i binarnym systemie liczbowym.
+```{python, python.reticulate = FALSE}
+x = 0x1  # szesnastkowy
+y = 0o1  # ósemkowy
+z = 0b1  # binarny
+print(type(x), x)
+print(type(y), y)
+print(type(z), z)
+```
+
+Jest także **float** - typ liczb zmiennoprzecinkowych.
+```{python, python.reticulate = FALSE}
+x = 0.5
+y = -0.5
+print(type(x), x)
+print(type(y), y)
+```
+```{python, python.reticulate = FALSE}
+x = 0.1 + 0.1
+y = 0.1 + 0.1 + 0.1
+z = 0.3
+s = 0.2
+print(x == s)
+print("{:.20f}".format(x) )
+print("{:.20f}".format(s))
+print(y == z)
+print("{:.20f}".format(y))
+print("{:.20f}".format(z))
+```
+
+W celu przechowywania ciągu znaków używamy typu **string**.
+```{python, python.reticulate = FALSE, eval = FALSE}
+a = 'A wewnątrz można umieścić "cudzysłów"'
+b = "A wewnątrz można umieścić 'apostrof'"
+```
+
+Trzy pojedyncze apostrofy są wygodne do zapisania tekstu w kilku linijkach.
+```{python, python.reticulate = FALSE, eval = FALSE}
+c = '''Trzy pojedyncze 
+apostrofy'''
+```
+
+W celu dokumentacji używamy trzech cudzysłowów.
+```{python, python.reticulate = FALSE, eval = FALSE}
+d = """Trzy cudzysłowy"""
+```
+
+Żeby odwołać się do poszczególnych części słowa *indeksujemy*.
+```{python, python.reticulate = FALSE}
+a = 'Laura jadła jabłko'
+print(type(a), a)
+print('len(a): ', len(a)) #sprawdzanie długości słowa
+print(type(a[0]), 'a[0]: ', a[0]) # pierwszy element ma indeks 0
+print('a[1]: ', a[1])
+print('a[len(a) - 1]: ', a[len(a) - 1]) # ostatni element to długość - 1, ponieważ indeksujemy od 0
+print('a[-1] = a[len(a) - 1]: ', a[-1]) # indeksy ujemne liczą od ostatniego znaku
+print('a[-18] = a[0]: ', a[-18])
+```
+
+```{python, python.reticulate = FALSE}
+a = 'Laura jadła jabłko'
+b = a
+print(id(a), a)
+print(id(b), b)
+a += '!'
+print(id(a), a)
+print(id(b), b)
+```
+
+*Do zastanowienia...*
+
+1. Co znaczy, że język jest dynamicznie typowany?
+2. Co znaczy, że język jest interpretowany? Podaj przykłady
+3. Jak sprawdzić, czy wartość należy do jakiejś klasy?
+4. Jak sprawdzić długość string?
+5. Jak napisać wiersz w Pythonie?

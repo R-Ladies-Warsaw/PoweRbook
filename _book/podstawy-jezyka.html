@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 2 Podstawy języka | PoweR, czyli Python i R w Data Science dla początkujących</title>
   <meta name="description" content="Materiały z warsztatów" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 2 Podstawy języka | PoweR, czyli Python i R w Data Science dla początkujących" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Kozak" />
 
 
-<meta name="date" content="2020-02-26" />
+<meta name="date" content="2020-03-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,26 +53,25 @@
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -81,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -133,10 +132,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Wstęp</a></li>
-<li class="chapter" data-level="2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html"><i class="fa fa-check"></i><b>2</b> Podstawy języka</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#r"><i class="fa fa-check"></i><b>2.1</b> R</a></li>
-<li class="chapter" data-level="2.2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#python"><i class="fa fa-check"></i><b>2.2</b> Python</a></li>
+<li class="chapter" data-level="2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html"><i class="fa fa-check"></i><b>2</b> Podstawy języka</a><ul>
+<li class="chapter" data-level="2.1" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#r"><i class="fa fa-check"></i><b>2.1</b> R</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#podstawowe-operacje"><i class="fa fa-check"></i><b>2.1.1</b> Podstawowe operacje</a></li>
+<li class="chapter" data-level="2.1.2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#struktury-danych"><i class="fa fa-check"></i><b>2.1.2</b> Struktury danych</a></li>
+<li class="chapter" data-level="2.1.3" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#instrukcja-warunkowa"><i class="fa fa-check"></i><b>2.1.3</b> Instrukcja warunkowa</a></li>
+<li class="chapter" data-level="2.1.4" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#pętle"><i class="fa fa-check"></i><b>2.1.4</b> Pętle</a></li>
+<li class="chapter" data-level="2.1.5" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#pliki-i-odczyt-danych"><i class="fa fa-check"></i><b>2.1.5</b> Pliki i odczyt danych</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#python"><i class="fa fa-check"></i><b>2.2</b> Python</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#podstawy-i-typy-danych"><i class="fa fa-check"></i><b>2.2.1</b> Podstawy i typy danych</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="formatowanie-danych.html"><a href="formatowanie-danych.html"><i class="fa fa-check"></i><b>3</b> Formatowanie danych</a></li>
 <li class="chapter" data-level="4" data-path="wizualne-eda.html"><a href="wizualne-eda.html"><i class="fa fa-check"></i><b>4</b> Wizualne EDA</a></li>
@@ -166,88 +172,375 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r" class="section level2">
 <h2><span class="header-section-number">2.1</span> R</h2>
 <p><img align="center" src="figure/cheatSheetR1.png" alt="drawing"/></p>
-<p>Następujący kod będzie pisany w oprogramowaniu <strong>RStudio</strong>. Jest to najbardziej powszechne środowisko programistyczne do R-a, integrujące także wiele innych przydatnych funkcjonalności.</p>
+<div id="podstawowe-operacje" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Podstawowe operacje</h3>
+<p>Następujący kod będzie pisany w oprogramowaniu <strong>RStudio</strong>. Jest to najbardziej powszechne środowisko programistyczne <em>R</em>-a, integrujące także wiele innych przydatnych funkcjonalności.</p>
 <p>R to bardzo wygodne narzędzie w kwestii operacji arytmetycznych. Sprawdźmy jak sprawdzi się dla paru z nich!</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="podstawy-jezyka.html#cb1-1"></a><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
 <pre><code>## [1] 4</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="podstawy-jezyka.html#cb3-1"></a><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
 <pre><code>## [1] 8</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="podstawy-jezyka.html#cb5-1"></a><span class="dv">2</span><span class="op">^</span><span class="dv">4</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="dv">2</span><span class="op">^</span><span class="dv">4</span></a></code></pre></div>
 <pre><code>## [1] 16</code></pre>
 <p>Oprócz wyżej wymienionych można także dokonywać wielu innych obliczeń. Zachowywana jest także kolejność działań.</p>
-<p><em>Zadanie 1</em>. Sprawdź czy R zachowuje kolejność dzialań. Jakiego przykladu można uzyć?</p>
-<p><strong>Przykładowe rozwiązanie:</strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="podstawy-jezyka.html#cb7-1"></a><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
+<p><strong>Zadanie 1</strong></p>
+<p>Sprawdź czy R zachowuje kolejność dzialań. Jakiego przykladu można uzyć?</p>
+<p><em>Przykładowe rozwiązanie:</em></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
 <pre><code>## [1] 6</code></pre>
 <p>W R-rze istnieją dwie metody przypisania. Głownie używamy składni <em>x &lt;- 5</em> (możliwe także <em>5 -&gt; x</em>), ale istnieje rownież opcja może bardziej instynktownego <em>x = 5</em>. Standardowo przynajmniej na tym etapie lepiej jest jednak używać “strzałki”.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="podstawy-jezyka.html#cb9-1"></a>x &lt;-<span class="st"> </span><span class="dv">5</span></span>
-<span id="cb9-2"><a href="podstawy-jezyka.html#cb9-2"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">x</a></code></pre></div>
 <pre><code>## [1] 5</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="podstawy-jezyka.html#cb11-1"></a>y =<span class="st"> </span><span class="dv">5</span></span>
-<span id="cb11-2"><a href="podstawy-jezyka.html#cb11-2"></a>zmienna &lt;-<span class="st"> &quot;Hello World!&quot;</span></span></code></pre></div>
-<p>Jedną z podstawowych struktur danych są <em>wektory</em>. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="podstawy-jezyka.html#cb12-1"></a>parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
-<span id="cb12-2"><a href="podstawy-jezyka.html#cb12-2"></a>litery &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>)</span>
-<span id="cb12-3"><a href="podstawy-jezyka.html#cb12-3"></a>litery[<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">y =<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">zmienna &lt;-<span class="st"> &quot;Hello World!&quot;</span></a></code></pre></div>
+</div>
+<div id="struktury-danych" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Struktury danych</h3>
+<p>Jedną z podstawowych są <em>wektory</em>. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">litery &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>)</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">litery[<span class="dv">2</span>]</a></code></pre></div>
 <pre><code>## [1] &quot;b&quot;</code></pre>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="podstawy-jezyka.html#cb14-1"></a>vec &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, litery)</span>
-<span id="cb14-2"><a href="podstawy-jezyka.html#cb14-2"></a>vec</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">vec &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, litery)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">vec</a></code></pre></div>
 <pre><code>## [1] &quot;2&quot; &quot;4&quot; &quot;6&quot; &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
 <p>Oczywiście i na nich możemy dokonywać różnych operacji.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="podstawy-jezyka.html#cb16-1"></a>nieparzyste &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb16-2"><a href="podstawy-jezyka.html#cb16-2"></a></span>
-<span id="cb16-3"><a href="podstawy-jezyka.html#cb16-3"></a>parzyste <span class="op">+</span><span class="st"> </span>nieparzyste</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">nieparzyste &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">parzyste <span class="op">+</span><span class="st"> </span>nieparzyste</a></code></pre></div>
 <pre><code>## [1]  3  7 11</code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="podstawy-jezyka.html#cb18-1"></a>parzyste <span class="op">*</span><span class="st"> </span>x</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">parzyste <span class="op">*</span><span class="st"> </span>x</a></code></pre></div>
 <pre><code>## [1] 10 20 30</code></pre>
 <p>Inną istotną strukturą są <em>listy</em>.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="podstawy-jezyka.html#cb20-1"></a>liczby &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">parzyste =</span> parzyste, <span class="dt">nieparzyste =</span> nieparzyste)</span>
-<span id="cb20-2"><a href="podstawy-jezyka.html#cb20-2"></a><span class="kw">c</span>(parzyste, nieparzyste)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">liczby &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">parzyste =</span> parzyste, <span class="dt">nieparzyste =</span> nieparzyste)</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2"><span class="kw">c</span>(parzyste, nieparzyste)</a></code></pre></div>
 <pre><code>## [1] 2 4 6 1 3 5</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="podstawy-jezyka.html#cb22-1"></a>liczby[[<span class="dv">1</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">liczby[[<span class="dv">1</span>]]</a></code></pre></div>
 <pre><code>## [1] 2 4 6</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="podstawy-jezyka.html#cb24-1"></a>liczby[[<span class="st">&quot;parzyste&quot;</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">liczby[[<span class="st">&quot;parzyste&quot;</span>]]</a></code></pre></div>
 <pre><code>## [1] 2 4 6</code></pre>
-<p><em>Zadanie 2</em>.
-a) Stwórz dwa wektory składające się z 5 liczb każdy, a następnie przypisz ich rożnice do nowej zmiennej o nazwie różnica.</p>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Połącz te trzy wektory w listę.</li>
+<p><strong>Zadanie 2</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Stwórz dwa wektory składające się z 5 liczb każdy, a następnie przypisz ich rożnice do nowej zmiennej o nazwie różnica.</p></li>
+<li><p>Połącz te trzy wektory w listę.</p></li>
 </ol>
-<p><strong>Przykładowe rozwiązanie:</strong></p>
+<p><em>Przykładowe rozwiązanie:</em></p>
 <ol style="list-style-type: lower-alpha">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="podstawy-jezyka.html#cb26-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb26-2"><a href="podstawy-jezyka.html#cb26-2"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span>
-<span id="cb26-3"><a href="podstawy-jezyka.html#cb26-3"></a>roznica &lt;-<span class="st"> </span>b <span class="op">-</span><span class="st"> </span>a</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2">b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb26-3" data-line-number="3">roznica &lt;-<span class="st"> </span>b <span class="op">-</span><span class="st"> </span>a</a></code></pre></div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="podstawy-jezyka.html#cb27-1"></a>lista_wektorow &lt;-<span class="st"> </span><span class="kw">list</span>(a, b, roznica)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1">lista_wektorow &lt;-<span class="st"> </span><span class="kw">list</span>(a, b, roznica)</a></code></pre></div>
 <p>R jest także bogaty w szereg przydatnych funkcji wbudowanych. Oto niektóre z nich i ich działanie:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="podstawy-jezyka.html#cb28-1"></a>?min</span>
-<span id="cb28-2"><a href="podstawy-jezyka.html#cb28-2"></a><span class="kw">min</span>(roznica)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1">?min <span class="co"># zwraca informacje o funkcji</span></a></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw">min</span>(roznica)</a></code></pre></div>
 <pre><code>## [1] 5</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="podstawy-jezyka.html#cb30-1"></a><span class="kw">max</span>(roznica)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw">max</span>(roznica)</a></code></pre></div>
 <pre><code>## [1] 5</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="podstawy-jezyka.html#cb32-1"></a><span class="kw">sum</span>(roznica)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw">sum</span>(roznica)</a></code></pre></div>
 <pre><code>## [1] 25</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="podstawy-jezyka.html#cb34-1"></a><span class="kw">length</span>(roznica)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw">length</span>(roznica)</a></code></pre></div>
 <pre><code>## [1] 5</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="podstawy-jezyka.html#cb36-1"></a>vec2 &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span></span>
-<span id="cb36-2"><a href="podstawy-jezyka.html#cb36-2"></a>vec2</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1">vec2 &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span></a>
+<a class="sourceLine" id="cb37-2" data-line-number="2">vec2</a></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="podstawy-jezyka.html#cb38-1"></a>vec3 &lt;-<span class="st"> </span><span class="dv">50</span><span class="op">:</span><span class="dv">100</span></span>
-<span id="cb38-2"><a href="podstawy-jezyka.html#cb38-2"></a>vec3</span></code></pre></div>
-<pre><code>##  [1]  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68
-## [20]  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87
-## [39]  88  89  90  91  92  93  94  95  96  97  98  99 100</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1">vec3 &lt;-<span class="st"> </span><span class="dv">50</span><span class="op">:</span><span class="dv">100</span></a>
+<a class="sourceLine" id="cb39-2" data-line-number="2">vec3</a></code></pre></div>
+<pre><code>##  [1]  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66
+## [18]  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83
+## [35]  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100</code></pre>
+<p>Kolejną bardzo ważną strukturą w R jest <em>ramka danych</em>.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col_1 =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">col_2 =</span> <span class="kw">c</span>(<span class="st">&quot;raz&quot;</span>, <span class="st">&quot;dwa&quot;</span>, <span class="st">&quot;trzy&quot;</span>))</a></code></pre></div>
+<p>Możemy na niej działać poprzez odpowiednie operatory:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1">df<span class="op">$</span>col_<span class="dv">1</span></a></code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" data-line-number="1">df[[<span class="st">&quot;col_1&quot;</span>]]</a></code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1">df[<span class="dv">3</span>, <span class="dv">1</span>]</a></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1">df[,<span class="dv">1</span>]</a></code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1">df[<span class="dv">1</span>,]</a></code></pre></div>
+<pre><code>##   col_1 col_2
+## 1     1   raz</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1">df[<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>,]</a></code></pre></div>
+<pre><code>##   col_1 col_2
+## 2     2   dwa
+## 3     3  trzy</code></pre>
+</div>
+<div id="instrukcja-warunkowa" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Instrukcja warunkowa</h3>
+<p>… to konstrukcja, której używamy W celu dokonywania decyzji o wykonywanych krokach. Najprościej mówiąc owy element języka pozwala na wykonanie ciągu operacji w zależności od zaproponowanego przez programistę warunku. Oto i przykładowe takie warunki:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1"><span class="dv">1</span> <span class="op">==</span><span class="st"> </span><span class="dv">1</span></a></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1"><span class="dv">1</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span></a></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" data-line-number="1"><span class="dv">1</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span></a></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb60-1" data-line-number="1"><span class="dv">1</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span></a></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb62-1" data-line-number="1"><span class="op">!</span>(<span class="dv">1</span><span class="op">==</span><span class="dv">1</span>)</a></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" data-line-number="1">parzyste</a></code></pre></div>
+<pre><code>## [1] 2 4 6</code></pre>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" data-line-number="1">parzyste <span class="op">==</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1]  TRUE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" data-line-number="1"><span class="kw">all</span>(parzyste <span class="op">==</span><span class="st"> </span><span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" data-line-number="1"><span class="kw">any</span>(parzyste <span class="op">==</span><span class="st"> </span><span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" data-line-number="1"><span class="dv">2</span> <span class="op">%in%</span><span class="st"> </span>parzyste</a></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>… i sama instrukcja <em>if</em> w praktyce:</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb74-1" data-line-number="1"><span class="cf">if</span>( <span class="op">!</span>(<span class="dv">8</span> <span class="op">%in%</span><span class="st"> </span>parzyste) ){</a>
+<a class="sourceLine" id="cb74-2" data-line-number="2">  parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, <span class="dv">8</span>)</a>
+<a class="sourceLine" id="cb74-3" data-line-number="3">}</a>
+<a class="sourceLine" id="cb74-4" data-line-number="4">parzyste</a></code></pre></div>
+<pre><code>## [1] 2 4 6 8</code></pre>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb76-1" data-line-number="1">skorupa &lt;-<span class="st"> </span><span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb76-2" data-line-number="2"><span class="cf">if</span>(skorupa <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>){</a>
+<a class="sourceLine" id="cb76-3" data-line-number="3">  <span class="st">&quot;zolw&quot;</span></a>
+<a class="sourceLine" id="cb76-4" data-line-number="4">} <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb76-5" data-line-number="5">  <span class="st">&quot;kot&quot;</span></a>
+<a class="sourceLine" id="cb76-6" data-line-number="6">}</a></code></pre></div>
+<pre><code>## [1] &quot;zolw&quot;</code></pre>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb78-1" data-line-number="1"><span class="kw">ifelse</span>(skorupa <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>, <span class="st">&quot;zolw&quot;</span>, <span class="st">&quot;kot&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;zolw&quot;</code></pre>
+<p>ifelse działa też na wektorze:</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb80-1" data-line-number="1">skorupa &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb80-2" data-line-number="2"><span class="kw">ifelse</span>(skorupa <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>, <span class="st">&quot;zolw&quot;</span>, <span class="st">&quot;kot&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;zolw&quot; &quot;zolw&quot; &quot;kot&quot;</code></pre>
+<p><strong>Zadanie 3</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Podobnie jak w powyższym przykładzie, wektor liczb nieparzystych powiększ o liczbe 7, o ile już jej nie ma.</li>
+<li>Dany jest wektor liczb, v &lt;- c(1,2,2,2,2,2,3,3,3,1,1,2). Użyj instrukcji if else lub ifelse, zeby zrobić z niego wektor zawierający wartosci “jeden”, “dwa”, “trzy”.</li>
+</ol>
+<p><em>Przykładowe rozwiązanie:</em></p>
+<ol style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb82-1" data-line-number="1"><span class="cf">if</span>( <span class="op">!</span>(<span class="dv">7</span> <span class="op">%in%</span><span class="st"> </span>nieparzyste) ){</a>
+<a class="sourceLine" id="cb82-2" data-line-number="2">  nieparzyste &lt;-<span class="st"> </span><span class="kw">c</span>(nieparzyste, <span class="dv">7</span>)</a>
+<a class="sourceLine" id="cb82-3" data-line-number="3">}</a>
+<a class="sourceLine" id="cb82-4" data-line-number="4">nieparzyste</a></code></pre></div>
+<pre><code>## [1] 1 3 5 7</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" data-line-number="1">v &lt;-<span class="st"> </span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb84-2" data-line-number="2"><span class="kw">ifelse</span>(v <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="st">&quot;jeden&quot;</span>, <span class="kw">ifelse</span>(v <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, <span class="st">&quot;dwa&quot;</span>, <span class="st">&quot;trzy&quot;</span>))</a></code></pre></div>
+<pre><code>## [1] &quot;dwa&quot;</code></pre>
+</div>
+<div id="pętle" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Pętle</h3>
+<p>Często spotykamy się z sytuacją, kiedy daną operację lub ciąg wielu instrukcji chcemy wykonać wielokrotnie. Do tego właśnie używamy tytułowych konstrukcji.</p>
+<p>Dwie najbardziej powszechne to <em>while</em> i <em>for</em>. Pierwsza z nich działa na podobnej zasadzie jak intrukcja if - z tym wyjątkiem, że warunek sprawdzany jest wielokrotnie - tak długo, aż będzie spełniany.</p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" data-line-number="1"><span class="cf">while</span> (<span class="kw">length</span>(parzyste) <span class="op">&lt;</span><span class="st"> </span><span class="dv">10</span>) {</a>
+<a class="sourceLine" id="cb86-2" data-line-number="2">  len &lt;-<span class="st"> </span><span class="kw">length</span>(parzyste)</a>
+<a class="sourceLine" id="cb86-3" data-line-number="3">  parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, parzyste[len] <span class="op">+</span><span class="st"> </span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb86-4" data-line-number="4">}</a></code></pre></div>
+<p>Z drugiej strony for udostępnia nam możliwość wykonania operacji konkretną ilość razy - np. dokonując czynności dla każdej liczby z listy.</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb87-1" data-line-number="1">nieparzyste2 &lt;-<span class="st"> </span><span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb87-2" data-line-number="2"><span class="cf">for</span>(liczba <span class="cf">in</span> parzyste){</a>
+<a class="sourceLine" id="cb87-3" data-line-number="3">  nieparzyste2 &lt;-<span class="st"> </span><span class="kw">c</span>(nieparzyste2, liczba <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb87-4" data-line-number="4">}</a></code></pre></div>
+<p><strong>Zadanie 4</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Użyj pętli (której?), żeby iterując po wektorze <code>liczby &lt;- 1:10</code> stworzyć wektor 10 kolejnych liczb nieparzystych.</p></li>
+<li><p>Czy jest więcej niż jeden sposob?</p></li>
+</ol>
+<p><em>Przykładowe rozwiązanie:</em>
+a)</p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb88-1" data-line-number="1">nieparzyste3 &lt;-<span class="st"> </span><span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb88-2" data-line-number="2"><span class="cf">for</span>(x <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</a>
+<a class="sourceLine" id="cb88-3" data-line-number="3">  nieparzyste3 &lt;-<span class="st"> </span><span class="kw">c</span>(nieparzyste3, <span class="dv">2</span> <span class="op">*</span><span class="st"> </span>x <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)  </a>
+<a class="sourceLine" id="cb88-4" data-line-number="4">}</a></code></pre></div>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Ależ oczywiście, że tak!</li>
+</ol>
+</div>
+<div id="pliki-i-odczyt-danych" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Pliki i odczyt danych</h3>
+<p>Bardzo istotnymi funkcjami są <em>getwd()</em> i <em>setwd()</em> - pierwsza zwraca ścieżkę do roboczego katalogu roboczego, zaś druga umożliwia ustawienie nowej.</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb89-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb89-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;/Users/ja/mojeskrypty&quot;</span>)</a></code></pre></div>
+<p>Do odczytania ramki danych możemy użyć funkcji <em>read.csv</em> - w tym celu jako pierwszy argument podajemy ścieżkę do naszego pliku, a jako opcjonalny drugi - separator [znak lub ciąg oddzielający kolejne kolumki data frame].</p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" data-line-number="1"><span class="co"># seriale &lt;- read.csv(&quot;&lt;tu nalezy wkleic sciezke do pliku&gt;&quot;, sep=&quot;;&quot;)</span></a>
+<a class="sourceLine" id="cb90-2" data-line-number="2">seriale &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;files/netflix_titles.csv&quot;</span>)</a></code></pre></div>
+<p>Zobaczmy efekt wywołania naszej funkcji - operacja <em>head</em> zwróci nam kilka pierwszych wierszy, zaś <em>View</em> udostępnia estetyczny ogląd tabelki.</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb91-1" data-line-number="1"><span class="kw">head</span>(seriale)</a>
+<a class="sourceLine" id="cb91-2" data-line-number="2"><span class="kw">View</span>(seriale)</a></code></pre></div>
+<p><strong>Zadanie 5</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Wypisz nazwy seriali, które wyszły w 2020 roku.</p></li>
+<li><p>Wybierz podzbiór zawierający Twoje 3 ulubione seriale i przypisz go do nowej zmiennej.</p></li>
+</ol>
+<p><em>Przykładowe rozwiązanie:</em>
+a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli zawiera TRUE, to znaczy, że serial był wydany w 2020, jeśli FALSE oznacza, że serial byl wydany w innym roku</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" data-line-number="1">ktore_w_<span class="dv">2020</span> &lt;-<span class="st"> </span>seriale[[<span class="st">&quot;release_year&quot;</span>]] <span class="op">==</span><span class="st"> </span><span class="dv">2020</span></a></code></pre></div>
+<p>Możemy użyc wektora TRUE/FALSE do indeksowania wierszy. Poniższe polecenie wybierze tylko te wiersze, w których wektor <em>ktore_w_2020</em> przyjął wartość TRUE.</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb93-1" data-line-number="1">seriale_<span class="dv">2020</span> &lt;-<span class="st"> </span>seriale[ktore_w_<span class="dv">2020</span>, ]</a></code></pre></div>
+<ol start="2" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb94-1" data-line-number="1">moje_seriale &lt;-<span class="st"> </span>seriale[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">10</span>), ]</a></code></pre></div>
+</div>
 </div>
 <div id="python" class="section level2">
 <h2><span class="header-section-number">2.2</span> Python</h2>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="podstawy-jezyka.html#cb40-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello World!&quot;</span>)</span></code></pre></div>
-<pre><code>## Hello World!</code></pre>
+<p><img align="center" src="figure/cheatSheetPython1.png" alt="drawing"/></p>
+<div id="podstawy-i-typy-danych" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Podstawy i typy danych</h3>
+<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb95-1" data-line-number="1"><span class="bu">print</span>(<span class="st">&quot;Hi!&quot;</span>)</a></code></pre></div>
+<pre><code>## Hi!</code></pre>
+<p>Python jest językiem <strong>interpretowanym</strong> - najprościej mówiąc oznacza to, że jest on tłumaczony i wykonywany “w locie”. Tłumaczeniem i wykonywaniem programu zajmuje się specjalny program nazwany interpreterem języka.</p>
+<p>Najprostszym typem jest <strong>int</strong> - obejmuje on liczby całkowite.</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb97-1" data-line-number="1">x <span class="op">=</span> <span class="dv">21</span></a>
+<a class="sourceLine" id="cb97-2" data-line-number="2"><span class="bu">print</span>(x)</a>
+<a class="sourceLine" id="cb97-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">type</span>(x))</a>
+<a class="sourceLine" id="cb97-4" data-line-number="4">y <span class="op">=</span> <span class="fl">0.3</span></a>
+<a class="sourceLine" id="cb97-5" data-line-number="5"><span class="bu">print</span>(y)</a>
+<a class="sourceLine" id="cb97-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(y))</a></code></pre></div>
+<pre><code>## 21
+## &lt;class &#39;int&#39;&gt;
+## 0.3
+## &lt;class &#39;float&#39;&gt;</code></pre>
+<div class="sourceCode" id="cb99"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb99-1" data-line-number="1"><span class="kw">def</span> fun(x, y):</a>
+<a class="sourceLine" id="cb99-2" data-line-number="2">    <span class="cf">return</span> x <span class="op">+</span> y</a>
+<a class="sourceLine" id="cb99-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb99-4" data-line-number="4">x <span class="op">=</span> <span class="st">&quot;Data&quot;</span></a>
+<a class="sourceLine" id="cb99-5" data-line-number="5">y <span class="op">=</span> <span class="st">&quot;Science&quot;</span></a>
+<a class="sourceLine" id="cb99-6" data-line-number="6"><span class="bu">print</span>(fun(x, y))</a>
+<a class="sourceLine" id="cb99-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb99-8" data-line-number="8">x <span class="op">=</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb99-9" data-line-number="9">y <span class="op">=</span> <span class="dv">7</span></a>
+<a class="sourceLine" id="cb99-10" data-line-number="10"><span class="bu">print</span>(fun(x, y))</a></code></pre></div>
+<pre><code>## DataScience
+## 12</code></pre>
+<p>Python jest <em>dynamicznie typowany</em> i typowanie jest silne - oznacza to, że język nie może niejawnie konwertować wartości różnych typów.</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb101-1" data-line-number="1">a <span class="op">=</span> <span class="dv">2</span></a>
+<a class="sourceLine" id="cb101-2" data-line-number="2">b <span class="op">=</span> <span class="st">&#39;L&#39;</span></a>
+<a class="sourceLine" id="cb101-3" data-line-number="3">c <span class="op">=</span> a <span class="op">+</span> b <span class="co"># zwróci błąd</span></a></code></pre></div>
+<p>Wartości niektórych obiektów mogą ulec zmianie. Obiekty, których wartość może ulec zmianie, są nazywane <em>mutable</em>; obiekty, których wartość jest niezmienna po ich utworzeniu, nazywane są <em>immutable</em>.</p>
+<p>Typ logiczny <strong>bool</strong> to dwie stałe: True i False.</p>
+<div class="sourceCode" id="cb102"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb102-1" data-line-number="1">a <span class="op">=</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb102-2" data-line-number="2"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb102-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">type</span>(a))</a>
+<a class="sourceLine" id="cb102-4" data-line-number="4">b <span class="op">=</span> <span class="va">False</span></a>
+<a class="sourceLine" id="cb102-5" data-line-number="5"><span class="bu">print</span>(b)</a>
+<a class="sourceLine" id="cb102-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(a))</a></code></pre></div>
+<pre><code>## True
+## &lt;class &#39;bool&#39;&gt;
+## False
+## &lt;class &#39;bool&#39;&gt;</code></pre>
+<p><em>bool</em> jest podtypem liczby całkowitej (<em>int</em>).</p>
+<p>Funkcja <em>isinstance()</em> została zaprojektowana specjalnie w celu sprawdzenia, czy dane należą do określonej klasy (typu danych), zaś funkcja <em>issubclass()</em> wskazuje, czy określona klasa jest podklasą określonych klas.</p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb104-1" data-line-number="1"><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="va">True</span>, <span class="bu">int</span>))</a>
+<a class="sourceLine" id="cb104-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="va">False</span>, <span class="bu">int</span>))</a>
+<a class="sourceLine" id="cb104-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">issubclass</span>(<span class="bu">bool</span>, <span class="bu">int</span>))</a></code></pre></div>
+<pre><code>## True
+## True
+## True</code></pre>
+<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb106-1" data-line-number="1">x <span class="op">=</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb106-2" data-line-number="2">y <span class="op">=</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb106-3" data-line-number="3">z <span class="op">=</span> <span class="va">False</span></a>
+<a class="sourceLine" id="cb106-4" data-line-number="4"><span class="bu">print</span>(x <span class="op">+</span> y)</a>
+<a class="sourceLine" id="cb106-5" data-line-number="5"><span class="bu">print</span>(y <span class="op">+</span> z)</a></code></pre></div>
+<pre><code>## 2
+## 1</code></pre>
+<p>W Pythonie wartość liczby całkowitej nie jest ograniczona liczbą bitów i może wzrosnąć do limitu dostępnej pamięci.</p>
+<p>W porównaniu do np. <em>C++</em> gdzie <em>int</em> ma wartości od -2147483648 do 2147483647 - 4 bajty.</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb108-1" data-line-number="1">x <span class="op">=</span> <span class="dv">78</span></a>
+<a class="sourceLine" id="cb108-2" data-line-number="2">y <span class="op">=</span> <span class="dv">-5</span></a>
+<a class="sourceLine" id="cb108-3" data-line-number="3">z <span class="op">=</span> <span class="dv">100</span> <span class="op">**</span> <span class="dv">20</span></a>
+<a class="sourceLine" id="cb108-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(x), x)</a>
+<a class="sourceLine" id="cb108-5" data-line-number="5"><span class="bu">print</span>(<span class="bu">type</span>(y), y)</a>
+<a class="sourceLine" id="cb108-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(z), z)</a></code></pre></div>
+<pre><code>## &lt;class &#39;int&#39;&gt; 78
+## &lt;class &#39;int&#39;&gt; -5
+## &lt;class &#39;int&#39;&gt; 10000000000000000000000000000000000000000</code></pre>
+<p>Liczby możemy zapisywać także w w ósemkowym, szesnastkowym i binarnym systemie liczbowym.</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb110-1" data-line-number="1">x <span class="op">=</span> <span class="bn">0x1</span>  <span class="co"># szesnastkowy</span></a>
+<a class="sourceLine" id="cb110-2" data-line-number="2">y <span class="op">=</span> <span class="dv">0o1</span>  <span class="co"># ósemkowy</span></a>
+<a class="sourceLine" id="cb110-3" data-line-number="3">z <span class="op">=</span> 0b1  <span class="co"># binarny</span></a>
+<a class="sourceLine" id="cb110-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(x), x)</a>
+<a class="sourceLine" id="cb110-5" data-line-number="5"><span class="bu">print</span>(<span class="bu">type</span>(y), y)</a>
+<a class="sourceLine" id="cb110-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(z), z)</a></code></pre></div>
+<pre><code>## &lt;class &#39;int&#39;&gt; 1
+## &lt;class &#39;int&#39;&gt; 1
+## &lt;class &#39;int&#39;&gt; 1</code></pre>
+<p>Jest także <strong>float</strong> - typ liczb zmiennoprzecinkowych.</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb112-1" data-line-number="1">x <span class="op">=</span> <span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb112-2" data-line-number="2">y <span class="op">=</span> <span class="fl">-0.5</span></a>
+<a class="sourceLine" id="cb112-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">type</span>(x), x)</a>
+<a class="sourceLine" id="cb112-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(y), y)</a></code></pre></div>
+<pre><code>## &lt;class &#39;float&#39;&gt; 0.5
+## &lt;class &#39;float&#39;&gt; -0.5</code></pre>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb114-1" data-line-number="1">x <span class="op">=</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.1</span></a>
+<a class="sourceLine" id="cb114-2" data-line-number="2">y <span class="op">=</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.1</span></a>
+<a class="sourceLine" id="cb114-3" data-line-number="3">z <span class="op">=</span> <span class="fl">0.3</span></a>
+<a class="sourceLine" id="cb114-4" data-line-number="4">s <span class="op">=</span> <span class="fl">0.2</span></a>
+<a class="sourceLine" id="cb114-5" data-line-number="5"><span class="bu">print</span>(x <span class="op">==</span> s)</a>
+<a class="sourceLine" id="cb114-6" data-line-number="6"><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{:.20f}</span><span class="st">&quot;</span>.<span class="bu">format</span>(x) )</a>
+<a class="sourceLine" id="cb114-7" data-line-number="7"><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{:.20f}</span><span class="st">&quot;</span>.<span class="bu">format</span>(s))</a>
+<a class="sourceLine" id="cb114-8" data-line-number="8"><span class="bu">print</span>(y <span class="op">==</span> z)</a>
+<a class="sourceLine" id="cb114-9" data-line-number="9"><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{:.20f}</span><span class="st">&quot;</span>.<span class="bu">format</span>(y))</a>
+<a class="sourceLine" id="cb114-10" data-line-number="10"><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{:.20f}</span><span class="st">&quot;</span>.<span class="bu">format</span>(z))</a></code></pre></div>
+<pre><code>## True
+## 0.20000000000000001110
+## 0.20000000000000001110
+## False
+## 0.30000000000000004441
+## 0.29999999999999998890</code></pre>
+<p>W celu przechowywania ciągu znaków używamy typu <strong>string</strong>.</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb116-1" data-line-number="1">a <span class="op">=</span> <span class="st">&#39;A wewnątrz można umieścić &quot;cudzysłów&quot;&#39;</span></a>
+<a class="sourceLine" id="cb116-2" data-line-number="2">b <span class="op">=</span> <span class="st">&quot;A wewnątrz można umieścić &#39;apostrof&#39;&quot;</span></a></code></pre></div>
+<p>Trzy pojedyncze apostrofy są wygodne do zapisania tekstu w kilku linijkach.</p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb117-1" data-line-number="1">c <span class="op">=</span> <span class="st">&#39;&#39;&#39;Trzy pojedyncze </span></a>
+<a class="sourceLine" id="cb117-2" data-line-number="2"><span class="st">apostrofy&#39;&#39;&#39;</span></a></code></pre></div>
+<p>W celu dokumentacji używamy trzech cudzysłowów.</p>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb118-1" data-line-number="1">d <span class="op">=</span> <span class="st">&quot;&quot;&quot;Trzy cudzysłowy&quot;&quot;&quot;</span></a></code></pre></div>
+<p>Żeby odwołać się do poszczególnych części słowa <em>indeksujemy</em>.</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb119-1" data-line-number="1">a <span class="op">=</span> <span class="st">&#39;Laura jadła jabłko&#39;</span></a>
+<a class="sourceLine" id="cb119-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb119-3" data-line-number="3"><span class="bu">print</span>(<span class="st">&#39;len(a): &#39;</span>, <span class="bu">len</span>(a)) <span class="co">#sprawdzanie długości słowa</span></a>
+<a class="sourceLine" id="cb119-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(a[<span class="dv">0</span>]), <span class="st">&#39;a[0]: &#39;</span>, a[<span class="dv">0</span>]) <span class="co"># pierwszy element ma indeks 0</span></a>
+<a class="sourceLine" id="cb119-5" data-line-number="5"><span class="bu">print</span>(<span class="st">&#39;a[1]: &#39;</span>, a[<span class="dv">1</span>])</a>
+<a class="sourceLine" id="cb119-6" data-line-number="6"><span class="bu">print</span>(<span class="st">&#39;a[len(a) - 1]: &#39;</span>, a[<span class="bu">len</span>(a) <span class="op">-</span> <span class="dv">1</span>]) <span class="co"># ostatni element to długość - 1, ponieważ indeksujemy od 0</span></a>
+<a class="sourceLine" id="cb119-7" data-line-number="7"><span class="bu">print</span>(<span class="st">&#39;a[-1] = a[len(a) - 1]: &#39;</span>, a[<span class="op">-</span><span class="dv">1</span>]) <span class="co"># indeksy ujemne liczą od ostatniego znaku</span></a>
+<a class="sourceLine" id="cb119-8" data-line-number="8"><span class="bu">print</span>(<span class="st">&#39;a[-18] = a[0]: &#39;</span>, a[<span class="op">-</span><span class="dv">18</span>])</a></code></pre></div>
+<pre><code>## &lt;class &#39;str&#39;&gt; Laura jadła jabłko
+## len(a):  20
+## &lt;class &#39;str&#39;&gt; a[0]:  L
+## a[1]:  a
+## a[len(a) - 1]:  o
+## a[-1] = a[len(a) - 1]:  o
+## a[-18] = a[0]:  u</code></pre>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb121-1" data-line-number="1">a <span class="op">=</span> <span class="st">&#39;Laura jadła jabłko&#39;</span></a>
+<a class="sourceLine" id="cb121-2" data-line-number="2">b <span class="op">=</span> a</a>
+<a class="sourceLine" id="cb121-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">id</span>(a), a)</a>
+<a class="sourceLine" id="cb121-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">id</span>(b), b)</a>
+<a class="sourceLine" id="cb121-5" data-line-number="5">a <span class="op">+=</span> <span class="st">&#39;!&#39;</span></a>
+<a class="sourceLine" id="cb121-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">id</span>(a), a)</a>
+<a class="sourceLine" id="cb121-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">id</span>(b), b)</a></code></pre></div>
+<pre><code>## 2881952762800 Laura jadła jabłko
+## 2881952762800 Laura jadła jabłko
+## 2881952763696 Laura jadła jabłko!
+## 2881952762800 Laura jadła jabłko</code></pre>
+<p><em>Do zastanowienia…</em></p>
+<ol style="list-style-type: decimal">
+<li>Co znaczy, że język jest dynamicznie typowany?</li>
+<li>Co znaczy, że język jest interpretowany? Podaj przykłady</li>
+<li>Jak sprawdzić, czy wartość należy do jakiejś klasy?</li>
+<li>Jak sprawdzić długość string?</li>
+<li>Jak napisać wiersz w Pythonie?</li>
+</ol>
 
+</div>
 </div>
 </div>
             </section>

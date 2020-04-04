@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Kozak" />
 
 
-<meta name="date" content="2020-03-28" />
+<meta name="date" content="2020-04-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img align="center" src="figure/cheatSheetR1.png" alt="drawing"/></p>
 <div id="podstawowe-operacje" class="section level3">
 <h3><span class="header-section-number">2.1.1</span> Podstawowe operacje</h3>
-<p>Następujący kod będzie pisany w oprogramowaniu <strong>RStudio</strong>. Jest to najbardziej powszechne środowisko programistyczne <em>R</em>-a, integrujące także wiele innych przydatnych funkcjonalności.</p>
+<p>Poniższy kod został napisany i wygenerowany <strong>RStudio</strong>. Jest to najbardziej powszechne środowisko programistyczne <em>R</em>-a, integrujące także wiele innych przydatnych funkcjonalności. Aplikacja jest darmowa i łatwa do zainstalowania na większości systemów operacyjnych.</p>
 <p>R to bardzo wygodne narzędzie w kwestii operacji arytmetycznych. Sprawdźmy jak sprawdzi się dla paru z nich!</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
 <pre><code>## [1] 4</code></pre>
@@ -188,9 +188,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [1] 8</code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="dv">2</span><span class="op">^</span><span class="dv">4</span></a></code></pre></div>
 <pre><code>## [1] 16</code></pre>
-<p>Oprócz wyżej wymienionych można także dokonywać wielu innych obliczeń. Zachowywana jest także kolejność działań.</p>
+<p>Oprócz wyżej wymienionych można także dokonywać wielu innych obliczeń.</p>
 <p><strong>Zadanie 1</strong></p>
-<p>Sprawdź czy R zachowuje kolejność dzialań. Jakiego przykladu można uzyć?</p>
+<p>Sprawdź czy <em>R</em> zachowuje kolejność dzialań. Jakiego przykladu można uzyć?</p>
 <p><em>Przykładowe rozwiązanie:</em></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
 <pre><code>## [1] 6</code></pre>
@@ -203,7 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="struktury-danych" class="section level3">
 <h3><span class="header-section-number">2.1.2</span> Struktury danych</h3>
-<p>Jedną z podstawowych są <em>wektory</em>. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.</p>
+<p>Jedną z podstawowych są <strong>wektory</strong>. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</a>
 <a class="sourceLine" id="cb12-2" data-line-number="2">litery &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>)</a>
 <a class="sourceLine" id="cb12-3" data-line-number="3">litery[<span class="dv">2</span>]</a></code></pre></div>
@@ -217,7 +217,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [1]  3  7 11</code></pre>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">parzyste <span class="op">*</span><span class="st"> </span>x</a></code></pre></div>
 <pre><code>## [1] 10 20 30</code></pre>
-<p>Inną istotną strukturą są <em>listy</em>.</p>
+<p>Inną istotną strukturą są <strong>listy</strong>.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">liczby &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">parzyste =</span> parzyste, <span class="dt">nieparzyste =</span> nieparzyste)</a>
 <a class="sourceLine" id="cb20-2" data-line-number="2"><span class="kw">c</span>(parzyste, nieparzyste)</a></code></pre></div>
 <pre><code>## [1] 2 4 6 1 3 5</code></pre>
@@ -241,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li></li>
 </ol>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1">lista_wektorow &lt;-<span class="st"> </span><span class="kw">list</span>(a, b, roznica)</a></code></pre></div>
-<p>R jest także bogaty w szereg przydatnych funkcji wbudowanych. Oto niektóre z nich i ich działanie:</p>
+<p><em>R</em> jest także bogaty w szereg przydatnych funkcji wbudowanych. Oto niektóre z nich i ich działanie:</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1">?min <span class="co"># zwraca informacje o funkcji</span></a></code></pre></div>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw">min</span>(roznica)</a></code></pre></div>
 <pre><code>## [1] 5</code></pre>
@@ -259,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>##  [1]  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66
 ## [18]  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83
 ## [35]  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100</code></pre>
-<p>Kolejną bardzo ważną strukturą w R jest <em>ramka danych</em>.</p>
+<p>Kolejną bardzo ważną strukturą w <em>R</em> jest <strong>ramka danych</strong>.</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col_1 =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">col_2 =</span> <span class="kw">c</span>(<span class="st">&quot;raz&quot;</span>, <span class="st">&quot;dwa&quot;</span>, <span class="st">&quot;trzy&quot;</span>))</a></code></pre></div>
 <p>Możemy na niej działać poprzez odpowiednie operatory:</p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1">df<span class="op">$</span>col_<span class="dv">1</span></a></code></pre></div>
@@ -280,7 +280,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="instrukcja-warunkowa" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Instrukcja warunkowa</h3>
-<p>… to konstrukcja, której używamy W celu dokonywania decyzji o wykonywanych krokach. Najprościej mówiąc owy element języka pozwala na wykonanie ciągu operacji w zależności od zaproponowanego przez programistę warunku. Oto i przykładowe takie warunki:</p>
+<p>… to konstrukcja, której używamy w celu dokonywania decyzji o wykonywanych krokach. Najprościej mówiąc owy element języka pozwala na wykonanie ciągu operacji w zależności od zaproponowanego przez programistę warunku. Oto i przykładowe takie warunki:</p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1"><span class="dv">1</span> <span class="op">==</span><span class="st"> </span><span class="dv">1</span></a></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1"><span class="dv">1</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span></a></code></pre></div>
@@ -301,7 +301,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [1] TRUE</code></pre>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" data-line-number="1"><span class="dv">2</span> <span class="op">%in%</span><span class="st"> </span>parzyste</a></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<p>… i sama instrukcja <em>if</em> w praktyce:</p>
+<p>… i sama instrukcja <strong>if</strong> w praktyce:</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb74-1" data-line-number="1"><span class="cf">if</span>( <span class="op">!</span>(<span class="dv">8</span> <span class="op">%in%</span><span class="st"> </span>parzyste) ){</a>
 <a class="sourceLine" id="cb74-2" data-line-number="2">  parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, <span class="dv">8</span>)</a>
 <a class="sourceLine" id="cb74-3" data-line-number="3">}</a>
@@ -316,14 +316,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [1] &quot;zolw&quot;</code></pre>
 <div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb78-1" data-line-number="1"><span class="kw">ifelse</span>(skorupa <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>, <span class="st">&quot;zolw&quot;</span>, <span class="st">&quot;kot&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;zolw&quot;</code></pre>
-<p>ifelse działa też na wektorze:</p>
+<p><em>ifelse</em> działa też na wektorze:</p>
 <div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb80-1" data-line-number="1">skorupa &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)</a>
 <a class="sourceLine" id="cb80-2" data-line-number="2"><span class="kw">ifelse</span>(skorupa <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>, <span class="st">&quot;zolw&quot;</span>, <span class="st">&quot;kot&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;zolw&quot; &quot;zolw&quot; &quot;kot&quot;</code></pre>
 <p><strong>Zadanie 3</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li>Podobnie jak w powyższym przykładzie, wektor liczb nieparzystych powiększ o liczbe 7, o ile już jej nie ma.</li>
-<li>Dany jest wektor liczb, v &lt;- c(1,2,2,2,2,2,3,3,3,1,1,2). Użyj instrukcji if else lub ifelse, zeby zrobić z niego wektor zawierający wartosci “jeden”, “dwa”, “trzy”.</li>
+<li>Dany jest wektor liczb, v &lt;- c(1,2,2,2,2,2,3,3,3,1,1,2). Użyj instrukcji <em>if</em>, <em>else</em> lub <em>ifelse</em>, żeby zrobić z niego wektor zawierający wartości “jeden”, “dwa”, “trzy”.</li>
 </ol>
 <p><em>Przykładowe rozwiązanie:</em></p>
 <ol style="list-style-type: lower-alpha">
@@ -344,7 +344,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="pętle" class="section level3">
 <h3><span class="header-section-number">2.1.4</span> Pętle</h3>
 <p>Często spotykamy się z sytuacją, kiedy daną operację lub ciąg wielu instrukcji chcemy wykonać wielokrotnie. Do tego właśnie używamy tytułowych konstrukcji.</p>
-<p>Dwie najbardziej powszechne to <em>while</em> i <em>for</em>. Pierwsza z nich działa na podobnej zasadzie jak intrukcja if - z tym wyjątkiem, że warunek sprawdzany jest wielokrotnie - tak długo, aż będzie spełniany.</p>
+<p>Dwie najbardziej powszechne to <strong>while</strong> i <strong>for</strong>. Pierwsza z nich działa na podobnej zasadzie jak intrukcja <em>if</em> - z tym wyjątkiem, że warunek sprawdzany jest wielokrotnie - tak długo, aż będzie spełniany.</p>
 <div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" data-line-number="1"><span class="cf">while</span> (<span class="kw">length</span>(parzyste) <span class="op">&lt;</span><span class="st"> </span><span class="dv">10</span>) {</a>
 <a class="sourceLine" id="cb86-2" data-line-number="2">  len &lt;-<span class="st"> </span><span class="kw">length</span>(parzyste)</a>
 <a class="sourceLine" id="cb86-3" data-line-number="3">  parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, parzyste[len] <span class="op">+</span><span class="st"> </span><span class="dv">2</span>)</a>
@@ -374,10 +374,10 @@ a)</p>
 <p>Bardzo istotnymi funkcjami są <em>getwd()</em> i <em>setwd()</em> - pierwsza zwraca ścieżkę do roboczego katalogu roboczego, zaś druga umożliwia ustawienie nowej.</p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb89-1" data-line-number="1"><span class="kw">getwd</span>()</a>
 <a class="sourceLine" id="cb89-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;/Users/ja/mojeskrypty&quot;</span>)</a></code></pre></div>
-<p>Do odczytania ramki danych możemy użyć funkcji <em>read.csv</em> - w tym celu jako pierwszy argument podajemy ścieżkę do naszego pliku, a jako opcjonalny drugi - separator [znak lub ciąg oddzielający kolejne kolumki data frame].</p>
+<p>Do odczytania ramki danych możemy użyć funkcji <em>read.csv()</em> - w tym celu jako pierwszy argument podajemy ścieżkę do naszego pliku, a jako opcjonalny drugi - separator [znak lub ciąg oddzielający kolejne kolumki data frame].</p>
 <div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" data-line-number="1"><span class="co"># seriale &lt;- read.csv(&quot;&lt;tu nalezy wkleic sciezke do pliku&gt;&quot;, sep=&quot;;&quot;)</span></a>
 <a class="sourceLine" id="cb90-2" data-line-number="2">seriale &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;files/netflix_titles.csv&quot;</span>)</a></code></pre></div>
-<p>Zobaczmy efekt wywołania naszej funkcji - operacja <em>head</em> zwróci nam kilka pierwszych wierszy, zaś <em>View</em> udostępnia estetyczny ogląd tabelki.</p>
+<p>Zobaczmy efekt wywołania naszej funkcji - operacja <em>head()</em> zwróci nam kilka pierwszych wierszy, zaś <em>View</em>() udostępnia estetyczny ogląd tabelki.</p>
 <div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb91-1" data-line-number="1"><span class="kw">head</span>(seriale)</a>
 <a class="sourceLine" id="cb91-2" data-line-number="2"><span class="kw">View</span>(seriale)</a></code></pre></div>
 <p><strong>Zadanie 5</strong></p>
@@ -386,7 +386,7 @@ a)</p>
 <li><p>Wybierz podzbiór zawierający Twoje 3 ulubione seriale i przypisz go do nowej zmiennej.</p></li>
 </ol>
 <p><em>Przykładowe rozwiązanie:</em>
-a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli zawiera TRUE, to znaczy, że serial był wydany w 2020, jeśli FALSE oznacza, że serial byl wydany w innym roku</p>
+a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli zawiera TRUE, to znaczy, że serial był wydany w 2020, jeśli FALSE oznacza, że serial byl wydany w innym roku.</p>
 <div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" data-line-number="1">ktore_w_<span class="dv">2020</span> &lt;-<span class="st"> </span>seriale[[<span class="st">&quot;release_year&quot;</span>]] <span class="op">==</span><span class="st"> </span><span class="dv">2020</span></a></code></pre></div>
 <p>Możemy użyc wektora TRUE/FALSE do indeksowania wierszy. Poniższe polecenie wybierze tylko te wiersze, w których wektor <em>ktore_w_2020</em> przyjął wartość TRUE.</p>
 <div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb93-1" data-line-number="1">seriale_<span class="dv">2020</span> &lt;-<span class="st"> </span>seriale[ktore_w_<span class="dv">2020</span>, ]</a></code></pre></div>
@@ -403,7 +403,7 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <h3><span class="header-section-number">2.2.1</span> Podstawy i proste typy</h3>
 <div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb95-1" data-line-number="1"><span class="bu">print</span>(<span class="st">&quot;Hi!&quot;</span>)</a></code></pre></div>
 <pre><code>## Hi!</code></pre>
-<p>Python jest językiem <strong>interpretowanym</strong> - najprościej mówiąc oznacza to, że jest on tłumaczony i wykonywany “w locie”. Tłumaczeniem i wykonywaniem programu zajmuje się specjalny program nazwany interpreterem języka.</p>
+<p><em>Python</em> jest językiem <strong>interpretowanym</strong> - najprościej mówiąc oznacza to, że jest on tłumaczony i wykonywany “w locie”. Tłumaczeniem i wykonywaniem programu zajmuje się specjalny program nazwany interpreterem języka.</p>
 <p>Najprostszym typem jest <strong>int</strong> - obejmuje on liczby całkowite.</p>
 <div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb97-1" data-line-number="1">x <span class="op">=</span> <span class="dv">21</span></a>
 <a class="sourceLine" id="cb97-2" data-line-number="2"><span class="bu">print</span>(x)</a>
@@ -427,11 +427,11 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb99-10" data-line-number="10"><span class="bu">print</span>(fun(x, y))</a></code></pre></div>
 <pre><code>## DataScience
 ## 12</code></pre>
-<p>Python jest <em>dynamicznie typowany</em> i typowanie jest silne - oznacza to, że język nie może niejawnie konwertować wartości różnych typów.</p>
+<p>Python jest <strong>dynamicznie typowany</strong> i typowanie jest silne - oznacza to, że język nie może niejawnie konwertować wartości różnych typów.</p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb101-1" data-line-number="1">a <span class="op">=</span> <span class="dv">2</span></a>
 <a class="sourceLine" id="cb101-2" data-line-number="2">b <span class="op">=</span> <span class="st">&#39;L&#39;</span></a>
 <a class="sourceLine" id="cb101-3" data-line-number="3">c <span class="op">=</span> a <span class="op">+</span> b <span class="co"># zwróci błąd</span></a></code></pre></div>
-<p>Wartości niektórych obiektów mogą ulec zmianie. Obiekty, których wartość może ulec zmianie, są nazywane <em>mutable</em>; obiekty, których wartość jest niezmienna po ich utworzeniu, nazywane są <em>immutable</em>.</p>
+<p>Wartości niektórych obiektów mogą ulec zmianie. Obiekty, których wartość może ulec zmianie, są nazywane <strong>mutable</strong>; obiekty, których wartość jest niezmienna po ich utworzeniu, nazywane są <strong>immutable</strong>.</p>
 <p>Typ logiczny <strong>bool</strong> to dwie stałe: True i False.</p>
 <div class="sourceCode" id="cb102"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb102-1" data-line-number="1">a <span class="op">=</span> <span class="va">True</span></a>
 <a class="sourceLine" id="cb102-2" data-line-number="2"><span class="bu">print</span>(a)</a>
@@ -533,17 +533,17 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb121-5" data-line-number="5">a <span class="op">+=</span> <span class="st">&#39;!&#39;</span></a>
 <a class="sourceLine" id="cb121-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">id</span>(a), a)</a>
 <a class="sourceLine" id="cb121-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">id</span>(b), b)</a></code></pre></div>
-<pre><code>## 1857431292848 Laura jadła jabłko
-## 1857431292848 Laura jadła jabłko
-## 1857431293744 Laura jadła jabłko!
-## 1857431292848 Laura jadła jabłko</code></pre>
+<pre><code>## 1406768008112 Laura jadła jabłko
+## 1406768008112 Laura jadła jabłko
+## 1406768009008 Laura jadła jabłko!
+## 1406768008112 Laura jadła jabłko</code></pre>
 <p><em>Do zastanowienia…</em></p>
 <ol style="list-style-type: decimal">
 <li>Co znaczy, że język jest dynamicznie typowany?</li>
 <li>Co znaczy, że język jest interpretowany? Podaj przykłady</li>
 <li>Jak sprawdzić, czy wartość należy do jakiejś klasy?</li>
 <li>Jak sprawdzić długość string?</li>
-<li>Jak napisać wiersz w Pythonie?</li>
+<li>Jak napisać wiersz w <em>Pythonie</em>?</li>
 </ol>
 </div>
 <div id="struktury-danych-1" class="section level3">
@@ -588,10 +588,10 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb127-6" data-line-number="6">m.append(<span class="st">&quot;słoń&quot;</span>)</a>
 <a class="sourceLine" id="cb127-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">id</span>(m), m)</a>
 <a class="sourceLine" id="cb127-8" data-line-number="8"><span class="bu">print</span>(<span class="bu">id</span>(n), n)</a></code></pre></div>
-<pre><code>## 1876034539912 [1, 2, 3]
-## 1876034539912 [1, 2, 3]
-## 1876034539912 [1, 2, 3, &#39;słoń&#39;]
-## 1876034539912 [1, 2, 3, &#39;słoń&#39;]</code></pre>
+<pre><code>## 1399495283080 [1, 2, 3]
+## 1399495283080 [1, 2, 3]
+## 1399495283080 [1, 2, 3, &#39;słoń&#39;]
+## 1399495283080 [1, 2, 3, &#39;słoń&#39;]</code></pre>
 <p>Przydaje się funkcja <em>copy()</em>… bez zaskoczeń tworząca kopię danego obiektu.</p>
 <div class="sourceCode" id="cb129"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb129-1" data-line-number="1">l <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</a>
 <a class="sourceLine" id="cb129-2" data-line-number="2">more_lists <span class="op">=</span> l[:] <span class="co">#slices</span></a>
@@ -600,9 +600,9 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb129-5" data-line-number="5"><span class="bu">print</span>(<span class="bu">id</span>(l), l)</a>
 <a class="sourceLine" id="cb129-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">id</span>(more_lists), more_lists)</a>
 <a class="sourceLine" id="cb129-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">id</span>(more_list2), more_list2)</a></code></pre></div>
-<pre><code>## 3076264382856 [1, 2, 3, 5, 7]
-## 3076264383368 [1, 2, 3, 5, 7]
-## 3076266393992 [1, 2, 3, 5, 7]</code></pre>
+<pre><code>## 1806828392840 [1, 2, 3, 5, 7]
+## 1806828393352 [1, 2, 3, 5, 7]
+## 1806830403976 [1, 2, 3, 5, 7]</code></pre>
 <p>Bardzo przydatną umiejętnością jest zaznajomienie z obiektem <strong>slice</strong> (pl: wykrojenie?). Służy on do wygodnego tworzenia ciągów arytmetycznych, a także indeksowania po utworzonych sekwencjach.</p>
 <p>Składnia <em>slice()</em> to <strong>slice(start, stop, step)</strong>.</p>
 <div class="sourceCode" id="cb131"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb131-1" data-line-number="1">l <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</a>
@@ -667,7 +667,7 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <ol start="8" style="list-style-type: decimal">
 <li>Policz liczbę wystąpień litery <em>e</em> w stringu “PoweR is the best event evER” nie patrząc na wielkość litery (oczekiwana wartość: 7)</li>
 </ol>
-<p>… Jedną z naistotniejszych struktur danych w Pythonie są <em>tuple</em>, zwane także krotkami.</p>
+<p>… Jedną z naistotniejszych struktur danych w <em>Pythonie</em> są <strong>tuple</strong>, zwane także krotkami.</p>
 <div class="sourceCode" id="cb137"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb137-1" data-line-number="1">a <span class="op">=</span> () <span class="co"># pusta tuple</span></a>
 <a class="sourceLine" id="cb137-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
 <a class="sourceLine" id="cb137-3" data-line-number="3">a <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>) <span class="co"># deklaracja</span></a>
@@ -686,7 +686,7 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 ## &lt;class &#39;int&#39;&gt; 1
 ## &lt;class &#39;tuple&#39;&gt; (1,)
 ## &lt;class &#39;tuple&#39;&gt; (&#39;mouse&#39;, [8, 4, 6], (1, 2, 3))</code></pre>
-<p>Kolejną ważną strukturą są <strong>słowniki</strong> - ich idea to przechowywania <em>wartości</em> pod odpowiednimi <em>kluczami</em>. Należy pamiętać, że klucz jest tylko obiektem immutable (hashowalnym) i jeden klucz może mieć tylko jedną wartość (jeżeli będzie dodane kilka par z tym samym kluczem, Python zapisze ostatni). Protip: jeśli chcesz zapisać kolejność, w której elementy zostały dodane do słownika, użyj funkcji <em>collections.OrderedDict()</em>.</p>
+<p>Kolejną ważną strukturą są <strong>słowniki</strong> - ich idea to przechowywania <em>wartości</em> pod odpowiednimi <em>kluczami</em>. Należy pamiętać, że klucz jest tylko obiektem immutable (hashowalnym) i jeden klucz może mieć tylko jedną wartość (jeżeli będzie dodane kilka par z tym samym kluczem, <em>Python</em> zapisze ostatni). Protip: jeśli chcesz zapisać kolejność, w której elementy zostały dodane do <em>słownika</em>, użyj funkcji <em>collections.OrderedDict()</em>.</p>
 <div class="sourceCode" id="cb139"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb139-1" data-line-number="1">a <span class="op">=</span> <span class="bu">dict</span>() <span class="co"># pusty słownik</span></a>
 <a class="sourceLine" id="cb139-2" data-line-number="2">b <span class="op">=</span> {} <span class="co"># alternatywa na deklaracje pustego słownika</span></a>
 <a class="sourceLine" id="cb139-3" data-line-number="3">c <span class="op">=</span> {<span class="st">&#39;klucz&#39;</span>: <span class="st">&#39;wartość&#39;</span>}</a>
@@ -704,7 +704,7 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 ## &lt;class &#39;dict&#39;&gt; {&#39;klucz&#39;: &#39;wartość&#39;}
 ## {&#39;new_key&#39;: &#39;new_value&#39;, (7, 8): [(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;), &#39;🤖&#39;]}
 ## {&#39;new_key&#39;: &#39;👧&#39;, (7, 8): [(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;), &#39;🤖&#39;]}</code></pre>
-<p>Jeśli klucz nie występuje w słowniku, pojawia się error. Żeby tak nie było trzeba dodatkowo zdefiniować zachowanie <em>__missing__(key)</em>. Poniższe operacje nie zadziałają poprawnie.</p>
+<p>Jeśli klucz nie występuje w <em>słowniku</em>, pojawia się error. Żeby tak nie było trzeba dodatkowo zdefiniować zachowanie <em>__missing__(key)</em>. Poniższe operacje nie zadziałają poprawnie.</p>
 <div class="sourceCode" id="cb141"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb141-1" data-line-number="1"><span class="bu">print</span>(c[<span class="st">&#39;nieklucz&#39;</span>])</a>
 <a class="sourceLine" id="cb141-2" data-line-number="2">a[[<span class="dv">1</span>, <span class="dv">2</span>]] <span class="op">=</span> <span class="st">&#39;nie działa&#39;</span></a></code></pre></div>
 <p>Do przechowywania wartości unikalnych, przyda nam sie <strong>set</strong> - zbiór. Najprościej mówiąc jest to „kontener” zawierający niepowtarzalne elementy w losowej kolejności. Czas sprawdzenia czy jakiś obiekt jest w zbiorze jest stały, w porównaniu do listy albo krotki, w których czas jest liniowo zależny od liczby elementów.</p>
@@ -722,7 +722,7 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb142-12" data-line-number="12"></a>
 <a class="sourceLine" id="cb142-13" data-line-number="13">mixed_set.add(<span class="st">&quot;Katty&quot;</span>) </a>
 <a class="sourceLine" id="cb142-14" data-line-number="14"><span class="bu">print</span>(<span class="bu">type</span>(mixed_set), mixed_set)</a></code></pre></div>
-<p>Jeżeli chcielibyśmy dodać do zbioru element już w nim będący - set go zignoruje.</p>
+<p>Jeżeli chcielibyśmy dodać do zbioru element już w nim będący - <em>set</em> go zignoruje.</p>
 <div class="sourceCode" id="cb143"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb143-1" data-line-number="1">a <span class="op">=</span> {[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>], [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]}</a></code></pre></div>
 </div>
 <div id="operatory" class="section level3">
@@ -730,15 +730,9 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <p>W celu wykonania operacji arytmetycznych i dokonania innych ingerencji między obiektami, składnia jest prosta i nieodbiegająca od standardu innych języków programowania.</p>
 <p><strong>Arytmetyczne:</strong></p>
 <ul>
-<li><ul>
-<li>dodawanie</li>
-</ul></li>
-<li><ul>
-<li>odejmowanie</li>
-</ul></li>
-<li><ul>
-<li>mnożenie</li>
-</ul></li>
+<li>+ dodawanie</li>
+<li>- odejmowanie</li>
+<li>* mnożenie</li>
 <li>** potęgowanie</li>
 <li>/ dzielenie -&gt; float</li>
 <li>// dzielenie z zaokrągleniem do najbliższego int w dół</li>
@@ -751,27 +745,23 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <li><em>is</em> zwraca true, jeśli obie zmienne są tym samym obiektem (porównuje wyniki funkcji id, adresy obiektów przechowywane w pamięci)</li>
 <li><em>is not</em> zwraca true, jeśli obie zmienne nie są tym samym obiektem</li>
 <li>&lt; mniejsze</li>
-<li><blockquote>
-<p>większe</p>
-</blockquote></li>
-<li><blockquote>
-<p>= większe lub równe</p>
-</blockquote></li>
+<li>&gt; większe</li>
+<li>&gt;= większe lub równe</li>
 <li>&lt;= mniejsze lub równe</li>
 <li><em>in</em> zwraca wartość True, jeśli w obiekcie znajduje się sekwencja o określonej wartości (np litera w stringu)</li>
 <li><em>not in</em> czy obiekt nie jest zawarty w innym obiekcie</li>
 </ul>
 <p><strong>Logiczne:</strong></p>
 <ul>
-<li><em>and</em> zwraca wartość True, jeśli obie instrukcje są prawdziwe x &lt; 5 and x &lt; 10</li>
-<li><em>or</em> zwraca wartość True, jeśli jedno z wyrażeń jest prawdziwe x &lt; 5 or x &lt; 4</li>
-<li><em>not</em> odwraca wynik, zwraca False, jeśli wynik jest prawdziwy(x &lt; 5 and x &lt; 10)</li>
+<li><em>and</em> zwraca wartość True, jeśli obie instrukcje są prawdziwe (x &lt; 5 and x &lt; 10)</li>
+<li><em>or</em> zwraca wartość True, jeśli jedno z wyrażeń jest prawdziwe (x &lt; 5 or x &lt; 4)</li>
+<li><em>not</em> odwraca wynik, zwraca False, jeśli wynik jest prawdziwy (x &lt; 5 and x &lt; 10)</li>
 </ul>
 <p>Trochę o operatorze <strong>in</strong>:
 1. W listach są przeszukiwane wszystkie elementy po kolei. Czas wyszukiwania zależy od rozmiaru listy.
 2. Dla zbiorów wyszukiwanie nie zależy od rozmiaru zbioru - jest stałe
 3. W przypadku słowników wyszukiwane są tylko klucze, czas wyszukiwania nie zależy od liczby elementów w słowniku. Średnio <em>O(1)</em></p>
-<p><strong>Uwaga!</strong> Do porównywania stosujemy tylko <em>==</em>. Jest to bardzo ważne, gdyż niedbałe mylenie <em>==</em> z <em>=</em> to typowy błąd początkujących programistów, który niezwykle często doprowadza do porozumień i zepsucia kodu tylko przez tą jedną literkę, którą niekiedy i wychwycić niełatwo.</p>
+<p><strong>Uwaga!</strong> Do porównywania stosujemy tylko <em>==</em>. Jest to bardzo ważne, gdyż niedbałe mylenie == z = to typowy błąd początkujących programistów, który niezwykle często doprowadza do nieporozumień i zepsucia działania kodu tylko przez tą jedną literkę, którą niekiedy i wychwycić niełatwo.</p>
 <p>Zobaczmy nasze oparatory w akcji.</p>
 <div class="sourceCode" id="cb144"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb144-1" data-line-number="1">x <span class="op">=</span> <span class="dv">256</span></a>
 <a class="sourceLine" id="cb144-2" data-line-number="2">y <span class="op">=</span> <span class="dv">256</span></a>
@@ -786,15 +776,15 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb144-11" data-line-number="11"><span class="bu">print</span>(<span class="st">&#39;id(y)&#39;</span>, <span class="bu">id</span>(y))</a>
 <a class="sourceLine" id="cb144-12" data-line-number="12"><span class="bu">print</span>(<span class="st">&#39;x is y&#39;</span>, x <span class="kw">is</span> y)</a>
 <a class="sourceLine" id="cb144-13" data-line-number="13"><span class="bu">print</span>(<span class="st">&#39;x == y&#39;</span>, x <span class="op">==</span> y)</a></code></pre></div>
-<pre><code>## id(x) 140704384598384
-## id(y) 140704384598384
+<pre><code>## id(x) 140734005166448
+## id(y) 140734005166448
 ## x is y True
 ## x == y True
-## id(x) 2065240868912
-## id(y) 2065240868912
+## id(x) 2384241608752
+## id(y) 2384241608752
 ## x is y True
 ## x == y True</code></pre>
-<p>Zwróć uwagę, jak zmieniło się zachowanie Pythona dla operatorów <em>==</em> i <em>is</em> - dzieje się tak dlatego, że zwzględów optymalizacyjnych liczby “małe” są nieco inaczej interpretowane.</p>
+<p>Zwróć uwagę, jak zmieniło się zachowanie <em>Pythona</em> dla operatorów <em>==</em> i <em>is</em> - dzieje się tak dlatego, że zwzględów optymalizacyjnych liczby “małe” są nieco inaczej interpretowane.</p>
 </div>
 <div id="instrukcja-warunkowa-1" class="section level3">
 <h3><span class="header-section-number">2.2.4</span> Instrukcja warunkowa</h3>
@@ -829,16 +819,13 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <div class="sourceCode" id="cb150"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb150-1" data-line-number="1">mix <span class="op">=</span> [<span class="dv">7</span>,<span class="st">&#39;👻&#39;</span>,<span class="st">&#39;róża&#39;, 3 + 2j] </span></a>
 <a class="sourceLine" id="cb150-2" data-line-number="2"><span class="st">for el in mix: </span></a>
 <a class="sourceLine" id="cb150-3" data-line-number="3"><span class="st">    print(el)</span></a>
-<a class="sourceLine" id="cb150-4" data-line-number="4"><span class="st">    </span></a>
-<a class="sourceLine" id="cb150-5" data-line-number="5"><span class="st">print(&quot;==========================================================================&quot;)    </span></a>
-<a class="sourceLine" id="cb150-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb150-7" data-line-number="7"><span class="st">for i in &#39;</span>hello world<span class="st">&#39;:</span></a>
-<a class="sourceLine" id="cb150-8" data-line-number="8"><span class="st">    print(i * 2, end = &#39;&#39;)</span></a></code></pre></div>
+<a class="sourceLine" id="cb150-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb150-5" data-line-number="5"><span class="st">for i in &#39;</span>hello world<span class="st">&#39;:</span></a>
+<a class="sourceLine" id="cb150-6" data-line-number="6"><span class="st">    print(i * 2, end = &#39;&#39;)</span></a></code></pre></div>
 <pre><code>## 7
 ## 👻
 ## róża
 ## (3+2j)
-## ==========================================================================
 ## hheelllloo  wwoorrlldd</code></pre>
 <p>W celu przerwania działania pętli korzystamy z instrukcji <strong>break</strong>, zaś kiedy chcemy rozpocząć następny obrót pętli, omijając pozostałą część - używamy <strong>continue</strong>.</p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb152-1" data-line-number="1"><span class="cf">for</span> i <span class="kw">in</span> <span class="st">&#39;hello world&#39;</span>:</a>
@@ -859,7 +846,7 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb156-5" data-line-number="5">    <span class="bu">print</span>(<span class="st">&#39;Nie ma takiej litery&#39;</span>)</a></code></pre></div>
 <pre><code>## Nie ma takiej litery</code></pre>
 <p>Drugą pętlą jakiej możemy użyć w Pythonie jest <strong>while</strong> - zezwala ona na wykonywanie operacji w bloku kodu jej przeznaczonym tak długo, aż wpisany przez programistę warunek będzie spełniony.</p>
-<p>Intuicja: <em>while</em> to taki <em>if</em> wykonywany wielokrotnie [o ile warunek jest spełniany].</p>
+<p>Intuicja: <em>while</em> to taki <em>if</em> wykonywany wielokrotnie.</p>
 <div class="sourceCode" id="cb158"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb158-1" data-line-number="1">i <span class="op">=</span> <span class="dv">5</span></a>
 <a class="sourceLine" id="cb158-2" data-line-number="2"><span class="cf">while</span> i <span class="op">&lt;</span> <span class="dv">15</span>:</a>
 <a class="sourceLine" id="cb158-3" data-line-number="3">    <span class="bu">print</span>(i)</a>
@@ -875,23 +862,22 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb160-3" data-line-number="3">    squares.append(x <span class="op">**</span> <span class="dv">2</span>)</a>
 <a class="sourceLine" id="cb160-4" data-line-number="4"><span class="bu">print</span>(squares)</a>
 <a class="sourceLine" id="cb160-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb160-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb160-7" data-line-number="7">squares <span class="op">=</span> [x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</a>
-<a class="sourceLine" id="cb160-8" data-line-number="8"><span class="bu">print</span> (squares)</a>
-<a class="sourceLine" id="cb160-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb160-10" data-line-number="10">b <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> <span class="kw">not</span> x<span class="op">%</span><span class="dv">3</span>] <span class="co"># lista liczb podzielnych przez 3 and &lt; 10 </span></a>
-<a class="sourceLine" id="cb160-11" data-line-number="11"><span class="bu">print</span>(b)</a></code></pre></div>
+<a class="sourceLine" id="cb160-6" data-line-number="6">squares <span class="op">=</span> [x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</a>
+<a class="sourceLine" id="cb160-7" data-line-number="7"><span class="bu">print</span> (squares)</a>
+<a class="sourceLine" id="cb160-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb160-9" data-line-number="9">b <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> <span class="kw">not</span> x<span class="op">%</span><span class="dv">3</span>] <span class="co"># lista liczb podzielnych przez 3 and &lt; 10 </span></a>
+<a class="sourceLine" id="cb160-10" data-line-number="10"><span class="bu">print</span>(b)</a></code></pre></div>
 <pre><code>## [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ## [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ## [0, 3, 6, 9]</code></pre>
-<p>Można także składać zbiory i słowniki.</p>
+<p>Można także składać <em>zbiory</em> i <em>słowniki</em>.</p>
 <div class="sourceCode" id="cb162"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb162-1" data-line-number="1">a <span class="op">=</span> {<span class="bu">str</span>(i):i <span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]} <span class="co"># słownik</span></a>
 <a class="sourceLine" id="cb162-2" data-line-number="2"><span class="bu">print</span>(a)</a>
 <a class="sourceLine" id="cb162-3" data-line-number="3">a <span class="op">=</span> {x <span class="cf">for</span> x <span class="kw">in</span>  <span class="bu">range</span>(<span class="dv">10</span>) } <span class="co"># set</span></a>
 <a class="sourceLine" id="cb162-4" data-line-number="4"><span class="bu">print</span>(a)</a></code></pre></div>
 <pre><code>## {&#39;1&#39;: 1, &#39;2&#39;: 2, &#39;3&#39;: 3, &#39;4&#39;: 4, &#39;5&#39;: 5}
 ## {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</code></pre>
-<p>Oraz tuple. Tylko uważaj!</p>
+<p>… oraz tuple. Tylko uważaj!</p>
 <div class="sourceCode" id="cb164"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb164-1" data-line-number="1">a <span class="op">=</span> (x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)) <span class="co"># generatory</span></a>
 <a class="sourceLine" id="cb164-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">type</span>(a))</a>
 <a class="sourceLine" id="cb164-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">next</span>(a))</a>
@@ -937,13 +923,13 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 </div>
 <div id="funkcje" class="section level3">
 <h3><span class="header-section-number">2.2.6</span> Funkcje</h3>
-<p>W Pythonie definiuje się je za pomocą słowa kluczowego <strong>def</strong>:</p>
+<p>W Pythonie definiuje się je za pomocą słowa kluczowego <em>def</em>:</p>
 <div class="sourceCode" id="cb166"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb166-1" data-line-number="1"><span class="kw">def</span> func():</a>
 <a class="sourceLine" id="cb166-2" data-line-number="2">    <span class="bu">print</span>(<span class="st">&quot;Hi, dear!&quot;</span>)</a>
 <a class="sourceLine" id="cb166-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb166-4" data-line-number="4">func()</a></code></pre></div>
 <pre><code>## Hi, dear!</code></pre>
-<p>W zależności od deklaracji, funkcja może przyjąć dowolną liczbę argumentów o niemalże ograniczonej swobodzie wyboru typów.</p>
+<p>W zależności od deklaracji, <strong>funkcja</strong> może przyjąć dowolną liczbę argumentów o niemalże ograniczonej swobodzie wyboru typów.</p>
 <div class="sourceCode" id="cb168"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb168-1" data-line-number="1"><span class="kw">def</span> greet(name):</a>
 <a class="sourceLine" id="cb168-2" data-line-number="2">    <span class="co">&quot;&quot;&quot;This function greets to the person passed in as parameter&quot;&quot;&quot;</span></a>
 <a class="sourceLine" id="cb168-3" data-line-number="3">    <span class="bu">print</span>(<span class="st">&quot;Hello, &quot;</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">&quot;. Good morning!&quot;</span>)</a>
@@ -952,7 +938,7 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb168-6" data-line-number="6">greet(<span class="st">&quot;Kate&quot;</span>)</a></code></pre></div>
 <pre><code>## This function greets to the person passed in as parameter
 ## Hello, Kate. Good morning!</code></pre>
-<p>W przypadku podawania argumentów <strong>pozycyjnie</strong>, podaje się je po nazwie funkcji w nawiasach. Możesz dodać dowolną liczbę argumentów - po prostu oddziel je przecinkiem.</p>
+<p>W przypadku podawania argumentów <em>pozycyjnie</em>, podaje się je po nazwie funkcji w nawiasach. Możesz dodać dowolną liczbę argumentów - po prostu oddziel je przecinkiem.</p>
 <div class="sourceCode" id="cb170"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb170-1" data-line-number="1"><span class="kw">def</span> func(name):</a>
 <a class="sourceLine" id="cb170-2" data-line-number="2">    <span class="cf">return</span> name <span class="op">+</span> <span class="st">&quot; Ref&quot;</span></a>
 <a class="sourceLine" id="cb170-3" data-line-number="3"></a>
@@ -963,7 +949,7 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <pre><code>## Katty Ref
 ## Lila Ref
 ## Ewa Ref</code></pre>
-<p>Można też podawać argumenty <strong>kluczowo</strong>, tj. przez nazwanie. Wtedy kolejność jest nieważna.</p>
+<p>Można też podawać argumenty <em>kluczowo</em>, tj. przez nazwanie. Wtedy kolejność jest nieważna.</p>
 <div class="sourceCode" id="cb172"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb172-1" data-line-number="1"><span class="kw">def</span> func(person3, person2, person1):</a>
 <a class="sourceLine" id="cb172-2" data-line-number="2">    <span class="bu">print</span>(<span class="st">&quot;Imie ryczerza to &quot;</span> <span class="op">+</span> person3)</a>
 <a class="sourceLine" id="cb172-3" data-line-number="3"></a>
@@ -999,20 +985,17 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb181-2" data-line-number="2">    lista.append(<span class="st">&#39;print&#39;</span>)</a>
 <a class="sourceLine" id="cb181-3" data-line-number="3">    <span class="cf">for</span> el <span class="kw">in</span> lista:</a>
 <a class="sourceLine" id="cb181-4" data-line-number="4">        <span class="bu">print</span>(<span class="bu">id</span>(lista), el)</a>
-<a class="sourceLine" id="cb181-5" data-line-number="5">        </a>
-<a class="sourceLine" id="cb181-6" data-line-number="6">printing()</a>
-<a class="sourceLine" id="cb181-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb181-8" data-line-number="8">li <span class="op">=</span> [<span class="st">&#39;nowe słowo&#39;</span>]</a>
-<a class="sourceLine" id="cb181-9" data-line-number="9"><span class="bu">print</span>(<span class="bu">id</span>(li))</a>
-<a class="sourceLine" id="cb181-10" data-line-number="10">printing(li)</a>
-<a class="sourceLine" id="cb181-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb181-12" data-line-number="12">printing()</a></code></pre></div>
-<pre><code>## 2168984129928 print
-## 2169014454920
-## 2169014454920 nowe słowo
-## 2169014454920 print
-## 2168984129928 print
-## 2168984129928 print</code></pre>
+<a class="sourceLine" id="cb181-5" data-line-number="5">printing()</a>
+<a class="sourceLine" id="cb181-6" data-line-number="6">li <span class="op">=</span> [<span class="st">&#39;nowe słowo&#39;</span>]</a>
+<a class="sourceLine" id="cb181-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">id</span>(li))</a>
+<a class="sourceLine" id="cb181-8" data-line-number="8">printing(li)</a>
+<a class="sourceLine" id="cb181-9" data-line-number="9">printing()</a></code></pre></div>
+<pre><code>## 1964697604488 print
+## 1964728057992
+## 1964728057992 nowe słowo
+## 1964728057992 print
+## 1964697604488 print
+## 1964697604488 print</code></pre>
 <p>Niżej już poprawna implementacja i jej wywołanie:</p>
 <div class="sourceCode" id="cb183"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb183-1" data-line-number="1"><span class="kw">def</span> printing(lista <span class="op">=</span> <span class="va">None</span>):</a>
 <a class="sourceLine" id="cb183-2" data-line-number="2">    <span class="bu">print</span>(<span class="st">&quot;Przed if: &quot;</span>,<span class="bu">id</span>(lista))</a>
@@ -1029,17 +1012,17 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <a class="sourceLine" id="cb183-13" data-line-number="13">l <span class="op">=</span> [<span class="st">&#39;nowe słowo&#39;</span>]</a>
 <a class="sourceLine" id="cb183-14" data-line-number="14"><span class="bu">print</span>(<span class="st">&quot;Przed wywołaniem funkcji: &quot;</span>, <span class="bu">id</span>(l))</a>
 <a class="sourceLine" id="cb183-15" data-line-number="15">printing(l)</a></code></pre></div>
-<pre><code>## Przed if:  140704384113888
-## Po if:  2398374744968
-## 2398374744968 print
-## Przed if:  140704384113888
-## Po if:  2398374744968
-## 2398374744968 print
-## Przed wywołaniem funkcji:  2398374744968
-## Przed if:  2398374744968
-## Po if:  2398374744968
-## 2398374744968 nowe słowo
-## 2398374744968 print</code></pre>
+<pre><code>## Przed if:  140734004681952
+## Po if:  1119402283912
+## 1119402283912 print
+## Przed if:  140734004681952
+## Po if:  1119402283912
+## 1119402283912 print
+## Przed wywołaniem funkcji:  1119402283912
+## Przed if:  1119402283912
+## Po if:  1119402283912
+## 1119402283912 nowe słowo
+## 1119402283912 print</code></pre>
 <p><em>Sprawdź się!</em></p>
 <ol style="list-style-type: decimal">
 <li><p>Napisz program, który znajdzie wszystkie takie liczby, które są podzielne przez 7, ale nie są wielokrotnością 5, od 2000 do 3200 (włącznie). Otrzymane liczby należy wydrukować w oddzielonej przecinkami sekwencji w jednym wierszu.</p></li>
@@ -1064,11 +1047,12 @@ a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli za
 <li><strong>Series</strong> - jest to jednowymiarowa struktura danych („jednowymiarowa tablica”), która może przechowywać wartości i dla każdej wartości ma także unikalny indeks</li>
 <li><strong>DataFrame</strong> - dwuwymiarowa (lub więcej) wymiarowa struktura danych - w zasadzie tabela z wierszami i kolumnami. Kolumny mają nazwy, a wiersze indeksy.</li>
 </ol>
-<p><strong>Pandas</strong> to doskonała biblioteka implementująca wiele przydatnych narzedzi do obróbki i pracą nad ramką danych. Aby móc korzystać z jej mocy, musimy wczytać (i ewentualnie zainstalować, jeżeli nie zostało to wcześniej zrobione) pakiet. Standardowo przyjęło się wczytywać go jako <em>pd</em> - dodanie do instrukcji wczytywania biblioteki magicznych czterech liter <em>as pd</em> zezwoli nam na możliwość odwoływania sie w każdym kolejnym kroku kiedy będziemy potrzebować <em>pandas</em> nie do całej sześcioliterowej nazwy pakietu, ale tylko do tych dwóch prostych znaków.</p>
-<p>Jeżeli nie masz jeszcze zainstalowanego pakietu <em>pandas</em> - użyj instrukcji jak niżej.</p>
-<div class="sourceCode" id="cb185"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb185-1" data-line-number="1">install.packages(<span class="st">&quot;pandas&quot;</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb186"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb186-1" data-line-number="1"><span class="im">import</span> pandas <span class="im">as</span> pd</a></code></pre></div>
-<p>Dzięki <em>pandas</em> możemy łatwo wczytywać gotowe pliki <em>.csv</em>. Instrukcja <strong>read_csv</strong> standardowo przyjmuje dwa argumenty - ścieżkę do pliku i opcjonalnie <em>delimiter</em> - sposób, w jaki oddzielone są kolejne wartości w wierszach.</p>
+<p><strong>Pandas</strong> to doskonała biblioteka implementująca wiele przydatnych narzedzi do obróbki i pracy nad ramką danych. Aby móc korzystać z jej mocy, musimy wczytać (i ewentualnie zainstalować, jeżeli nie zostało to wcześniej zrobione) pakiet o tej właśnie nazwie. Standardowo przyjęło się wczytywać go jako <em>pd</em> - dodanie do instrukcji wczytywania biblioteki magicznych czterech liter <em>as pd</em> zezwoli nam na możliwość odwoływania sie w każdym kolejnym kroku kiedy będziemy potrzebować <em>pandas</em> nie do całej sześcioliterowej nazwy pakietu, ale tylko do tych dwóch prostych znaków.</p>
+<p>Jeżeli nie masz jeszcze zainstalowanego pakietu <em>pandas</em> - użyj instrukcji jak niżej… a następnie za każdym razem gdy będziesz potrzebować jego dóbr - wczytaj go za pomocą instrukcji <em>import</em>.</p>
+<div class="sourceCode" id="cb185"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb185-1" data-line-number="1">install.packages(<span class="st">&quot;pandas&quot;</span>)</a>
+<a class="sourceLine" id="cb185-2" data-line-number="2"><span class="im">import</span> pandas <span class="im">as</span> pd</a></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<p>Dzięki <em>pandas</em> możemy łatwo wczytywać gotowe pliki <em>.csv</em>. Instrukcja <em>read_csv()</em> standardowo przyjmuje dwa argumenty - ścieżkę do pliku i opcjonalnie <em>delimiter</em> - sposób, w jaki oddzielone są kolejne wartości w wierszach.</p>
 <div class="sourceCode" id="cb187"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb187-1" data-line-number="1">data <span class="op">=</span> pd.read_csv(<span class="st">&quot;files/movies.csv&quot;</span>, delimiter <span class="op">=</span> <span class="st">&#39;,&#39;</span>)</a></code></pre></div>
 <p>Tak utworzona ramka danych ma swój własny typ.</p>
 <div class="sourceCode" id="cb188"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb188-1" data-line-number="1"><span class="bu">print</span>(<span class="bu">type</span>(data.head()))</a></code></pre></div>

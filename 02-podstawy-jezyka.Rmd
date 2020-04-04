@@ -8,7 +8,7 @@ Wstęp do Pythona i R
 
 ### Podstawowe operacje
 
-Następujący kod będzie pisany w oprogramowaniu **RStudio**. Jest to najbardziej powszechne środowisko programistyczne *R*-a, integrujące także wiele innych przydatnych funkcjonalności.
+Poniższy kod został napisany i wygenerowany **RStudio**. Jest to najbardziej powszechne środowisko programistyczne *R*-a, integrujące także wiele innych przydatnych funkcjonalności. Aplikacja jest darmowa i łatwa do zainstalowania na większości systemów operacyjnych.
 
 R to bardzo wygodne narzędzie w kwestii operacji arytmetycznych. Sprawdźmy jak sprawdzi się dla paru z nich!
 ```{r}
@@ -17,11 +17,11 @@ R to bardzo wygodne narzędzie w kwestii operacji arytmetycznych. Sprawdźmy jak
 2^4
 ```
 
-Oprócz wyżej wymienionych można także dokonywać wielu innych obliczeń. Zachowywana jest także kolejność działań.
+Oprócz wyżej wymienionych można także dokonywać wielu innych obliczeń.
 
 **Zadanie 1**
 
-Sprawdź czy R zachowuje kolejność dzialań. Jakiego przykladu można uzyć?
+Sprawdź czy *R* zachowuje kolejność dzialań. Jakiego przykladu można uzyć?
 
 *Przykładowe rozwiązanie:*
 ```{r}
@@ -38,7 +38,7 @@ zmienna <- "Hello World!"
 
 ### Struktury danych
 
-Jedną z podstawowych są *wektory*. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.
+Jedną z podstawowych są **wektory**. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.
 ```{r}
 parzyste <- c(2, 4, 6)
 litery <- c("a", "b", "c")
@@ -54,7 +54,7 @@ parzyste + nieparzyste
 parzyste * x
 ```
 
-Inną istotną strukturą są *listy*.
+Inną istotną strukturą są **listy**.
 ```{r}
 liczby <- list(parzyste = parzyste, nieparzyste = nieparzyste)
 c(parzyste, nieparzyste)
@@ -81,7 +81,7 @@ b)
 lista_wektorow <- list(a, b, roznica)
 ```
 
-R jest także bogaty w szereg przydatnych funkcji wbudowanych. Oto niektóre z nich i ich działanie:
+*R* jest także bogaty w szereg przydatnych funkcji wbudowanych. Oto niektóre z nich i ich działanie:
 ```{r, eval = FALSE}
 ?min # zwraca informacje o funkcji
 ```
@@ -96,7 +96,7 @@ vec3 <- 50:100
 vec3
 ```
 
-Kolejną bardzo ważną strukturą w R jest *ramka danych*.
+Kolejną bardzo ważną strukturą w *R* jest **ramka danych**.
 ```{r}
 df <- data.frame(col_1 = c(1, 2, 3), col_2 = c("raz", "dwa", "trzy"))
 ```
@@ -113,7 +113,7 @@ df[2:3,]
 
 ### Instrukcja warunkowa
 
-... to konstrukcja, której używamy W celu dokonywania decyzji o wykonywanych krokach. Najprościej mówiąc owy element języka pozwala na wykonanie ciągu operacji w zależności od zaproponowanego przez programistę warunku. Oto i przykładowe takie warunki:
+... to konstrukcja, której używamy w celu dokonywania decyzji o wykonywanych krokach. Najprościej mówiąc owy element języka pozwala na wykonanie ciągu operacji w zależności od zaproponowanego przez programistę warunku. Oto i przykładowe takie warunki:
 ```{r}
 1 == 1
 1 == 0
@@ -127,7 +127,7 @@ any(parzyste == 2)
 2 %in% parzyste
 ```
 
-... i sama instrukcja *if* w praktyce:
+... i sama instrukcja **if** w praktyce:
 ```{r}
 if( !(8 %in% parzyste) ){
   parzyste <- c(parzyste, 8)
@@ -144,7 +144,7 @@ if(skorupa == TRUE){
 ifelse(skorupa == TRUE, "zolw", "kot")
 ```
 
-ifelse działa też na wektorze:
+*ifelse* działa też na wektorze:
 ```{r}
 skorupa <- c(TRUE, TRUE, FALSE)
 ifelse(skorupa == TRUE, "zolw", "kot")
@@ -153,7 +153,7 @@ ifelse(skorupa == TRUE, "zolw", "kot")
 **Zadanie 3**
 
 a) Podobnie jak w powyższym przykładzie, wektor liczb nieparzystych powiększ o liczbe 7, o ile już jej nie ma.
-b) Dany jest wektor liczb, v <- c(1,2,2,2,2,2,3,3,3,1,1,2). Użyj instrukcji if else lub ifelse, zeby zrobić z niego wektor zawierający wartosci "jeden", "dwa", "trzy".
+b) Dany jest wektor liczb, v <- c(1,2,2,2,2,2,3,3,3,1,1,2). Użyj instrukcji *if*, *else* lub *ifelse*, żeby zrobić z niego wektor zawierający wartości "jeden", "dwa", "trzy".
 
 *Przykładowe rozwiązanie:*
 
@@ -175,7 +175,7 @@ ifelse(v == 1, "jeden", ifelse(v == 2, "dwa", "trzy"))
 
 Często spotykamy się z sytuacją, kiedy daną operację lub ciąg wielu instrukcji chcemy wykonać wielokrotnie. Do tego właśnie używamy tytułowych konstrukcji.
 
-Dwie najbardziej powszechne to *while* i *for*. Pierwsza z nich działa na podobnej zasadzie jak intrukcja if - z tym wyjątkiem, że warunek sprawdzany jest wielokrotnie - tak długo, aż będzie spełniany.
+Dwie najbardziej powszechne to **while** i **for**. Pierwsza z nich działa na podobnej zasadzie jak intrukcja *if* - z tym wyjątkiem, że warunek sprawdzany jest wielokrotnie - tak długo, aż będzie spełniany.
 
 ```{r}
 while (length(parzyste) < 10) {
@@ -219,14 +219,14 @@ getwd()
 setwd("/Users/ja/mojeskrypty")
 ```
 
-Do odczytania ramki danych możemy użyć funkcji *read.csv* - w tym celu jako pierwszy argument podajemy ścieżkę do naszego pliku, a jako opcjonalny drugi - separator [znak lub ciąg oddzielający kolejne kolumki data frame].
+Do odczytania ramki danych możemy użyć funkcji *read.csv()* - w tym celu jako pierwszy argument podajemy ścieżkę do naszego pliku, a jako opcjonalny drugi - separator [znak lub ciąg oddzielający kolejne kolumki data frame].
 
 ```{r, eval = FALSE}
 # seriale <- read.csv("<tu nalezy wkleic sciezke do pliku>", sep=";")
 seriale <- read.csv("files/netflix_titles.csv")
 ```
 
-Zobaczmy efekt wywołania naszej funkcji - operacja *head* zwróci nam kilka pierwszych wierszy, zaś *View* udostępnia estetyczny ogląd tabelki.
+Zobaczmy efekt wywołania naszej funkcji - operacja *head()* zwróci nam kilka pierwszych wierszy, zaś *View*() udostępnia estetyczny ogląd tabelki.
 
 ```{r, eval = FALSE}
 head(seriale)
@@ -240,7 +240,7 @@ a) Wypisz nazwy seriali, które wyszły w 2020 roku.
 b) Wybierz podzbiór zawierający Twoje 3 ulubione seriale i przypisz go do nowej zmiennej.
 
 *Przykładowe rozwiązanie:*
-a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli zawiera TRUE, to znaczy, że serial był wydany w 2020, jeśli FALSE oznacza, że serial byl wydany w innym roku
+a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli zawiera TRUE, to znaczy, że serial był wydany w 2020, jeśli FALSE oznacza, że serial byl wydany w innym roku.
 ```{r, eval = FALSE}
 ktore_w_2020 <- seriale[["release_year"]] == 2020
 ```
@@ -265,7 +265,7 @@ moje_seriale <- seriale[c(1, 2, 10), ]
 print("Hi!")
 ```
 
-Python jest językiem **interpretowanym** - najprościej mówiąc oznacza to, że jest on tłumaczony i wykonywany "w locie". Tłumaczeniem i wykonywaniem programu zajmuje się specjalny program nazwany interpreterem języka.
+*Python* jest językiem **interpretowanym** - najprościej mówiąc oznacza to, że jest on tłumaczony i wykonywany "w locie". Tłumaczeniem i wykonywaniem programu zajmuje się specjalny program nazwany interpreterem języka.
 
 Najprostszym typem jest **int** - obejmuje on liczby całkowite.
 
@@ -290,7 +290,7 @@ y = 7
 print(fun(x, y))
 ```
 
-Python jest *dynamicznie typowany* i typowanie jest silne - oznacza to, że język nie może niejawnie konwertować wartości różnych typów.
+Python jest **dynamicznie typowany** i typowanie jest silne - oznacza to, że język nie może niejawnie konwertować wartości różnych typów.
 
 ```{python, python.reticulate = FALSE, eval = FALSE}
 a = 2
@@ -298,7 +298,7 @@ b = 'L'
 c = a + b # zwróci błąd
 ```
 
-Wartości niektórych obiektów mogą ulec zmianie. Obiekty, których wartość może ulec zmianie, są nazywane *mutable*; obiekty, których wartość jest niezmienna po ich utworzeniu, nazywane są *immutable*.
+Wartości niektórych obiektów mogą ulec zmianie. Obiekty, których wartość może ulec zmianie, są nazywane **mutable**; obiekty, których wartość jest niezmienna po ich utworzeniu, nazywane są **immutable**.
 
 Typ logiczny **bool** to dwie stałe: True i False.
 ```{python, python.reticulate = FALSE}
@@ -413,7 +413,7 @@ print(id(b), b)
 2. Co znaczy, że język jest interpretowany? Podaj przykłady
 3. Jak sprawdzić, czy wartość należy do jakiejś klasy?
 4. Jak sprawdzić długość string?
-5. Jak napisać wiersz w Pythonie?
+5. Jak napisać wiersz w *Pythonie*?
 
 ### Struktury danych
 
@@ -524,7 +524,7 @@ print("c:", c)
 
 8. Policz liczbę wystąpień litery *e* w stringu "PoweR is the best event evER" nie patrząc na wielkość litery (oczekiwana wartość: 7)
 
-... Jedną z naistotniejszych struktur danych w Pythonie są *tuple*, zwane także krotkami.
+... Jedną z naistotniejszych struktur danych w *Pythonie* są **tuple**, zwane także krotkami.
 ```{python, python.reticulate = FALSE}
 a = () # pusta tuple
 print(type(a), a)
@@ -540,7 +540,7 @@ n_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
 print(type(n_tuple), n_tuple)
 ```
 
-Kolejną ważną strukturą są **słowniki** - ich idea to przechowywania *wartości* pod odpowiednimi *kluczami*. Należy pamiętać, że klucz jest tylko obiektem immutable (hashowalnym) i jeden klucz może mieć tylko jedną wartość (jeżeli będzie dodane kilka par z tym samym kluczem, Python zapisze ostatni). Protip: jeśli chcesz zapisać kolejność, w której elementy zostały dodane do słownika, użyj funkcji *collections.OrderedDict()*.
+Kolejną ważną strukturą są **słowniki** - ich idea to przechowywania *wartości* pod odpowiednimi *kluczami*. Należy pamiętać, że klucz jest tylko obiektem immutable (hashowalnym) i jeden klucz może mieć tylko jedną wartość (jeżeli będzie dodane kilka par z tym samym kluczem, *Python* zapisze ostatni). Protip: jeśli chcesz zapisać kolejność, w której elementy zostały dodane do *słownika*, użyj funkcji *collections.OrderedDict()*.
 ```{python, python.reticulate = FALSE}
 a = dict() # pusty słownik
 b = {} # alternatywa na deklaracje pustego słownika
@@ -556,7 +556,7 @@ a['new_key'] = '👧'
 print(a)
 ```
 
-Jeśli klucz nie występuje w słowniku, pojawia się error. Żeby tak nie było trzeba dodatkowo zdefiniować zachowanie *\_\_missing\_\_(key)*. Poniższe operacje nie zadziałają poprawnie.
+Jeśli klucz nie występuje w *słowniku*, pojawia się error. Żeby tak nie było trzeba dodatkowo zdefiniować zachowanie *\_\_missing\_\_(key)*. Poniższe operacje nie zadziałają poprawnie.
 ```{python, python.reticulate = FALSE, eval = FALSE}
 print(c['nieklucz'])
 a[[1, 2]] = 'nie działa'
@@ -580,7 +580,7 @@ mixed_set.add("Katty")
 print(type(mixed_set), mixed_set)
 ```
 
-Jeżeli chcielibyśmy dodać do zbioru element już w nim będący - set go zignoruje.
+Jeżeli chcielibyśmy dodać do zbioru element już w nim będący - *set* go zignoruje.
 ```{python, python.reticulate = FALSE, eval = FALSE}
 a = {[1,2,3], [1,2,3]}
 ```
@@ -591,9 +591,9 @@ W celu wykonania operacji arytmetycznych i dokonania innych ingerencji między o
 
 **Arytmetyczne:**
 
-* + dodawanie
-* - odejmowanie
-* * mnożenie
+* \+ dodawanie
+* \- odejmowanie
+* \* mnożenie
 * ** potęgowanie
 * / dzielenie -> float
 * // dzielenie z zaokrągleniem do najbliższego int w dół
@@ -605,25 +605,25 @@ W celu wykonania operacji arytmetycznych i dokonania innych ingerencji między o
 * != różne co do wartości
 * *is* zwraca true, jeśli obie zmienne są tym samym obiektem (porównuje wyniki funkcji id, adresy obiektów przechowywane w pamięci)
 * *is not* zwraca true, jeśli obie zmienne nie są tym samym obiektem
-* < mniejsze
-* > większe
-* >= większe lub równe
+* \< mniejsze
+* \> większe
+* \>= większe lub równe
 * \<= mniejsze lub równe
 * *in* zwraca wartość True, jeśli w obiekcie znajduje się sekwencja o określonej wartości (np litera w stringu)
 * *not in* czy obiekt nie jest zawarty w innym obiekcie
 
 **Logiczne:**
 
-* *and* zwraca wartość True, jeśli obie instrukcje są prawdziwe x < 5 and x < 10
-* *or* zwraca wartość True, jeśli jedno z wyrażeń jest prawdziwe x < 5 or x < 4
-* *not* odwraca wynik, zwraca False, jeśli wynik jest prawdziwy(x < 5 and x < 10)
+* *and* zwraca wartość True, jeśli obie instrukcje są prawdziwe (x < 5 and x < 10)
+* *or* zwraca wartość True, jeśli jedno z wyrażeń jest prawdziwe (x < 5 or x < 4)
+* *not* odwraca wynik, zwraca False, jeśli wynik jest prawdziwy (x < 5 and x < 10)
 
 Trochę o operatorze **in**:
 1. W listach są przeszukiwane wszystkie elementy po kolei. Czas wyszukiwania zależy od rozmiaru listy.
 2. Dla zbiorów wyszukiwanie nie zależy od rozmiaru zbioru - jest stałe
 3. W przypadku słowników wyszukiwane są tylko klucze, czas wyszukiwania nie zależy od liczby elementów w słowniku. Średnio *O(1)*
 
-**Uwaga!** Do porównywania stosujemy tylko *==*. Jest to bardzo ważne, gdyż niedbałe mylenie *==* z *=* to typowy błąd początkujących programistów, który niezwykle często doprowadza do porozumień i zepsucia kodu tylko przez tą jedną literkę, którą niekiedy i wychwycić niełatwo.
+**Uwaga!** Do porównywania stosujemy tylko *==*. Jest to bardzo ważne, gdyż niedbałe mylenie == z = to typowy błąd początkujących programistów, który niezwykle często doprowadza do nieporozumień i zepsucia działania kodu tylko przez tą jedną literkę, którą niekiedy i wychwycić niełatwo.
 
 Zobaczmy nasze oparatory w akcji.
 ```{python, python.reticulate = FALSE}
@@ -642,7 +642,7 @@ print('x is y', x is y)
 print('x == y', x == y)
 ```
 
-Zwróć uwagę, jak zmieniło się zachowanie Pythona dla operatorów *==* i *is* - dzieje się tak dlatego, że zwzględów optymalizacyjnych liczby "małe" są nieco inaczej interpretowane.
+Zwróć uwagę, jak zmieniło się zachowanie *Pythona* dla operatorów *==* i *is* - dzieje się tak dlatego, że zwzględów optymalizacyjnych liczby "małe" są nieco inaczej interpretowane.
 
 ### Instrukcja warunkowa
 
@@ -677,8 +677,6 @@ Iterować możemy po po dowolnych iterowalnych obiektach.
 mix = [7,'👻','róża', 3 + 2j] 
 for el in mix: 
     print(el)
-    
-print("==========================================================================")    
 
 for i in 'hello world':
     print(i * 2, end = '')
@@ -710,7 +708,7 @@ else:
 
 Drugą pętlą jakiej możemy użyć w Pythonie jest **while** - zezwala ona na wykonywanie operacji w bloku kodu jej przeznaczonym tak długo, aż wpisany przez programistę warunek będzie spełniony.
 
-Intuicja: *while* to taki *if* wykonywany wielokrotnie [o ile warunek jest spełniany].
+Intuicja: *while* to taki *if* wykonywany wielokrotnie.
 ```{python, python.reticulate = FALSE}
 i = 5
 while i < 15:
@@ -725,7 +723,6 @@ for x in range(10):
     squares.append(x ** 2)
 print(squares)
 
-
 squares = [x**2 for x in range(10)]
 print (squares)
 
@@ -733,7 +730,7 @@ b = [x for x in range(10) if not x%3] # lista liczb podzielnych przez 3 and < 10
 print(b)
 ```
 
-Można także składać zbiory i słowniki.
+Można także składać *zbiory* i *słowniki*.
 ```{python, python.reticulate = FALSE}
 a = {str(i):i for i in [1,2,3,4,5]} # słownik
 print(a)
@@ -741,7 +738,7 @@ a = {x for x in  range(10) } # set
 print(a)
 ```
 
-Oraz tuple. Tylko uważaj!
+... oraz tuple. Tylko uważaj!
 ```{python, python.reticulate = FALSE}
 a = (x for x in range(10)) # generatory
 print(type(a))
@@ -790,7 +787,7 @@ print(type(b))
 
 ### Funkcje
 
-W Pythonie definiuje się je za pomocą słowa kluczowego **def**:
+W Pythonie definiuje się je za pomocą słowa kluczowego *def*:
 ```{python, python.reticulate = FALSE}
 def func():
     print("Hi, dear!")
@@ -798,7 +795,7 @@ def func():
 func()
 ```
 
-W zależności od deklaracji, funkcja może przyjąć dowolną liczbę argumentów o niemalże ograniczonej swobodzie wyboru typów.
+W zależności od deklaracji, **funkcja** może przyjąć dowolną liczbę argumentów o niemalże ograniczonej swobodzie wyboru typów.
 ```{python, python.reticulate = FALSE}
 def greet(name):
     """This function greets to the person passed in as parameter"""
@@ -808,7 +805,7 @@ print(greet.__doc__)
 greet("Kate")
 ```
 
-W przypadku podawania argumentów **pozycyjnie**, podaje się je po nazwie funkcji w nawiasach. Możesz dodać dowolną liczbę argumentów - po prostu oddziel je przecinkiem.
+W przypadku podawania argumentów *pozycyjnie*, podaje się je po nazwie funkcji w nawiasach. Możesz dodać dowolną liczbę argumentów - po prostu oddziel je przecinkiem.
 ```{python, python.reticulate = FALSE}
 def func(name):
     return name + " Ref"
@@ -819,7 +816,7 @@ print(func("Lila"))
 print(func("Ewa"))
 ```
 
-Można też podawać argumenty **kluczowo**, tj. przez nazwanie. Wtedy kolejność jest nieważna.
+Można też podawać argumenty *kluczowo*, tj. przez nazwanie. Wtedy kolejność jest nieważna.
 ```{python, python.reticulate = FALSE}
 def func(person3, person2, person1):
     print("Imie ryczerza to " + person3)
@@ -870,13 +867,10 @@ def printing(lista = []):
     lista.append('print')
     for el in lista:
         print(id(lista), el)
-        
 printing()
-
 li = ['nowe słowo']
 print(id(li))
 printing(li)
-
 printing()
 ```
 
@@ -925,19 +919,17 @@ W kolejnych krokach będziemy brać pod lupę dwa rodzaje tabel:
 1. **Series** - jest to jednowymiarowa struktura danych („jednowymiarowa tablica”), która może przechowywać wartości i dla każdej wartości ma także unikalny indeks
 2. **DataFrame** - dwuwymiarowa (lub więcej) wymiarowa struktura danych - w zasadzie tabela z wierszami i kolumnami. Kolumny mają nazwy, a wiersze indeksy.
 
-**Pandas** to doskonała biblioteka implementująca wiele przydatnych narzedzi do obróbki i pracą nad ramką danych. Aby móc korzystać z jej mocy, musimy wczytać (i ewentualnie zainstalować, jeżeli nie zostało to wcześniej zrobione) pakiet. Standardowo przyjęło się wczytywać go jako *pd* - dodanie do instrukcji wczytywania biblioteki magicznych czterech liter *as pd* zezwoli nam na możliwość odwoływania sie w każdym kolejnym kroku kiedy będziemy potrzebować *pandas* nie do całej sześcioliterowej nazwy pakietu, ale tylko do tych dwóch prostych znaków.
+**Pandas** to doskonała biblioteka implementująca wiele przydatnych narzedzi do obróbki i pracy nad ramką danych. Aby móc korzystać z jej mocy, musimy wczytać (i ewentualnie zainstalować, jeżeli nie zostało to wcześniej zrobione) pakiet o tej właśnie nazwie. Standardowo przyjęło się wczytywać go jako *pd* - dodanie do instrukcji wczytywania biblioteki magicznych czterech liter *as pd* zezwoli nam na możliwość odwoływania sie w każdym kolejnym kroku kiedy będziemy potrzebować *pandas* nie do całej sześcioliterowej nazwy pakietu, ale tylko do tych dwóch prostych znaków.
 
-Jeżeli nie masz jeszcze zainstalowanego pakietu *pandas* - użyj instrukcji jak niżej.
+Jeżeli nie masz jeszcze zainstalowanego pakietu *pandas* - użyj instrukcji jak niżej... a następnie za każdym razem gdy będziesz potrzebować jego dóbr - wczytaj go za pomocą instrukcji *import*.
 
 ```{python, python.reticulate = FALSE, eval = FALSE}
 install.packages("pandas")
-```
-
-```{python, python.reticulate = FALSE, eval = FALSE}
 import pandas as pd
 ```
 
-Dzięki *pandas* możemy łatwo wczytywać gotowe pliki *.csv*. Instrukcja **read_csv** standardowo przyjmuje dwa argumenty - ścieżkę do pliku i opcjonalnie *delimiter* - sposób, w jaki oddzielone są kolejne wartości w wierszach.
+
+Dzięki *pandas* możemy łatwo wczytywać gotowe pliki *.csv*. Instrukcja **read_csv()** standardowo przyjmuje dwa argumenty - ścieżkę do pliku i opcjonalnie *delimiter* - sposób, w jaki oddzielone są kolejne wartości w wierszach.
 ```{python, python.reticulate = FALSE, eval = FALSE}
 data = pd.read_csv("files/movies.csv", delimiter = ',')
 ```

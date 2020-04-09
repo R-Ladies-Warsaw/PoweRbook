@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 2 Podstawy języka | PoweR, czyli Python i R w Data Science dla początkujących</title>
+  <meta name="description" content="Materiały z warsztatów" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 2 Podstawy języka | PoweR, czyli Python i R w Data Science dla początkujących" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Materiały z warsztatów" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 2 Podstawy języka | PoweR, czyli Python i R w Data Science dla początkujących" />
+  
+  <meta name="twitter:description" content="Materiały z warsztatów" />
+  
+
+<meta name="author" content="Anna Kozak" />
+
+
+<meta name="date" content="2020-04-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="formatowanie-danych.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">PoweR</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Wstęp</a></li>
+<li class="chapter" data-level="2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html"><i class="fa fa-check"></i><b>2</b> Podstawy języka</a><ul>
+<li class="chapter" data-level="2.1" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#r"><i class="fa fa-check"></i><b>2.1</b> R</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#podstawowe-operacje"><i class="fa fa-check"></i><b>2.1.1</b> Podstawowe operacje</a></li>
+<li class="chapter" data-level="2.1.2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#struktury-danych"><i class="fa fa-check"></i><b>2.1.2</b> Struktury danych</a></li>
+<li class="chapter" data-level="2.1.3" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#instrukcja-warunkowa"><i class="fa fa-check"></i><b>2.1.3</b> Instrukcja warunkowa</a></li>
+<li class="chapter" data-level="2.1.4" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#pętle"><i class="fa fa-check"></i><b>2.1.4</b> Pętle</a></li>
+<li class="chapter" data-level="2.1.5" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#pliki-i-odczyt-danych"><i class="fa fa-check"></i><b>2.1.5</b> Pliki i odczyt danych</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#python"><i class="fa fa-check"></i><b>2.2</b> Python</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#podstawy-i-proste-typy"><i class="fa fa-check"></i><b>2.2.1</b> Podstawy i proste typy</a></li>
+<li class="chapter" data-level="2.2.2" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#struktury-danych-1"><i class="fa fa-check"></i><b>2.2.2</b> Struktury danych</a></li>
+<li class="chapter" data-level="2.2.3" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#operatory"><i class="fa fa-check"></i><b>2.2.3</b> Operatory</a></li>
+<li class="chapter" data-level="2.2.4" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#instrukcja-warunkowa-1"><i class="fa fa-check"></i><b>2.2.4</b> Instrukcja warunkowa</a></li>
+<li class="chapter" data-level="2.2.5" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#pętle-1"><i class="fa fa-check"></i><b>2.2.5</b> Pętle</a></li>
+<li class="chapter" data-level="2.2.6" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#funkcje"><i class="fa fa-check"></i><b>2.2.6</b> Funkcje</a></li>
+<li class="chapter" data-level="2.2.7" data-path="podstawy-jezyka.html"><a href="podstawy-jezyka.html#ramka-danych-i-pandas---mały-wstęp"><i class="fa fa-check"></i><b>2.2.7</b> Ramka danych i <em>pandas</em> - mały wstęp</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="formatowanie-danych.html"><a href="formatowanie-danych.html"><i class="fa fa-check"></i><b>3</b> Formatowanie danych</a></li>
+<li class="chapter" data-level="4" data-path="wizualne-eda.html"><a href="wizualne-eda.html"><i class="fa fa-check"></i><b>4</b> Wizualne EDA</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PoweR, czyli Python i R w Data Science dla początkujących</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="podstawy-jezyka" class="section level1">
+<h1><span class="header-section-number"> 2</span> Podstawy języka</h1>
+<p>Wstęp do Pythona i R</p>
+<div id="r" class="section level2">
+<h2><span class="header-section-number">2.1</span> R</h2>
+<p><img align="center" src="figure/cheatSheetR1.png" alt="drawing"/></p>
+<div id="podstawowe-operacje" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Podstawowe operacje</h3>
+<p>Poniższy kod został napisany i wygenerowany <strong>RStudio</strong>. Jest to najbardziej powszechne środowisko programistyczne <em>R</em>-a, integrujące także wiele innych przydatnych funkcjonalności. Aplikacja jest darmowa i łatwa do zainstalowania na większości systemów operacyjnych.</p>
+<p>R to bardzo wygodne narzędzie w kwestii operacji arytmetycznych. Sprawdźmy jak sprawdzi się dla paru z nich!</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="dv">2</span><span class="op">^</span><span class="dv">4</span></a></code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<p>Oprócz wyżej wymienionych można także dokonywać wielu innych obliczeń.</p>
+<p><strong>Zadanie 1</strong></p>
+<p>Sprawdź czy <em>R</em> zachowuje kolejność dzialań. Jakiego przykladu można uzyć?</p>
+<p><em>Przykładowe rozwiązanie:</em></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<p>W R-rze istnieją dwie metody przypisania. Głownie używamy składni <em>x &lt;- 5</em> (możliwe także <em>5 -&gt; x</em>), ale istnieje rownież opcja może bardziej instynktownego <em>x = 5</em>. Standardowo przynajmniej na tym etapie lepiej jest jednak używać “strzałki”.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">x</a></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">y =<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">zmienna &lt;-<span class="st"> &quot;Hello World!&quot;</span></a></code></pre></div>
+</div>
+<div id="struktury-danych" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Struktury danych</h3>
+<p>Jedną z podstawowych są <strong>wektory</strong>. Służą one do przechowywania pewnej liczby elementów w jednej zmiennej.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">litery &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>)</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">litery[<span class="dv">2</span>]</a></code></pre></div>
+<pre><code>## [1] &quot;b&quot;</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">vec &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, litery)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">vec</a></code></pre></div>
+<pre><code>## [1] &quot;2&quot; &quot;4&quot; &quot;6&quot; &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
+<p>Oczywiście i na nich możemy dokonywać różnych operacji.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">nieparzyste &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">parzyste <span class="op">+</span><span class="st"> </span>nieparzyste</a></code></pre></div>
+<pre><code>## [1]  3  7 11</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">parzyste <span class="op">*</span><span class="st"> </span>x</a></code></pre></div>
+<pre><code>## [1] 10 20 30</code></pre>
+<p>Inną istotną strukturą są <strong>listy</strong>.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">liczby &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">parzyste =</span> parzyste, <span class="dt">nieparzyste =</span> nieparzyste)</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2"><span class="kw">c</span>(parzyste, nieparzyste)</a></code></pre></div>
+<pre><code>## [1] 2 4 6 1 3 5</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">liczby[[<span class="dv">1</span>]]</a></code></pre></div>
+<pre><code>## [1] 2 4 6</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">liczby[[<span class="st">&quot;parzyste&quot;</span>]]</a></code></pre></div>
+<pre><code>## [1] 2 4 6</code></pre>
+<p><strong>Zadanie 2</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Stwórz dwa wektory składające się z 5 liczb każdy, a następnie przypisz ich rożnice do nowej zmiennej o nazwie różnica.</p></li>
+<li><p>Połącz te trzy wektory w listę.</p></li>
+</ol>
+<p><em>Przykładowe rozwiązanie:</em></p>
+<ol style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2">b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb26-3" data-line-number="3">roznica &lt;-<span class="st"> </span>b <span class="op">-</span><span class="st"> </span>a</a></code></pre></div>
+<ol start="2" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1">lista_wektorow &lt;-<span class="st"> </span><span class="kw">list</span>(a, b, roznica)</a></code></pre></div>
+<p><em>R</em> jest także bogaty w szereg przydatnych funkcji wbudowanych. Oto niektóre z nich i ich działanie:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1">?min <span class="co"># zwraca informacje o funkcji</span></a></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw">min</span>(roznica)</a></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw">max</span>(roznica)</a></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw">sum</span>(roznica)</a></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw">length</span>(roznica)</a></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1">vec2 &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span></a>
+<a class="sourceLine" id="cb37-2" data-line-number="2">vec2</a></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1">vec3 &lt;-<span class="st"> </span><span class="dv">50</span><span class="op">:</span><span class="dv">100</span></a>
+<a class="sourceLine" id="cb39-2" data-line-number="2">vec3</a></code></pre></div>
+<pre><code>##  [1]  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66
+## [18]  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83
+## [35]  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100</code></pre>
+<p>Kolejną bardzo ważną strukturą w <em>R</em> jest <strong>ramka danych</strong>.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col_1 =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">col_2 =</span> <span class="kw">c</span>(<span class="st">&quot;raz&quot;</span>, <span class="st">&quot;dwa&quot;</span>, <span class="st">&quot;trzy&quot;</span>))</a></code></pre></div>
+<p>Możemy na niej działać poprzez odpowiednie operatory:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1">df<span class="op">$</span>col_<span class="dv">1</span></a></code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" data-line-number="1">df[[<span class="st">&quot;col_1&quot;</span>]]</a></code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1">df[<span class="dv">3</span>, <span class="dv">1</span>]</a></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1">df[,<span class="dv">1</span>]</a></code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1">df[<span class="dv">1</span>,]</a></code></pre></div>
+<pre><code>##   col_1 col_2
+## 1     1   raz</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1">df[<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>,]</a></code></pre></div>
+<pre><code>##   col_1 col_2
+## 2     2   dwa
+## 3     3  trzy</code></pre>
+</div>
+<div id="instrukcja-warunkowa" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Instrukcja warunkowa</h3>
+<p>… to konstrukcja, której używamy w celu dokonywania decyzji o wykonywanych krokach. Najprościej mówiąc owy element języka pozwala na wykonanie ciągu operacji w zależności od zaproponowanego przez programistę warunku. Oto i przykładowe takie warunki:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1"><span class="dv">1</span> <span class="op">==</span><span class="st"> </span><span class="dv">1</span></a></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1"><span class="dv">1</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span></a></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" data-line-number="1"><span class="dv">1</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span></a></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb60-1" data-line-number="1"><span class="dv">1</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span></a></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb62-1" data-line-number="1"><span class="op">!</span>(<span class="dv">1</span><span class="op">==</span><span class="dv">1</span>)</a></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" data-line-number="1">parzyste</a></code></pre></div>
+<pre><code>## [1] 2 4 6</code></pre>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" data-line-number="1">parzyste <span class="op">==</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1]  TRUE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" data-line-number="1"><span class="kw">all</span>(parzyste <span class="op">==</span><span class="st"> </span><span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" data-line-number="1"><span class="kw">any</span>(parzyste <span class="op">==</span><span class="st"> </span><span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" data-line-number="1"><span class="dv">2</span> <span class="op">%in%</span><span class="st"> </span>parzyste</a></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>… i sama instrukcja <strong>if</strong> w praktyce:</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb74-1" data-line-number="1"><span class="cf">if</span>( <span class="op">!</span>(<span class="dv">8</span> <span class="op">%in%</span><span class="st"> </span>parzyste) ){</a>
+<a class="sourceLine" id="cb74-2" data-line-number="2">  parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, <span class="dv">8</span>)</a>
+<a class="sourceLine" id="cb74-3" data-line-number="3">}</a>
+<a class="sourceLine" id="cb74-4" data-line-number="4">parzyste</a></code></pre></div>
+<pre><code>## [1] 2 4 6 8</code></pre>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb76-1" data-line-number="1">skorupa &lt;-<span class="st"> </span><span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb76-2" data-line-number="2"><span class="cf">if</span>(skorupa <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>){</a>
+<a class="sourceLine" id="cb76-3" data-line-number="3">  <span class="st">&quot;zolw&quot;</span></a>
+<a class="sourceLine" id="cb76-4" data-line-number="4">} <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb76-5" data-line-number="5">  <span class="st">&quot;kot&quot;</span></a>
+<a class="sourceLine" id="cb76-6" data-line-number="6">}</a></code></pre></div>
+<pre><code>## [1] &quot;zolw&quot;</code></pre>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb78-1" data-line-number="1"><span class="kw">ifelse</span>(skorupa <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>, <span class="st">&quot;zolw&quot;</span>, <span class="st">&quot;kot&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;zolw&quot;</code></pre>
+<p><em>ifelse</em> działa też na wektorze:</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb80-1" data-line-number="1">skorupa &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb80-2" data-line-number="2"><span class="kw">ifelse</span>(skorupa <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>, <span class="st">&quot;zolw&quot;</span>, <span class="st">&quot;kot&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;zolw&quot; &quot;zolw&quot; &quot;kot&quot;</code></pre>
+<p><strong>Zadanie 3</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Podobnie jak w powyższym przykładzie, wektor liczb nieparzystych powiększ o liczbe 7, o ile już jej nie ma.</li>
+<li>Dany jest wektor liczb, v &lt;- c(1,2,2,2,2,2,3,3,3,1,1,2). Użyj instrukcji <em>if</em>, <em>else</em> lub <em>ifelse</em>, żeby zrobić z niego wektor zawierający wartości “jeden”, “dwa”, “trzy”.</li>
+</ol>
+<p><em>Przykładowe rozwiązanie:</em></p>
+<ol style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb82-1" data-line-number="1"><span class="cf">if</span>( <span class="op">!</span>(<span class="dv">7</span> <span class="op">%in%</span><span class="st"> </span>nieparzyste) ){</a>
+<a class="sourceLine" id="cb82-2" data-line-number="2">  nieparzyste &lt;-<span class="st"> </span><span class="kw">c</span>(nieparzyste, <span class="dv">7</span>)</a>
+<a class="sourceLine" id="cb82-3" data-line-number="3">}</a>
+<a class="sourceLine" id="cb82-4" data-line-number="4">nieparzyste</a></code></pre></div>
+<pre><code>## [1] 1 3 5 7</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" data-line-number="1">v &lt;-<span class="st"> </span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb84-2" data-line-number="2"><span class="kw">ifelse</span>(v <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="st">&quot;jeden&quot;</span>, <span class="kw">ifelse</span>(v <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, <span class="st">&quot;dwa&quot;</span>, <span class="st">&quot;trzy&quot;</span>))</a></code></pre></div>
+<pre><code>## [1] &quot;dwa&quot;</code></pre>
+</div>
+<div id="pętle" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Pętle</h3>
+<p>Często spotykamy się z sytuacją, kiedy daną operację lub ciąg wielu instrukcji chcemy wykonać wielokrotnie. Do tego właśnie używamy tytułowych konstrukcji.</p>
+<p>Dwie najbardziej powszechne to <strong>while</strong> i <strong>for</strong>. Pierwsza z nich działa na podobnej zasadzie jak intrukcja <em>if</em> - z tym wyjątkiem, że warunek sprawdzany jest wielokrotnie - tak długo, aż będzie spełniany.</p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" data-line-number="1"><span class="cf">while</span> (<span class="kw">length</span>(parzyste) <span class="op">&lt;</span><span class="st"> </span><span class="dv">10</span>) {</a>
+<a class="sourceLine" id="cb86-2" data-line-number="2">  len &lt;-<span class="st"> </span><span class="kw">length</span>(parzyste)</a>
+<a class="sourceLine" id="cb86-3" data-line-number="3">  parzyste &lt;-<span class="st"> </span><span class="kw">c</span>(parzyste, parzyste[len] <span class="op">+</span><span class="st"> </span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb86-4" data-line-number="4">}</a></code></pre></div>
+<p>Z drugiej strony for udostępnia nam możliwość wykonania operacji konkretną ilość razy - np. dokonując czynności dla każdej liczby z listy.</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb87-1" data-line-number="1">nieparzyste2 &lt;-<span class="st"> </span><span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb87-2" data-line-number="2"><span class="cf">for</span>(liczba <span class="cf">in</span> parzyste){</a>
+<a class="sourceLine" id="cb87-3" data-line-number="3">  nieparzyste2 &lt;-<span class="st"> </span><span class="kw">c</span>(nieparzyste2, liczba <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb87-4" data-line-number="4">}</a></code></pre></div>
+<p><strong>Zadanie 4</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Użyj pętli (której?), żeby iterując po wektorze <code>liczby &lt;- 1:10</code> stworzyć wektor 10 kolejnych liczb nieparzystych.</p></li>
+<li><p>Czy jest więcej niż jeden sposob?</p></li>
+</ol>
+<p><em>Przykładowe rozwiązanie:</em>
+a)</p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb88-1" data-line-number="1">nieparzyste3 &lt;-<span class="st"> </span><span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb88-2" data-line-number="2"><span class="cf">for</span>(x <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</a>
+<a class="sourceLine" id="cb88-3" data-line-number="3">  nieparzyste3 &lt;-<span class="st"> </span><span class="kw">c</span>(nieparzyste3, <span class="dv">2</span> <span class="op">*</span><span class="st"> </span>x <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)  </a>
+<a class="sourceLine" id="cb88-4" data-line-number="4">}</a></code></pre></div>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Ależ oczywiście, że tak!</li>
+</ol>
+</div>
+<div id="pliki-i-odczyt-danych" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Pliki i odczyt danych</h3>
+<p>Bardzo istotnymi funkcjami są <em>getwd()</em> i <em>setwd()</em> - pierwsza zwraca ścieżkę do roboczego katalogu roboczego, zaś druga umożliwia ustawienie nowej.</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb89-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb89-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;/Users/ja/mojeskrypty&quot;</span>)</a></code></pre></div>
+<p>Do odczytania ramki danych możemy użyć funkcji <em>read.csv()</em> - w tym celu jako pierwszy argument podajemy ścieżkę do naszego pliku, a jako opcjonalny drugi - separator [znak lub ciąg oddzielający kolejne kolumki data frame].</p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" data-line-number="1"><span class="co"># seriale &lt;- read.csv(&quot;&lt;tu nalezy wkleic sciezke do pliku&gt;&quot;, sep=&quot;;&quot;)</span></a>
+<a class="sourceLine" id="cb90-2" data-line-number="2">seriale &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;files/netflix_titles.csv&quot;</span>)</a></code></pre></div>
+<p>Zobaczmy efekt wywołania naszej funkcji - operacja <em>head()</em> zwróci nam kilka pierwszych wierszy, zaś <em>View</em>() udostępnia estetyczny ogląd tabelki.</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb91-1" data-line-number="1"><span class="kw">head</span>(seriale)</a>
+<a class="sourceLine" id="cb91-2" data-line-number="2"><span class="kw">View</span>(seriale)</a></code></pre></div>
+<p><strong>Zadanie 5</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Wypisz nazwy seriali, które wyszły w 2020 roku.</p></li>
+<li><p>Wybierz podzbiór zawierający Twoje 3 ulubione seriale i przypisz go do nowej zmiennej.</p></li>
+</ol>
+<p><em>Przykładowe rozwiązanie:</em>
+a) Tworzymy wektor, który odpowiada kolejnym wierszom z ramki danych, jeśli zawiera TRUE, to znaczy, że serial był wydany w 2020, jeśli FALSE oznacza, że serial byl wydany w innym roku.</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" data-line-number="1">ktore_w_<span class="dv">2020</span> &lt;-<span class="st"> </span>seriale[[<span class="st">&quot;release_year&quot;</span>]] <span class="op">==</span><span class="st"> </span><span class="dv">2020</span></a></code></pre></div>
+<p>Możemy użyc wektora TRUE/FALSE do indeksowania wierszy. Poniższe polecenie wybierze tylko te wiersze, w których wektor <em>ktore_w_2020</em> przyjął wartość TRUE.</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb93-1" data-line-number="1">seriale_<span class="dv">2020</span> &lt;-<span class="st"> </span>seriale[ktore_w_<span class="dv">2020</span>, ]</a></code></pre></div>
+<ol start="2" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb94-1" data-line-number="1">moje_seriale &lt;-<span class="st"> </span>seriale[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">10</span>), ]</a></code></pre></div>
+</div>
+</div>
+<div id="python" class="section level2">
+<h2><span class="header-section-number">2.2</span> Python</h2>
+<p><img align="center" src="figure/cheatSheetPython1.png" alt="drawing"/></p>
+<div id="podstawy-i-proste-typy" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Podstawy i proste typy</h3>
+<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb95-1" data-line-number="1"><span class="bu">print</span>(<span class="st">&quot;Hi!&quot;</span>)</a></code></pre></div>
+<pre><code>## Hi!</code></pre>
+<p><em>Python</em> jest językiem <strong>interpretowanym</strong> - najprościej mówiąc oznacza to, że jest on tłumaczony i wykonywany “w locie”. Tłumaczeniem i wykonywaniem programu zajmuje się specjalny program nazwany interpreterem języka.</p>
+<p>Najprostszym typem jest <strong>int</strong> - obejmuje on liczby całkowite.</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb97-1" data-line-number="1">x <span class="op">=</span> <span class="dv">21</span></a>
+<a class="sourceLine" id="cb97-2" data-line-number="2"><span class="bu">print</span>(x)</a>
+<a class="sourceLine" id="cb97-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">type</span>(x))</a>
+<a class="sourceLine" id="cb97-4" data-line-number="4">y <span class="op">=</span> <span class="fl">0.3</span></a>
+<a class="sourceLine" id="cb97-5" data-line-number="5"><span class="bu">print</span>(y)</a>
+<a class="sourceLine" id="cb97-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(y))</a></code></pre></div>
+<pre><code>## 21
+## &lt;class &#39;int&#39;&gt;
+## 0.3
+## &lt;class &#39;float&#39;&gt;</code></pre>
+<div class="sourceCode" id="cb99"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb99-1" data-line-number="1"><span class="kw">def</span> fun(x, y):</a>
+<a class="sourceLine" id="cb99-2" data-line-number="2">    <span class="cf">return</span> x <span class="op">+</span> y</a>
+<a class="sourceLine" id="cb99-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb99-4" data-line-number="4">x <span class="op">=</span> <span class="st">&quot;Data&quot;</span></a>
+<a class="sourceLine" id="cb99-5" data-line-number="5">y <span class="op">=</span> <span class="st">&quot;Science&quot;</span></a>
+<a class="sourceLine" id="cb99-6" data-line-number="6"><span class="bu">print</span>(fun(x, y))</a>
+<a class="sourceLine" id="cb99-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb99-8" data-line-number="8">x <span class="op">=</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb99-9" data-line-number="9">y <span class="op">=</span> <span class="dv">7</span></a>
+<a class="sourceLine" id="cb99-10" data-line-number="10"><span class="bu">print</span>(fun(x, y))</a></code></pre></div>
+<pre><code>## DataScience
+## 12</code></pre>
+<p>Python jest <strong>dynamicznie typowany</strong> i typowanie jest silne - oznacza to, że język nie może niejawnie konwertować wartości różnych typów.</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb101-1" data-line-number="1">a <span class="op">=</span> <span class="dv">2</span></a>
+<a class="sourceLine" id="cb101-2" data-line-number="2">b <span class="op">=</span> <span class="st">&#39;L&#39;</span></a>
+<a class="sourceLine" id="cb101-3" data-line-number="3">c <span class="op">=</span> a <span class="op">+</span> b <span class="co"># zwróci błąd</span></a></code></pre></div>
+<p>Wartości niektórych obiektów mogą ulec zmianie. Obiekty, których wartość może ulec zmianie, są nazywane <strong>mutable</strong>; obiekty, których wartość jest niezmienna po ich utworzeniu, nazywane są <strong>immutable</strong>.</p>
+<p>Typ logiczny <strong>bool</strong> to dwie stałe: True i False.</p>
+<div class="sourceCode" id="cb102"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb102-1" data-line-number="1">a <span class="op">=</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb102-2" data-line-number="2"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb102-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">type</span>(a))</a>
+<a class="sourceLine" id="cb102-4" data-line-number="4">b <span class="op">=</span> <span class="va">False</span></a>
+<a class="sourceLine" id="cb102-5" data-line-number="5"><span class="bu">print</span>(b)</a>
+<a class="sourceLine" id="cb102-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(a))</a></code></pre></div>
+<pre><code>## True
+## &lt;class &#39;bool&#39;&gt;
+## False
+## &lt;class &#39;bool&#39;&gt;</code></pre>
+<p><em>bool</em> jest podtypem liczby całkowitej (<em>int</em>).</p>
+<p>Funkcja <em>isinstance()</em> została zaprojektowana specjalnie w celu sprawdzenia, czy dane należą do określonej klasy (typu danych), zaś funkcja <em>issubclass()</em> wskazuje, czy określona klasa jest podklasą określonych klas.</p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb104-1" data-line-number="1"><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="va">True</span>, <span class="bu">int</span>))</a>
+<a class="sourceLine" id="cb104-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">isinstance</span>(<span class="va">False</span>, <span class="bu">int</span>))</a>
+<a class="sourceLine" id="cb104-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">issubclass</span>(<span class="bu">bool</span>, <span class="bu">int</span>))</a></code></pre></div>
+<pre><code>## True
+## True
+## True</code></pre>
+<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb106-1" data-line-number="1">x <span class="op">=</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb106-2" data-line-number="2">y <span class="op">=</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb106-3" data-line-number="3">z <span class="op">=</span> <span class="va">False</span></a>
+<a class="sourceLine" id="cb106-4" data-line-number="4"><span class="bu">print</span>(x <span class="op">+</span> y)</a>
+<a class="sourceLine" id="cb106-5" data-line-number="5"><span class="bu">print</span>(y <span class="op">+</span> z)</a></code></pre></div>
+<pre><code>## 2
+## 1</code></pre>
+<p>W Pythonie wartość liczby całkowitej nie jest ograniczona liczbą bitów i może wzrosnąć do limitu dostępnej pamięci.</p>
+<p>W porównaniu do np. <em>C++</em> gdzie <em>int</em> ma wartości od -2147483648 do 2147483647 - 4 bajty.</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb108-1" data-line-number="1">x <span class="op">=</span> <span class="dv">78</span></a>
+<a class="sourceLine" id="cb108-2" data-line-number="2">y <span class="op">=</span> <span class="dv">-5</span></a>
+<a class="sourceLine" id="cb108-3" data-line-number="3">z <span class="op">=</span> <span class="dv">100</span> <span class="op">**</span> <span class="dv">20</span></a>
+<a class="sourceLine" id="cb108-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(x), x)</a>
+<a class="sourceLine" id="cb108-5" data-line-number="5"><span class="bu">print</span>(<span class="bu">type</span>(y), y)</a>
+<a class="sourceLine" id="cb108-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(z), z)</a></code></pre></div>
+<pre><code>## &lt;class &#39;int&#39;&gt; 78
+## &lt;class &#39;int&#39;&gt; -5
+## &lt;class &#39;int&#39;&gt; 10000000000000000000000000000000000000000</code></pre>
+<p>Liczby możemy zapisywać także w w ósemkowym, szesnastkowym i binarnym systemie liczbowym.</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb110-1" data-line-number="1">x <span class="op">=</span> <span class="bn">0x1</span>  <span class="co"># szesnastkowy</span></a>
+<a class="sourceLine" id="cb110-2" data-line-number="2">y <span class="op">=</span> <span class="dv">0o1</span>  <span class="co"># ósemkowy</span></a>
+<a class="sourceLine" id="cb110-3" data-line-number="3">z <span class="op">=</span> 0b1  <span class="co"># binarny</span></a>
+<a class="sourceLine" id="cb110-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(x), x)</a>
+<a class="sourceLine" id="cb110-5" data-line-number="5"><span class="bu">print</span>(<span class="bu">type</span>(y), y)</a>
+<a class="sourceLine" id="cb110-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(z), z)</a></code></pre></div>
+<pre><code>## &lt;class &#39;int&#39;&gt; 1
+## &lt;class &#39;int&#39;&gt; 1
+## &lt;class &#39;int&#39;&gt; 1</code></pre>
+<p>Jest także <strong>float</strong> - typ liczb zmiennoprzecinkowych.</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb112-1" data-line-number="1">x <span class="op">=</span> <span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb112-2" data-line-number="2">y <span class="op">=</span> <span class="fl">-0.5</span></a>
+<a class="sourceLine" id="cb112-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">type</span>(x), x)</a>
+<a class="sourceLine" id="cb112-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(y), y)</a></code></pre></div>
+<pre><code>## &lt;class &#39;float&#39;&gt; 0.5
+## &lt;class &#39;float&#39;&gt; -0.5</code></pre>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb114-1" data-line-number="1">x <span class="op">=</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.1</span></a>
+<a class="sourceLine" id="cb114-2" data-line-number="2">y <span class="op">=</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.1</span></a>
+<a class="sourceLine" id="cb114-3" data-line-number="3">z <span class="op">=</span> <span class="fl">0.3</span></a>
+<a class="sourceLine" id="cb114-4" data-line-number="4">s <span class="op">=</span> <span class="fl">0.2</span></a>
+<a class="sourceLine" id="cb114-5" data-line-number="5"><span class="bu">print</span>(x <span class="op">==</span> s)</a>
+<a class="sourceLine" id="cb114-6" data-line-number="6"><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{:.20f}</span><span class="st">&quot;</span>.<span class="bu">format</span>(x) )</a>
+<a class="sourceLine" id="cb114-7" data-line-number="7"><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{:.20f}</span><span class="st">&quot;</span>.<span class="bu">format</span>(s))</a>
+<a class="sourceLine" id="cb114-8" data-line-number="8"><span class="bu">print</span>(y <span class="op">==</span> z)</a>
+<a class="sourceLine" id="cb114-9" data-line-number="9"><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{:.20f}</span><span class="st">&quot;</span>.<span class="bu">format</span>(y))</a>
+<a class="sourceLine" id="cb114-10" data-line-number="10"><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{:.20f}</span><span class="st">&quot;</span>.<span class="bu">format</span>(z))</a></code></pre></div>
+<pre><code>## True
+## 0.20000000000000001110
+## 0.20000000000000001110
+## False
+## 0.30000000000000004441
+## 0.29999999999999998890</code></pre>
+<p>W celu przechowywania ciągu znaków używamy typu <strong>string</strong>.</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb116-1" data-line-number="1">a <span class="op">=</span> <span class="st">&#39;A wewnątrz można umieścić &quot;cudzysłów&quot;&#39;</span></a>
+<a class="sourceLine" id="cb116-2" data-line-number="2">b <span class="op">=</span> <span class="st">&quot;A wewnątrz można umieścić &#39;apostrof&#39;&quot;</span></a></code></pre></div>
+<p>Trzy pojedyncze apostrofy są wygodne do zapisania tekstu w kilku linijkach.</p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb117-1" data-line-number="1">c <span class="op">=</span> <span class="st">&#39;&#39;&#39;Trzy pojedyncze </span></a>
+<a class="sourceLine" id="cb117-2" data-line-number="2"><span class="st">apostrofy&#39;&#39;&#39;</span></a></code></pre></div>
+<p>W celu dokumentacji używamy trzech cudzysłowów.</p>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb118-1" data-line-number="1">d <span class="op">=</span> <span class="st">&quot;&quot;&quot;Trzy cudzysłowy&quot;&quot;&quot;</span></a></code></pre></div>
+<p>Żeby odwołać się do poszczególnych części słowa <em>indeksujemy</em>.</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb119-1" data-line-number="1">a <span class="op">=</span> <span class="st">&#39;Laura jadła jabłko&#39;</span></a>
+<a class="sourceLine" id="cb119-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb119-3" data-line-number="3"><span class="bu">print</span>(<span class="st">&#39;len(a): &#39;</span>, <span class="bu">len</span>(a)) <span class="co"># sprawdzanie długości słowa</span></a>
+<a class="sourceLine" id="cb119-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(a[<span class="dv">0</span>]), <span class="st">&#39;a[0]: &#39;</span>, a[<span class="dv">0</span>]) <span class="co"># pierwszy element ma indeks 0</span></a>
+<a class="sourceLine" id="cb119-5" data-line-number="5"><span class="bu">print</span>(<span class="st">&#39;a[1]: &#39;</span>, a[<span class="dv">1</span>])</a>
+<a class="sourceLine" id="cb119-6" data-line-number="6"><span class="bu">print</span>(<span class="st">&#39;a[len(a) - 1]: &#39;</span>, a[<span class="bu">len</span>(a) <span class="op">-</span> <span class="dv">1</span>]) <span class="co"># ostatni element to długość - 1, ponieważ indeksujemy od 0</span></a>
+<a class="sourceLine" id="cb119-7" data-line-number="7"><span class="bu">print</span>(<span class="st">&#39;a[-1] = a[len(a) - 1]: &#39;</span>, a[<span class="op">-</span><span class="dv">1</span>]) <span class="co"># indeksy ujemne liczą od ostatniego znaku</span></a>
+<a class="sourceLine" id="cb119-8" data-line-number="8"><span class="bu">print</span>(<span class="st">&#39;a[-18] = a[0]: &#39;</span>, a[<span class="op">-</span><span class="dv">18</span>])</a></code></pre></div>
+<pre><code>## &lt;class &#39;str&#39;&gt; Laura jadła jabłko
+## len(a):  20
+## &lt;class &#39;str&#39;&gt; a[0]:  L
+## a[1]:  a
+## a[len(a) - 1]:  o
+## a[-1] = a[len(a) - 1]:  o
+## a[-18] = a[0]:  u</code></pre>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb121-1" data-line-number="1">a <span class="op">=</span> <span class="st">&#39;Laura jadła jabłko&#39;</span></a>
+<a class="sourceLine" id="cb121-2" data-line-number="2">b <span class="op">=</span> a</a>
+<a class="sourceLine" id="cb121-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">id</span>(a), a)</a>
+<a class="sourceLine" id="cb121-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">id</span>(b), b)</a>
+<a class="sourceLine" id="cb121-5" data-line-number="5">a <span class="op">+=</span> <span class="st">&#39;!&#39;</span></a>
+<a class="sourceLine" id="cb121-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">id</span>(a), a)</a>
+<a class="sourceLine" id="cb121-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">id</span>(b), b)</a></code></pre></div>
+<pre><code>## 2057059081392 Laura jadła jabłko
+## 2057059081392 Laura jadła jabłko
+## 2057060425904 Laura jadła jabłko!
+## 2057059081392 Laura jadła jabłko</code></pre>
+<p><em>Do zastanowienia…</em></p>
+<ol style="list-style-type: decimal">
+<li>Co znaczy, że język jest dynamicznie typowany?</li>
+<li>Co znaczy, że język jest interpretowany? Podaj przykłady</li>
+<li>Jak sprawdzić, czy wartość należy do jakiejś klasy?</li>
+<li>Jak sprawdzić długość string?</li>
+<li>Jak napisać wiersz w <em>Pythonie</em>?</li>
+</ol>
+</div>
+<div id="struktury-danych-1" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Struktury danych</h3>
+<p>W zależności od zadania i problemu nasze dane chcemy przechowywać w przeznaczony do tego sposób - w tym celu używamy właśnie tzw. struktur danych. Jedną z najprostszych jest <strong>lista</strong> - zezwala ona na przechowywanie elementów o różnych typach i swobodne odwołanie się do nich, a także łatwe dodawanie i usuwanie wartości.</p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb123-1" data-line-number="1">s <span class="op">=</span> [] <span class="co"># pusta lista</span></a>
+<a class="sourceLine" id="cb123-2" data-line-number="2"><span class="bu">print</span>(s)</a>
+<a class="sourceLine" id="cb123-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">type</span>(s))</a>
+<a class="sourceLine" id="cb123-4" data-line-number="4"><span class="bu">print</span>(<span class="st">&quot;len:&quot;</span>,<span class="bu">len</span>(s))</a>
+<a class="sourceLine" id="cb123-5" data-line-number="5">l <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>] <span class="co"># lista elementów typu int</span></a>
+<a class="sourceLine" id="cb123-6" data-line-number="6"><span class="bu">print</span>(l)</a>
+<a class="sourceLine" id="cb123-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">len</span>(l))</a>
+<a class="sourceLine" id="cb123-8" data-line-number="8">a <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">10</span> <span class="co"># lista o danym rozmiarze</span></a>
+<a class="sourceLine" id="cb123-9" data-line-number="9"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb123-10" data-line-number="10"><span class="bu">print</span>(<span class="bu">len</span>(a))</a></code></pre></div>
+<pre><code>## []
+## &lt;class &#39;list&#39;&gt;
+## len: 0
+## [1, 2, 3, 5, 7]
+## 5
+## [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+## 10</code></pre>
+<p>Lista jest także <em>obiektem iterowalnym</em> - oznacza to, że jest przystosowana do “lecenia element po elemencie.”</p>
+<div class="sourceCode" id="cb125"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb125-1" data-line-number="1">b <span class="op">=</span> <span class="bu">list</span>(<span class="st">&#39;lista&#39;</span>)</a>
+<a class="sourceLine" id="cb125-2" data-line-number="2"><span class="bu">print</span>(b)</a>
+<a class="sourceLine" id="cb125-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">len</span>(b))</a>
+<a class="sourceLine" id="cb125-4" data-line-number="4">mix <span class="op">=</span> [<span class="dv">7</span>,<span class="st">&#39;👻&#39;</span>,<span class="st">&#39;róża&#39;, 3 + 2j] # w listach może być &quot;wszystko&quot;</span></a>
+<a class="sourceLine" id="cb125-5" data-line-number="5"><span class="st">print(mix)</span></a>
+<a class="sourceLine" id="cb125-6" data-line-number="6"><span class="st">print(len(mix))</span></a>
+<a class="sourceLine" id="cb125-7" data-line-number="7"><span class="st">print(type(mix[1]), mix[1]) # indeksujemy</span></a></code></pre></div>
+<pre><code>## [&#39;l&#39;, &#39;i&#39;, &#39;s&#39;, &#39;t&#39;, &#39;a&#39;]
+## 5
+## [7, &#39;👻&#39;, &#39;róża&#39;, (3+2j)]
+## 4
+## &lt;class &#39;str&#39;&gt; 👻</code></pre>
+<p>Warto przyjrzeć sie liście także patrząc na różnicę <em>mutable</em> vs. <em>immutable</em>.</p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb127-1" data-line-number="1">m <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb127-2" data-line-number="2">n <span class="op">=</span> m</a>
+<a class="sourceLine" id="cb127-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">id</span>(m), m)</a>
+<a class="sourceLine" id="cb127-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">id</span>(n), n)</a>
+<a class="sourceLine" id="cb127-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb127-6" data-line-number="6">m.append(<span class="st">&quot;słoń&quot;</span>)</a>
+<a class="sourceLine" id="cb127-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">id</span>(m), m)</a>
+<a class="sourceLine" id="cb127-8" data-line-number="8"><span class="bu">print</span>(<span class="bu">id</span>(n), n)</a></code></pre></div>
+<pre><code>## 1700060090760 [1, 2, 3]
+## 1700060090760 [1, 2, 3]
+## 1700060090760 [1, 2, 3, &#39;słoń&#39;]
+## 1700060090760 [1, 2, 3, &#39;słoń&#39;]</code></pre>
+<p>Przydaje się funkcja <em>copy()</em>… bez zaskoczeń tworząca kopię danego obiektu.</p>
+<div class="sourceCode" id="cb129"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb129-1" data-line-number="1">l <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</a>
+<a class="sourceLine" id="cb129-2" data-line-number="2">more_lists <span class="op">=</span> l[:] <span class="co">#slices</span></a>
+<a class="sourceLine" id="cb129-3" data-line-number="3">more_list2 <span class="op">=</span> l.copy()</a>
+<a class="sourceLine" id="cb129-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb129-5" data-line-number="5"><span class="bu">print</span>(<span class="bu">id</span>(l), l)</a>
+<a class="sourceLine" id="cb129-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">id</span>(more_lists), more_lists)</a>
+<a class="sourceLine" id="cb129-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">id</span>(more_list2), more_list2)</a></code></pre></div>
+<pre><code>## 1443558805896 [1, 2, 3, 5, 7]
+## 1443558806408 [1, 2, 3, 5, 7]
+## 1443560837832 [1, 2, 3, 5, 7]</code></pre>
+<p>Bardzo przydatną umiejętnością jest zaznajomienie z obiektem <strong>slice</strong> (pl: wykrojenie?). Służy on do wygodnego tworzenia ciągów arytmetycznych, a także indeksowania po utworzonych sekwencjach.</p>
+<p>Składnia <em>slice()</em> to <strong>slice(start, stop, step)</strong>.</p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb131-1" data-line-number="1">l <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</a>
+<a class="sourceLine" id="cb131-2" data-line-number="2">sl <span class="op">=</span> <span class="bu">slice</span>(<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb131-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb131-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(sl), sl)</a>
+<a class="sourceLine" id="cb131-5" data-line-number="5"><span class="bu">print</span>(l[sl])</a>
+<a class="sourceLine" id="cb131-6" data-line-number="6"><span class="bu">print</span>(l[<span class="dv">2</span>:<span class="dv">5</span>:<span class="dv">1</span>]) </a>
+<a class="sourceLine" id="cb131-7" data-line-number="7"><span class="bu">print</span>(l)</a></code></pre></div>
+<pre><code>## &lt;class &#39;slice&#39;&gt; slice(2, 5, 1)
+## [3, 5, 7]
+## [3, 5, 7]
+## [1, 2, 3, 5, 7]</code></pre>
+<p>Abstrahując od <em>wykrojeń</em>, generalnie odwoływanie się do różnych elementów listy w zależności od potrzeb niemalże zawsze jest bardzo proste i łatwe do napisania - przyjrzyjmy się poniższym przykładom.</p>
+<div class="sourceCode" id="cb133"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb133-1" data-line-number="1">lis <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</a>
+<a class="sourceLine" id="cb133-2" data-line-number="2"><span class="bu">print</span>(lis[<span class="op">-</span><span class="dv">1</span>])      <span class="co"># ostatni element</span></a>
+<a class="sourceLine" id="cb133-3" data-line-number="3"><span class="bu">print</span>(lis[<span class="op">-</span><span class="dv">1</span>:])     <span class="co"># ostatni element, ale ...</span></a>
+<a class="sourceLine" id="cb133-4" data-line-number="4"><span class="bu">print</span>(lis[::<span class="op">-</span><span class="dv">1</span>])    <span class="co"># odwrotna kolejność</span></a>
+<a class="sourceLine" id="cb133-5" data-line-number="5"><span class="bu">print</span>(lis[::<span class="dv">2</span>])     <span class="co"># elelemty z indeksami parzystymi</span></a>
+<a class="sourceLine" id="cb133-6" data-line-number="6"><span class="bu">print</span>(lis[:<span class="op">-</span><span class="dv">2</span>])     <span class="co"># cała sekwencja poza ostatnimi dwoma elementami </span></a>
+<a class="sourceLine" id="cb133-7" data-line-number="7"><span class="bu">print</span>(lis[<span class="dv">1</span>::<span class="dv">2</span>])    <span class="co"># elementy z indeksami nieparzystymi</span></a></code></pre></div>
+<pre><code>## 7
+## [7]
+## [7, 5, 3, 2, 1]
+## [1, 3, 7]
+## [1, 2, 3]
+## [2, 5]</code></pre>
+<p>Na pozornie podobnej zasadzie jak <em>slice</em> działa <strong>range</strong>. Ten może przyjąć jeden, dwa lub trzy parametry:</p>
+<ul>
+<li>range(stop)</li>
+<li>range(start, stop)</li>
+<li>range(start, stop, step)</li>
+</ul>
+<p>Przyjrzyj się kolejnym wywołaniom i pomyśl: czym rożnią się <em>slice</em> i <em>range</em>?</p>
+<div class="sourceCode" id="cb135"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb135-1" data-line-number="1">range_ <span class="op">=</span> <span class="bu">range</span>(<span class="dv">20</span>)</a>
+<a class="sourceLine" id="cb135-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">type</span>(range_),range_)</a>
+<a class="sourceLine" id="cb135-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb135-4" data-line-number="4">a <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">20</span>))</a>
+<a class="sourceLine" id="cb135-5" data-line-number="5">b <span class="op">=</span> [<span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">1</span>)] </a>
+<a class="sourceLine" id="cb135-6" data-line-number="6">c <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb135-7" data-line-number="7"><span class="bu">print</span>(<span class="st">&quot;a:&quot;</span>, a)</a>
+<a class="sourceLine" id="cb135-8" data-line-number="8"><span class="bu">print</span>(<span class="st">&quot;b:&quot;</span>, b)</a>
+<a class="sourceLine" id="cb135-9" data-line-number="9"><span class="bu">print</span>(<span class="st">&quot;c:&quot;</span>, c)</a></code></pre></div>
+<pre><code>## &lt;class &#39;range&#39;&gt; range(0, 20)
+## a: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+## b: [range(10, 20)]
+## c: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</code></pre>
+<p><em>Sprawdź się!</em></p>
+<ol style="list-style-type: decimal">
+<li>Stwórz listę liczb od 0 do 500</li>
+<li>Policz sumę wszystkich elementów tej listy</li>
+<li>Odwróć tę listę</li>
+<li>Dodaj na początek słowo <em>PoweR</em></li>
+<li>Stwórz listę parzystych liczb o długości 50</li>
+<li>Dla stringa “PoweR warsztaty i przygoda!”, usuń wszystkie litery z 6 znaku aż do końca, wyświetl otrzymany string (oczekiwana wartość: “PoweR”)</li>
+<li>Mamy 2 stringi - s1 i s2. Stwórz nowy string dodając s2 w środku s1. Przykładowo:</li>
+</ol>
+<ul>
+<li><p>Przed: “Supplementary” i “Vector”</p></li>
+<li><p>Po: “SupplVectorementary”</p></li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>Policz liczbę wystąpień litery <em>e</em> w stringu “PoweR is the best event evER” nie patrząc na wielkość litery (oczekiwana wartość: 7)</li>
+</ol>
+<p>… Jedną z naistotniejszych struktur danych w <em>Pythonie</em> są <strong>tuple</strong>, zwane także krotkami.</p>
+<div class="sourceCode" id="cb137"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb137-1" data-line-number="1">a <span class="op">=</span> () <span class="co"># pusta tuple</span></a>
+<a class="sourceLine" id="cb137-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb137-3" data-line-number="3">a <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>) <span class="co"># deklaracja</span></a>
+<a class="sourceLine" id="cb137-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb137-5" data-line-number="5">a <span class="op">=</span> <span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span> <span class="co"># inna deklaracja </span></a>
+<a class="sourceLine" id="cb137-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb137-7" data-line-number="7">a <span class="op">=</span> (<span class="dv">1</span>) <span class="co"># ważne są przecinki, a nie nawiasy</span></a>
+<a class="sourceLine" id="cb137-8" data-line-number="8"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb137-9" data-line-number="9">a <span class="op">=</span> <span class="dv">1</span>, <span class="co"># tuple z 1 elementem</span></a>
+<a class="sourceLine" id="cb137-10" data-line-number="10"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb137-11" data-line-number="11">n_tuple <span class="op">=</span> (<span class="st">&quot;mouse&quot;</span>, [<span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">6</span>], (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))</a>
+<a class="sourceLine" id="cb137-12" data-line-number="12"><span class="bu">print</span>(<span class="bu">type</span>(n_tuple), n_tuple)</a></code></pre></div>
+<pre><code>## &lt;class &#39;tuple&#39;&gt; ()
+## &lt;class &#39;tuple&#39;&gt; (1, 2, 3, 4)
+## &lt;class &#39;tuple&#39;&gt; (1, 2, 3, 4)
+## &lt;class &#39;int&#39;&gt; 1
+## &lt;class &#39;tuple&#39;&gt; (1,)
+## &lt;class &#39;tuple&#39;&gt; (&#39;mouse&#39;, [8, 4, 6], (1, 2, 3))</code></pre>
+<p>Kolejną ważną strukturą są <strong>słowniki</strong> - ich idea to przechowywania <em>wartości</em> pod odpowiednimi <em>kluczami</em>. Należy pamiętać, że klucz jest tylko obiektem immutable (hashowalnym) i jeden klucz może mieć tylko jedną wartość (jeżeli będzie dodane kilka par z tym samym kluczem, <em>Python</em> zapisze ostatni). Protip: jeśli chcesz zapisać kolejność, w której elementy zostały dodane do <em>słownika</em>, użyj funkcji <em>collections.OrderedDict()</em>.</p>
+<div class="sourceCode" id="cb139"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb139-1" data-line-number="1">a <span class="op">=</span> <span class="bu">dict</span>() <span class="co"># pusty słownik</span></a>
+<a class="sourceLine" id="cb139-2" data-line-number="2">b <span class="op">=</span> {} <span class="co"># alternatywa na deklaracje pustego słownika</span></a>
+<a class="sourceLine" id="cb139-3" data-line-number="3">c <span class="op">=</span> {<span class="st">&#39;klucz&#39;</span>: <span class="st">&#39;wartość&#39;</span>}</a>
+<a class="sourceLine" id="cb139-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb139-5" data-line-number="5"><span class="bu">print</span>(<span class="bu">type</span>(b), b)</a>
+<a class="sourceLine" id="cb139-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(c), c)</a>
+<a class="sourceLine" id="cb139-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb139-8" data-line-number="8">a[<span class="st">&#39;new_key&#39;</span>] <span class="op">=</span> <span class="st">&#39;new_value&#39;</span>  <span class="co"># Dodajemy nowy element do słownika</span></a>
+<a class="sourceLine" id="cb139-9" data-line-number="9">a[(<span class="dv">7</span>, <span class="dv">8</span>)] <span class="op">=</span> [(<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>),<span class="st">&#39;🤖&#39;</span>]</a>
+<a class="sourceLine" id="cb139-10" data-line-number="10"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb139-11" data-line-number="11">a[<span class="st">&#39;new_key&#39;</span>] <span class="op">=</span> <span class="st">&#39;👧&#39;</span></a>
+<a class="sourceLine" id="cb139-12" data-line-number="12"><span class="bu">print</span>(a)</a></code></pre></div>
+<pre><code>## &lt;class &#39;dict&#39;&gt; {}
+## &lt;class &#39;dict&#39;&gt; {}
+## &lt;class &#39;dict&#39;&gt; {&#39;klucz&#39;: &#39;wartość&#39;}
+## {&#39;new_key&#39;: &#39;new_value&#39;, (7, 8): [(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;), &#39;🤖&#39;]}
+## {&#39;new_key&#39;: &#39;👧&#39;, (7, 8): [(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;), &#39;🤖&#39;]}</code></pre>
+<p>Jeśli klucz nie występuje w <em>słowniku</em>, pojawia się error. Żeby tak nie było trzeba dodatkowo zdefiniować zachowanie <em>__missing__(key)</em>. Poniższe operacje nie zadziałają poprawnie.</p>
+<div class="sourceCode" id="cb141"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb141-1" data-line-number="1"><span class="bu">print</span>(c[<span class="st">&#39;nieklucz&#39;</span>])</a>
+<a class="sourceLine" id="cb141-2" data-line-number="2">a[[<span class="dv">1</span>, <span class="dv">2</span>]] <span class="op">=</span> <span class="st">&#39;nie działa&#39;</span></a></code></pre></div>
+<p>Do przechowywania wartości unikalnych, przyda nam sie <strong>set</strong> - zbiór. Najprościej mówiąc jest to „kontener” zawierający niepowtarzalne elementy w losowej kolejności. Czas sprawdzenia czy jakiś obiekt jest w zbiorze jest stały, w porównaniu do listy albo krotki, w których czas jest liniowo zależny od liczby elementów.</p>
+<div class="sourceCode" id="cb142"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb142-1" data-line-number="1">a <span class="op">=</span> <span class="bu">set</span>()</a>
+<a class="sourceLine" id="cb142-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb142-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb142-4" data-line-number="4">a <span class="op">=</span> {} <span class="co"># nie set , a ...</span></a>
+<a class="sourceLine" id="cb142-5" data-line-number="5"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb142-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb142-7" data-line-number="7">a <span class="op">=</span> {<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;d&#39;</span>}</a>
+<a class="sourceLine" id="cb142-8" data-line-number="8"><span class="bu">print</span>(<span class="bu">type</span>(a), a)</a>
+<a class="sourceLine" id="cb142-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb142-10" data-line-number="10">mixed_set <span class="op">=</span> {<span class="fl">2.0</span>, <span class="st">&quot;Nicholas&quot;</span>, (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)} </a>
+<a class="sourceLine" id="cb142-11" data-line-number="11"><span class="bu">print</span>(<span class="bu">type</span>(mixed_set), mixed_set)</a>
+<a class="sourceLine" id="cb142-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb142-13" data-line-number="13">mixed_set.add(<span class="st">&quot;Katty&quot;</span>) </a>
+<a class="sourceLine" id="cb142-14" data-line-number="14"><span class="bu">print</span>(<span class="bu">type</span>(mixed_set), mixed_set)</a></code></pre></div>
+<p>Jeżeli chcielibyśmy dodać do zbioru element już w nim będący - <em>set</em> go zignoruje.</p>
+<div class="sourceCode" id="cb143"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb143-1" data-line-number="1">a <span class="op">=</span> {[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>], [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]}</a></code></pre></div>
+</div>
+<div id="operatory" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Operatory</h3>
+<p>W celu wykonania operacji arytmetycznych i dokonania innych ingerencji między obiektami, składnia jest prosta i nieodbiegająca od standardu innych języków programowania.</p>
+<p><strong>Arytmetyczne:</strong></p>
+<ul>
+<li>+ dodawanie</li>
+<li>- odejmowanie</li>
+<li>* mnożenie</li>
+<li>** potęgowanie</li>
+<li>/ dzielenie -&gt; float</li>
+<li>// dzielenie z zaokrągleniem do najbliższego int w dół</li>
+<li>% reszta z dzielenia</li>
+</ul>
+<p><strong>Porównania:</strong></p>
+<ul>
+<li>== równe co do wartości</li>
+<li>!= różne co do wartości</li>
+<li><em>is</em> zwraca true, jeśli obie zmienne są tym samym obiektem (porównuje wyniki funkcji id, adresy obiektów przechowywane w pamięci)</li>
+<li><em>is not</em> zwraca true, jeśli obie zmienne nie są tym samym obiektem</li>
+<li>&lt; mniejsze</li>
+<li>&gt; większe</li>
+<li>&gt;= większe lub równe</li>
+<li>&lt;= mniejsze lub równe</li>
+<li><em>in</em> zwraca wartość True, jeśli w obiekcie znajduje się sekwencja o określonej wartości (np litera w stringu)</li>
+<li><em>not in</em> czy obiekt nie jest zawarty w innym obiekcie</li>
+</ul>
+<p><strong>Logiczne:</strong></p>
+<ul>
+<li><em>and</em> zwraca wartość True, jeśli obie instrukcje są prawdziwe (x &lt; 5 and x &lt; 10)</li>
+<li><em>or</em> zwraca wartość True, jeśli jedno z wyrażeń jest prawdziwe (x &lt; 5 or x &lt; 4)</li>
+<li><em>not</em> odwraca wynik, zwraca False, jeśli wynik jest prawdziwy (x &lt; 5 and x &lt; 10)</li>
+</ul>
+<p>Trochę o operatorze <strong>in</strong>:
+1. W listach są przeszukiwane wszystkie elementy po kolei. Czas wyszukiwania zależy od rozmiaru listy.
+2. Dla zbiorów wyszukiwanie nie zależy od rozmiaru zbioru - jest stałe
+3. W przypadku słowników wyszukiwane są tylko klucze, czas wyszukiwania nie zależy od liczby elementów w słowniku. Średnio <em>O(1)</em></p>
+<p><strong>Uwaga!</strong> Do porównywania stosujemy tylko <em>==</em>. Jest to bardzo ważne, gdyż niedbałe mylenie == z = to typowy błąd początkujących programistów, który niezwykle często doprowadza do nieporozumień i zepsucia działania kodu tylko przez tą jedną literkę, którą niekiedy i wychwycić niełatwo.</p>
+<p>Zobaczmy nasze oparatory w akcji.</p>
+<div class="sourceCode" id="cb144"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb144-1" data-line-number="1">x <span class="op">=</span> <span class="dv">256</span></a>
+<a class="sourceLine" id="cb144-2" data-line-number="2">y <span class="op">=</span> <span class="dv">256</span></a>
+<a class="sourceLine" id="cb144-3" data-line-number="3"><span class="bu">print</span>(<span class="st">&#39;id(x)&#39;</span>, <span class="bu">id</span>(x))</a>
+<a class="sourceLine" id="cb144-4" data-line-number="4"><span class="bu">print</span>(<span class="st">&#39;id(y)&#39;</span>, <span class="bu">id</span>(y))</a>
+<a class="sourceLine" id="cb144-5" data-line-number="5"><span class="bu">print</span>(<span class="st">&#39;x is y&#39;</span>, x <span class="kw">is</span> x)</a>
+<a class="sourceLine" id="cb144-6" data-line-number="6"><span class="bu">print</span>(<span class="st">&#39;x == y&#39;</span>, x <span class="op">==</span> y)</a>
+<a class="sourceLine" id="cb144-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb144-8" data-line-number="8">x <span class="op">=</span> <span class="dv">257</span></a>
+<a class="sourceLine" id="cb144-9" data-line-number="9">y <span class="op">=</span> <span class="dv">257</span></a>
+<a class="sourceLine" id="cb144-10" data-line-number="10"><span class="bu">print</span>(<span class="st">&#39;id(x)&#39;</span>, <span class="bu">id</span>(x))</a>
+<a class="sourceLine" id="cb144-11" data-line-number="11"><span class="bu">print</span>(<span class="st">&#39;id(y)&#39;</span>, <span class="bu">id</span>(y))</a>
+<a class="sourceLine" id="cb144-12" data-line-number="12"><span class="bu">print</span>(<span class="st">&#39;x is y&#39;</span>, x <span class="kw">is</span> y)</a>
+<a class="sourceLine" id="cb144-13" data-line-number="13"><span class="bu">print</span>(<span class="st">&#39;x == y&#39;</span>, x <span class="op">==</span> y)</a></code></pre></div>
+<pre><code>## id(x) 140726998450544
+## id(y) 140726998450544
+## x is y True
+## x == y True
+## id(x) 2751384603344
+## id(y) 2751384603344
+## x is y True
+## x == y True</code></pre>
+<p>Zwróć uwagę, jak zmieniło się zachowanie <em>Pythona</em> dla operatorów <em>==</em> i <em>is</em> - dzieje się tak dlatego, że zwzględów optymalizacyjnych liczby “małe” są nieco inaczej interpretowane.</p>
+</div>
+<div id="instrukcja-warunkowa-1" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Instrukcja warunkowa</h3>
+<p>… to element języka pozwalający na wybór różnych ścieżek operacji w zależności od spełnionych warunków. Kluczowa jest umiejętność użytku i rozumienia instrukcji <strong>if</strong>, <strong>else</strong> i <strong>elif</strong> (skrót od <em>else if</em>). Działają one niemalże tak, jak można by się spodziewać po ich tłumaczeniach.</p>
+<div class="sourceCode" id="cb146"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb146-1" data-line-number="1">x <span class="op">=</span> <span class="dv">10</span></a>
+<a class="sourceLine" id="cb146-2" data-line-number="2"><span class="bu">print</span>(<span class="st">&#39;przed ifem&#39;</span>)</a>
+<a class="sourceLine" id="cb146-3" data-line-number="3"><span class="cf">if</span> x <span class="op">==</span> <span class="dv">10</span>:</a>
+<a class="sourceLine" id="cb146-4" data-line-number="4">    <span class="bu">print</span>(<span class="st">&#39;x=10&#39;</span>)</a>
+<a class="sourceLine" id="cb146-5" data-line-number="5"><span class="cf">elif</span> x <span class="op">==</span> <span class="dv">4</span>:</a>
+<a class="sourceLine" id="cb146-6" data-line-number="6">    <span class="bu">print</span>(<span class="st">&#39;x=4&#39;</span>)</a>
+<a class="sourceLine" id="cb146-7" data-line-number="7"><span class="cf">elif</span> x <span class="op">==</span> <span class="dv">5</span>:</a>
+<a class="sourceLine" id="cb146-8" data-line-number="8">    <span class="bu">print</span>(<span class="st">&#39;x=5&#39;</span>)</a>
+<a class="sourceLine" id="cb146-9" data-line-number="9"><span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb146-10" data-line-number="10">    <span class="bu">print</span>(<span class="st">&#39;else&#39;</span>)</a>
+<a class="sourceLine" id="cb146-11" data-line-number="11"><span class="bu">print</span>(<span class="st">&#39;po ifie&#39;</span>)</a></code></pre></div>
+<pre><code>## przed ifem
+## x=10
+## po ifie</code></pre>
+</div>
+<div id="pętle-1" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Pętle</h3>
+<p>W celu wykonania danego bloku operacji wiele razy korzystamy z pętli. Tak jak i w przypadku innych popularnych języków programowania, kluczowa jest znajomość <strong>for</strong> i <strong>while</strong>.</p>
+<p>Na tą pierwszą najwygodniej patrzeć jak na pętlę “<em>dla każdego…</em>”. Oto jej działanie:</p>
+<div class="sourceCode" id="cb148"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb148-1" data-line-number="1"><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>): </a>
+<a class="sourceLine" id="cb148-2" data-line-number="2">    <span class="bu">print</span>(number)</a></code></pre></div>
+<pre><code>## 0
+## 1
+## 2
+## 3
+## 4</code></pre>
+<p>Iterować możemy po po dowolnych iterowalnych obiektach.</p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb150-1" data-line-number="1">mix <span class="op">=</span> [<span class="dv">7</span>,<span class="st">&#39;👻&#39;</span>,<span class="st">&#39;róża&#39;, 3 + 2j] </span></a>
+<a class="sourceLine" id="cb150-2" data-line-number="2"><span class="st">for el in mix: </span></a>
+<a class="sourceLine" id="cb150-3" data-line-number="3"><span class="st">    print(el)</span></a>
+<a class="sourceLine" id="cb150-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb150-5" data-line-number="5"><span class="st">for i in &#39;</span>hello world<span class="st">&#39;:</span></a>
+<a class="sourceLine" id="cb150-6" data-line-number="6"><span class="st">    print(i * 2, end = &#39;&#39;)</span></a></code></pre></div>
+<pre><code>## 7
+## 👻
+## róża
+## (3+2j)
+## hheelllloo  wwoorrlldd</code></pre>
+<p>W celu przerwania działania pętli korzystamy z instrukcji <strong>break</strong>, zaś kiedy chcemy rozpocząć następny obrót pętli, omijając pozostałą część - używamy <strong>continue</strong>.</p>
+<div class="sourceCode" id="cb152"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb152-1" data-line-number="1"><span class="cf">for</span> i <span class="kw">in</span> <span class="st">&#39;hello world&#39;</span>:</a>
+<a class="sourceLine" id="cb152-2" data-line-number="2">    <span class="cf">if</span> i <span class="op">==</span> <span class="st">&#39;e&#39;</span>:</a>
+<a class="sourceLine" id="cb152-3" data-line-number="3">        <span class="cf">break</span></a>
+<a class="sourceLine" id="cb152-4" data-line-number="4">    <span class="bu">print</span>(i <span class="op">*</span> <span class="dv">2</span>, end <span class="op">=</span> <span class="st">&#39;&#39;</span>)</a></code></pre></div>
+<pre><code>## hh</code></pre>
+<div class="sourceCode" id="cb154"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb154-1" data-line-number="1"><span class="cf">for</span> i <span class="kw">in</span> <span class="st">&#39;hello world&#39;</span>:</a>
+<a class="sourceLine" id="cb154-2" data-line-number="2">    <span class="cf">if</span> i <span class="op">==</span> <span class="st">&#39;o&#39;</span>:</a>
+<a class="sourceLine" id="cb154-3" data-line-number="3">        <span class="cf">continue</span></a>
+<a class="sourceLine" id="cb154-4" data-line-number="4">    <span class="bu">print</span>(i <span class="op">*</span> <span class="dv">2</span>, end <span class="op">=</span> <span class="st">&#39;&#39;</span>)</a></code></pre></div>
+<pre><code>## hheellll  wwrrlldd</code></pre>
+<p>Przydatna jest też operacja <strong>else</strong> dla pętli - wykona się ona, jeśli pętla zakończyła się normalnie (nie za pomocą <em>break</em>).</p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb156-1" data-line-number="1"><span class="cf">for</span> i <span class="kw">in</span> <span class="st">&#39;hello world&#39;</span>:</a>
+<a class="sourceLine" id="cb156-2" data-line-number="2">    <span class="cf">if</span> i <span class="op">==</span> <span class="st">&#39;a&#39;</span>:</a>
+<a class="sourceLine" id="cb156-3" data-line-number="3">        <span class="cf">break</span></a>
+<a class="sourceLine" id="cb156-4" data-line-number="4"><span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb156-5" data-line-number="5">    <span class="bu">print</span>(<span class="st">&#39;Nie ma takiej litery&#39;</span>)</a></code></pre></div>
+<pre><code>## Nie ma takiej litery</code></pre>
+<p>Drugą pętlą jakiej możemy użyć w Pythonie jest <strong>while</strong> - zezwala ona na wykonywanie operacji w bloku kodu jej przeznaczonym tak długo, aż wpisany przez programistę warunek będzie spełniony.</p>
+<p>Intuicja: <em>while</em> to taki <em>if</em> wykonywany wielokrotnie.</p>
+<div class="sourceCode" id="cb158"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb158-1" data-line-number="1">i <span class="op">=</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb158-2" data-line-number="2"><span class="cf">while</span> i <span class="op">&lt;</span> <span class="dv">15</span>:</a>
+<a class="sourceLine" id="cb158-3" data-line-number="3">    <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb158-4" data-line-number="4">    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">2</span></a></code></pre></div>
+<pre><code>## 5
+## 7
+## 9
+## 11
+## 13</code></pre>
+<p>Rezultaty pętli <em>for</em> możemy także zapisywać w taki oto skrótowy sposób:</p>
+<div class="sourceCode" id="cb160"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb160-1" data-line-number="1">squares <span class="op">=</span> []</a>
+<a class="sourceLine" id="cb160-2" data-line-number="2"><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</a>
+<a class="sourceLine" id="cb160-3" data-line-number="3">    squares.append(x <span class="op">**</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb160-4" data-line-number="4"><span class="bu">print</span>(squares)</a>
+<a class="sourceLine" id="cb160-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb160-6" data-line-number="6">squares <span class="op">=</span> [x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</a>
+<a class="sourceLine" id="cb160-7" data-line-number="7"><span class="bu">print</span> (squares)</a>
+<a class="sourceLine" id="cb160-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb160-9" data-line-number="9">b <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> <span class="kw">not</span> x<span class="op">%</span><span class="dv">3</span>] <span class="co"># lista liczb podzielnych przez 3 and &lt; 10 </span></a>
+<a class="sourceLine" id="cb160-10" data-line-number="10"><span class="bu">print</span>(b)</a></code></pre></div>
+<pre><code>## [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+## [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+## [0, 3, 6, 9]</code></pre>
+<p>Można także składać <em>zbiory</em> i <em>słowniki</em>.</p>
+<div class="sourceCode" id="cb162"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb162-1" data-line-number="1">a <span class="op">=</span> {<span class="bu">str</span>(i):i <span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]} <span class="co"># słownik</span></a>
+<a class="sourceLine" id="cb162-2" data-line-number="2"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb162-3" data-line-number="3">a <span class="op">=</span> {x <span class="cf">for</span> x <span class="kw">in</span>  <span class="bu">range</span>(<span class="dv">10</span>) } <span class="co"># set</span></a>
+<a class="sourceLine" id="cb162-4" data-line-number="4"><span class="bu">print</span>(a)</a></code></pre></div>
+<pre><code>## {&#39;1&#39;: 1, &#39;2&#39;: 2, &#39;3&#39;: 3, &#39;4&#39;: 4, &#39;5&#39;: 5}
+## {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</code></pre>
+<p>… oraz tuple. Tylko uważaj!</p>
+<div class="sourceCode" id="cb164"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb164-1" data-line-number="1">a <span class="op">=</span> (x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)) <span class="co"># generatory</span></a>
+<a class="sourceLine" id="cb164-2" data-line-number="2"><span class="bu">print</span>(<span class="bu">type</span>(a))</a>
+<a class="sourceLine" id="cb164-3" data-line-number="3"><span class="bu">print</span>(<span class="bu">next</span>(a))</a>
+<a class="sourceLine" id="cb164-4" data-line-number="4"><span class="bu">print</span>(<span class="bu">next</span>(a))</a>
+<a class="sourceLine" id="cb164-5" data-line-number="5">b <span class="op">=</span> <span class="bu">tuple</span>(x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)) <span class="co"># tuple</span></a>
+<a class="sourceLine" id="cb164-6" data-line-number="6"><span class="bu">print</span>(<span class="bu">type</span>(b))</a></code></pre></div>
+<pre><code>## &lt;class &#39;generator&#39;&gt;
+## 0
+## 1
+## &lt;class &#39;tuple&#39;&gt;</code></pre>
+<p><em>Sprawdź się!</em></p>
+<ol style="list-style-type: decimal">
+<li>Mamy 2 listy. Wypisz <em>True</em> jeśli pierwszy i ostatni element na liście jest taki sam</li>
+<li>Zrób listę od 1 do 100 i wypisz wszystkie liczby podzielne przez 5</li>
+<li>Wypisz taką piramidę</li>
+</ol>
+<p>1</p>
+<p>2 2</p>
+<p>3 3 3</p>
+<p>4 4 4 4</p>
+<p>5 5 5 5 5</p>
+<p><em>(Pamiętaj o print (…, end=&quot; &quot;))</em></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Połącz dwie listy tak, że do wynikowej listy z pierwszej będą liczby nie parzyste, a z drugiej parzyste. Przykładowo:</li>
+</ol>
+<p><em>list1 = [15, 22, 23, 17, 19]</em>
+<em>list2 = [24, 43, 24, 36, 11]</em>
+<em>Merged List is [15, 23, 17, 19, 24, 24, 36]</em></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Policz wystąpienia kolejnych elementów i na podstawie tego stwórz słownik. Przykładowo:</li>
+</ol>
+<p><em>list1 = [121, 43, 87, 121, 23, 43, 43, 43, 87]</em>
+<em>dict1 = {121: 2, 43: 4, 87: 2, 23: 1}</em></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Rozpakuj krotkę do wartości</li>
+<li>Zamień wszystkie ostatnie wartości w tuple na 99. Przykładowo:</li>
+</ol>
+<p><em>l1 = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]</em>
+<em>result = [(10, 20, 99), (40, 50, 99), (70, 80, 99)]</em></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Mamy listę <em>mix[string, int , float …]</em>. Stwórz nową listę która będzie miała tylko <em>int</em>.</li>
+</ol>
+</div>
+<div id="funkcje" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Funkcje</h3>
+<p>W Pythonie definiuje się je za pomocą słowa kluczowego <em>def</em>:</p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb166-1" data-line-number="1"><span class="kw">def</span> func():</a>
+<a class="sourceLine" id="cb166-2" data-line-number="2">    <span class="bu">print</span>(<span class="st">&quot;Hi, dear!&quot;</span>)</a>
+<a class="sourceLine" id="cb166-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb166-4" data-line-number="4">func()</a></code></pre></div>
+<pre><code>## Hi, dear!</code></pre>
+<p>W zależności od deklaracji, <strong>funkcja</strong> może przyjąć dowolną liczbę argumentów o niemalże ograniczonej swobodzie wyboru typów.</p>
+<div class="sourceCode" id="cb168"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb168-1" data-line-number="1"><span class="kw">def</span> greet(name):</a>
+<a class="sourceLine" id="cb168-2" data-line-number="2">    <span class="co">&quot;&quot;&quot;This function greets to the person passed in as parameter&quot;&quot;&quot;</span></a>
+<a class="sourceLine" id="cb168-3" data-line-number="3">    <span class="bu">print</span>(<span class="st">&quot;Hello, &quot;</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">&quot;. Good morning!&quot;</span>)</a>
+<a class="sourceLine" id="cb168-4" data-line-number="4">    </a>
+<a class="sourceLine" id="cb168-5" data-line-number="5"><span class="bu">print</span>(greet.__doc__)</a>
+<a class="sourceLine" id="cb168-6" data-line-number="6">greet(<span class="st">&quot;Kate&quot;</span>)</a></code></pre></div>
+<pre><code>## This function greets to the person passed in as parameter
+## Hello, Kate. Good morning!</code></pre>
+<p>W przypadku podawania argumentów <em>pozycyjnie</em>, podaje się je po nazwie funkcji w nawiasach. Możesz dodać dowolną liczbę argumentów - po prostu oddziel je przecinkiem.</p>
+<div class="sourceCode" id="cb170"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb170-1" data-line-number="1"><span class="kw">def</span> func(name):</a>
+<a class="sourceLine" id="cb170-2" data-line-number="2">    <span class="cf">return</span> name <span class="op">+</span> <span class="st">&quot; Ref&quot;</span></a>
+<a class="sourceLine" id="cb170-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb170-4" data-line-number="4">a <span class="op">=</span> func(<span class="st">&quot;Katty&quot;</span>)</a>
+<a class="sourceLine" id="cb170-5" data-line-number="5"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb170-6" data-line-number="6"><span class="bu">print</span>(func(<span class="st">&quot;Lila&quot;</span>))</a>
+<a class="sourceLine" id="cb170-7" data-line-number="7"><span class="bu">print</span>(func(<span class="st">&quot;Ewa&quot;</span>))</a></code></pre></div>
+<pre><code>## Katty Ref
+## Lila Ref
+## Ewa Ref</code></pre>
+<p>Można też podawać argumenty <em>kluczowo</em>, tj. przez nazwanie. Wtedy kolejność jest nieważna.</p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb172-1" data-line-number="1"><span class="kw">def</span> func(person3, person2, person1):</a>
+<a class="sourceLine" id="cb172-2" data-line-number="2">    <span class="bu">print</span>(<span class="st">&quot;Imie ryczerza to &quot;</span> <span class="op">+</span> person3)</a>
+<a class="sourceLine" id="cb172-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb172-4" data-line-number="4">func(person1 <span class="op">=</span> <span class="st">&quot;Emil&quot;</span>, person2 <span class="op">=</span> <span class="st">&quot;Tobias&quot;</span>, person3 <span class="op">=</span> <span class="st">&quot;Linus&quot;</span>)</a></code></pre></div>
+<pre><code>## Imie ryczerza to Linus</code></pre>
+<div class="sourceCode" id="cb174"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb174-1" data-line-number="1"><span class="kw">def</span> func(x <span class="op">=</span> <span class="dv">1</span>, y <span class="op">=</span> <span class="dv">1</span>):</a>
+<a class="sourceLine" id="cb174-2" data-line-number="2">    outcome <span class="op">=</span> x <span class="op">+</span> y</a>
+<a class="sourceLine" id="cb174-3" data-line-number="3">    <span class="bu">print</span>(outcome)</a>
+<a class="sourceLine" id="cb174-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb174-5" data-line-number="5">func(x <span class="op">=</span> <span class="dv">100</span>)</a></code></pre></div>
+<pre><code>## 101</code></pre>
+<p>Uwaga z kolejnością argumentów z wartościami <em>default</em>! Deklaracja poniższej funkcji nie będzie poprawna.</p>
+<div class="sourceCode" id="cb176"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb176-1" data-line-number="1"><span class="kw">def</span> greet(msg <span class="op">=</span> <span class="st">&quot;Good morning!&quot;</span>, name):</a>
+<a class="sourceLine" id="cb176-2" data-line-number="2">    <span class="cf">pass</span></a></code></pre></div>
+<p>Można za to napisać w taki sposób:</p>
+<div class="sourceCode" id="cb177"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb177-1" data-line-number="1"><span class="kw">def</span> gree(name, msg <span class="op">=</span> <span class="st">&quot;Good morming!&quot;</span>):</a>
+<a class="sourceLine" id="cb177-2" data-line-number="2">    <span class="cf">pass</span></a></code></pre></div>
+<p>Python daje także możliwość użycia <em>Args - arbitrary arguments</em>. Jeśli nie wiesz, ile argumentów zostanie przekazanych do funkcji, dodaj gwiazdkę przed nazwą parametru w definicji funkcji.</p>
+<div class="sourceCode" id="cb178"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb178-1" data-line-number="1"><span class="kw">def</span> func(<span class="op">*</span>args):</a>
+<a class="sourceLine" id="cb178-2" data-line-number="2">    <span class="bu">print</span>(<span class="bu">type</span>(args))</a>
+<a class="sourceLine" id="cb178-3" data-line-number="3">    <span class="bu">print</span>(<span class="st">&quot;Imie ryczerza to &quot;</span> <span class="op">+</span> args[<span class="dv">2</span>])</a>
+<a class="sourceLine" id="cb178-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb178-5" data-line-number="5">func(<span class="st">&quot;Emil&quot;</span>, <span class="st">&quot;Tobias&quot;</span>, <span class="st">&quot;Linus&quot;</span>)</a></code></pre></div>
+<pre><code>## &lt;class &#39;tuple&#39;&gt;
+## Imie ryczerza to Linus</code></pre>
+<p>Są także i <em>Kwargs - arbitrary keyword arguments</em>. Jeśli nie wiesz, ile argumentów nazwanych zostanie przekazanych do funkcji, dodaj dwie gwiazdki przed nazwą parametru w definicji funkcji.</p>
+<div class="sourceCode" id="cb180"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb180-1" data-line-number="1"><span class="kw">def</span> func_kwargs(<span class="op">**</span>places):</a>
+<a class="sourceLine" id="cb180-2" data-line-number="2">    <span class="bu">print</span>(<span class="st">&quot;Jestem z &quot;</span> <span class="op">+</span> places[<span class="st">&quot;region&quot;</span>] <span class="op">+</span> <span class="st">&quot; województwa&quot;)</span></a>
+<a class="sourceLine" id="cb180-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb180-4" data-line-number="4"><span class="st">func_kwargs(city = &quot;</span>Warszawa<span class="st">&quot;, region = &quot;</span>Łódzkiego<span class="st">&quot;)</span></a></code></pre></div>
+<p>Pamiętajmy o <em>Mutable vs. Immutable</em>! Poniżej niepoprawnie zadeklarowana funkcja i tego efekty:</p>
+<div class="sourceCode" id="cb181"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb181-1" data-line-number="1"><span class="kw">def</span> printing(lista <span class="op">=</span> []):</a>
+<a class="sourceLine" id="cb181-2" data-line-number="2">    lista.append(<span class="st">&#39;print&#39;</span>)</a>
+<a class="sourceLine" id="cb181-3" data-line-number="3">    <span class="cf">for</span> el <span class="kw">in</span> lista:</a>
+<a class="sourceLine" id="cb181-4" data-line-number="4">        <span class="bu">print</span>(<span class="bu">id</span>(lista), el)</a>
+<a class="sourceLine" id="cb181-5" data-line-number="5">printing()</a>
+<a class="sourceLine" id="cb181-6" data-line-number="6">li <span class="op">=</span> [<span class="st">&#39;nowe słowo&#39;</span>]</a>
+<a class="sourceLine" id="cb181-7" data-line-number="7"><span class="bu">print</span>(<span class="bu">id</span>(li))</a>
+<a class="sourceLine" id="cb181-8" data-line-number="8">printing(li)</a>
+<a class="sourceLine" id="cb181-9" data-line-number="9">printing()</a></code></pre></div>
+<pre><code>## 2549309919624 print
+## 2549340382792
+## 2549340382792 nowe słowo
+## 2549340382792 print
+## 2549309919624 print
+## 2549309919624 print</code></pre>
+<p>Niżej już poprawna implementacja i jej wywołanie:</p>
+<div class="sourceCode" id="cb183"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb183-1" data-line-number="1"><span class="kw">def</span> printing(lista <span class="op">=</span> <span class="va">None</span>):</a>
+<a class="sourceLine" id="cb183-2" data-line-number="2">    <span class="bu">print</span>(<span class="st">&quot;Przed if: &quot;</span>,<span class="bu">id</span>(lista))</a>
+<a class="sourceLine" id="cb183-3" data-line-number="3">    lista <span class="op">=</span> lista <span class="cf">if</span> lista <span class="cf">else</span> [] <span class="co"># druga opcja lista or []</span></a>
+<a class="sourceLine" id="cb183-4" data-line-number="4">    <span class="bu">print</span>(<span class="st">&quot;Po if: &quot;</span>, <span class="bu">id</span>(lista))</a>
+<a class="sourceLine" id="cb183-5" data-line-number="5">    lista.append(<span class="st">&#39;print&#39;</span>)</a>
+<a class="sourceLine" id="cb183-6" data-line-number="6">    <span class="cf">for</span> el <span class="kw">in</span> lista:</a>
+<a class="sourceLine" id="cb183-7" data-line-number="7">        <span class="bu">print</span>(<span class="bu">id</span>(lista), el)</a>
+<a class="sourceLine" id="cb183-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb183-9" data-line-number="9">printing()</a>
+<a class="sourceLine" id="cb183-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb183-11" data-line-number="11">printing()</a>
+<a class="sourceLine" id="cb183-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb183-13" data-line-number="13">l <span class="op">=</span> [<span class="st">&#39;nowe słowo&#39;</span>]</a>
+<a class="sourceLine" id="cb183-14" data-line-number="14"><span class="bu">print</span>(<span class="st">&quot;Przed wywołaniem funkcji: &quot;</span>, <span class="bu">id</span>(l))</a>
+<a class="sourceLine" id="cb183-15" data-line-number="15">printing(l)</a></code></pre></div>
+<pre><code>## Przed if:  140726997966048
+## Po if:  2547467965320
+## 2547467965320 print
+## Przed if:  140726997966048
+## Po if:  2547467965320
+## 2547467965320 print
+## Przed wywołaniem funkcji:  2547467965320
+## Przed if:  2547467965320
+## Po if:  2547467965320
+## 2547467965320 nowe słowo
+## 2547467965320 print</code></pre>
+<p><em>Sprawdź się!</em></p>
+<ol style="list-style-type: decimal">
+<li><p>Napisz program, który znajdzie wszystkie takie liczby, które są podzielne przez 7, ale nie są wielokrotnością 5, od 2000 do 3200 (włącznie). Otrzymane liczby należy wydrukować w oddzielonej przecinkami sekwencji w jednym wierszu.</p></li>
+<li><p>Napisz funkcję, która oblicza i drukuje wartość zgodnie z podaną formułą: <em>Q = (2 * C * D) / H</em>, gdzie:</p></li>
+</ol>
+<ul>
+<li>C - argument nienazwany - integer</li>
+<li>D - argument nienazwany - integer</li>
+<li>H - nie wiadomo ile jest argumentów nienazwanych (jeżeli więcej niż 1 to zsumować H1 + H2 + H3)</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Zrób funkcję, przyjmującą listę <em>tuple</em>, indeks(“i”) i wartość(“w”). Zamień wszystkie wartości na indeksie “i” w tuple na wartość (“w”). Przykładowo:</li>
+</ol>
+<p><em>l1 = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]</em></p>
+<p><em>change(l1,1,77)</em></p>
+<p><em>result = [(10, 77, 40), (40, 77, 60), (70, 77, 90)]</em></p>
+</div>
+<div id="ramka-danych-i-pandas---mały-wstęp" class="section level3">
+<h3><span class="header-section-number">2.2.7</span> Ramka danych i <em>pandas</em> - mały wstęp</h3>
+<p>W kolejnych krokach będziemy brać pod lupę dwa rodzaje tabel:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Series</strong> - jest to jednowymiarowa struktura danych („jednowymiarowa tablica”), która może przechowywać wartości i dla każdej wartości ma także unikalny indeks</li>
+<li><strong>DataFrame</strong> - dwuwymiarowa (lub więcej) wymiarowa struktura danych - w zasadzie tabela z wierszami i kolumnami. Kolumny mają nazwy, a wiersze indeksy.</li>
+</ol>
+<p><strong>Pandas</strong> to doskonała biblioteka implementująca wiele przydatnych narzedzi do obróbki i pracy nad ramką danych. Aby móc korzystać z jej mocy, musimy wczytać (i ewentualnie zainstalować, jeżeli nie zostało to wcześniej zrobione) pakiet o tej właśnie nazwie. Standardowo przyjęło się wczytywać go jako <em>pd</em> - dodanie do instrukcji wczytywania biblioteki magicznych czterech liter <em>as pd</em> zezwoli nam na możliwość odwoływania sie w każdym kolejnym kroku kiedy będziemy potrzebować <em>pandas</em> nie do całej sześcioliterowej nazwy pakietu, ale tylko do tych dwóch prostych znaków.</p>
+<p>Jeżeli nie masz jeszcze zainstalowanego pakietu <em>pandas</em> - użyj instrukcji jak niżej… a następnie za każdym razem gdy będziesz potrzebować jego dóbr - wczytaj go za pomocą instrukcji <em>import</em>.</p>
+<div class="sourceCode" id="cb185"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb185-1" data-line-number="1">install.packages(<span class="st">&quot;pandas&quot;</span>)</a>
+<a class="sourceLine" id="cb185-2" data-line-number="2"><span class="im">import</span> pandas <span class="im">as</span> pd</a></code></pre></div>
+<p>Dzięki <em>pandas</em> możemy łatwo wczytywać gotowe pliki <em>.csv</em>. Instrukcja <strong>read_csv()</strong> standardowo przyjmuje dwa argumenty - ścieżkę do pliku i opcjonalnie <em>delimiter</em> - sposób, w jaki oddzielone są kolejne wartości w wierszach.</p>
+<div class="sourceCode" id="cb186"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb186-1" data-line-number="1">data <span class="op">=</span> pd.read_csv(<span class="st">&quot;files/movies.csv&quot;</span>, delimiter <span class="op">=</span> <span class="st">&#39;,&#39;</span>)</a></code></pre></div>
+<p>Tak utworzona ramka danych ma swój własny typ.</p>
+<div class="sourceCode" id="cb187"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb187-1" data-line-number="1"><span class="bu">print</span>(<span class="bu">type</span>(data.head()))</a></code></pre></div>
+<p>Możemy łatwo odwołać się do pierwszych lub ostatnich wierszy data frame za pomocą metod <strong>head()</strong> i <strong>tail()</strong>.</p>
+<div class="sourceCode" id="cb188"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb188-1" data-line-number="1">display(data.tail())</a>
+<a class="sourceLine" id="cb188-2" data-line-number="2">display(data.head())</a></code></pre></div>
+<p>Do zwrócenia losowych rows używamy <strong>sample()</strong>.</p>
+<div class="sourceCode" id="cb189"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb189-1" data-line-number="1">data.sample(<span class="dv">5</span>)</a></code></pre></div>
+<p>Możemy także łatwo odwołać się do wierszy spełniających podane kryteria. Przykładowo poniższa instrukcja zwróci nam te, dla których wartość odpowiadająca za <em>title</em> przyjmuje &quot;Apaches*.</p>
+<div class="sourceCode" id="cb190"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb190-1" data-line-number="1">data[data.title <span class="op">==</span> <span class="st">&quot;Apaches&quot;</span>]</a></code></pre></div>
+<p><em>Sprawdź się!</em></p>
+<ol style="list-style-type: decimal">
+<li>Sprawdź szczegółowe informacje o <em>DataFrame</em></li>
+<li>Uzyskaj pierwsze 3 wiersze danych</li>
+<li>Wyświetl kolumny <em>title</em> i <em>description</em></li>
+<li>Wyświetl kolumny <em>show_id</em>, <em>country</em>, <em>data_added</em> dla wierszy 0, 3, 6, 24</li>
+<li>Wyświetl wiersze gdzie <em>release_year</em> &gt; 2010</li>
+<li>Wyświetl wiersze, gdzie <em>director</em> is <em>NaN</em></li>
+<li>Policz ile jest takich wierszy jak w punkcie 5.</li>
+<li>Sprawdź typ kolumny <em>duration</em></li>
+<li>Sprawdź co to znaczy</li>
+<li>Zmień nazwę kolumny <em>title</em> na <em>name</em>
+Dodaj nowy wiersz</li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="formatowanie-danych.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["PoweR.pdf", "PoweR.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
